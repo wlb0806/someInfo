@@ -15,6 +15,12 @@ const copy = {
     selectedWork: "精选作品",
     appsHeading: "我的作品",
     appsIntro: "工具让生活轻一点，游戏让空闲有趣一点。",
+    iOSSummary: "5 款为 iPhone 与 iPad 打造的作品",
+    macOSSummary: "1 款为 Mac 打造的效率工具",
+    applicationGroup: "应用",
+    gameGroup: "游戏",
+    applicationHint: "解决日常里的具体问题",
+    gameHint: "让空闲的片刻更有趣",
     behindApps: "作品背后",
     aboutHeading: "独立制作，认真打磨。",
     aboutBody: "从一个具体的小问题出发，完成设计、开发和发布的每一步。没有庞大的团队，只有对清晰体验、可靠功能和细节的坚持。",
@@ -42,6 +48,12 @@ const copy = {
     selectedWork: "SELECTED WORK",
     appsHeading: "The app collection",
     appsIntro: "Tools to make life lighter. Games to make quiet moments brighter.",
+    iOSSummary: "5 products made for iPhone and iPad",
+    macOSSummary: "1 focused utility made for Mac",
+    applicationGroup: "Apps",
+    gameGroup: "Games",
+    applicationHint: "Useful answers to everyday problems",
+    gameHint: "A little more play in quiet moments",
     behindApps: "BEHIND THE APPS",
     aboutHeading: "Independently made. Carefully refined.",
     aboutBody: "Each app begins with one specific problem, then moves through design, development and launch. No huge team—just a belief in clear experiences, dependable features and thoughtful details.",
@@ -58,6 +70,8 @@ const copy = {
 const apps = [
   {
     name: "ReceiptGuard: Returns",
+    os: "ios",
+    kind: "application",
     icon: "assets/icons/receiptguard.png",
     url: "https://apps.apple.com/cn/app/id6791833165",
     platform: { zh: "iPhone · 生活", en: "iPhone · Lifestyle" },
@@ -69,6 +83,8 @@ const apps = [
   },
   {
     name: "CalendarKiller",
+    os: "ios",
+    kind: "application",
     icon: "assets/icons/calendarkiller.png",
     url: "https://apps.apple.com/cn/app/id6787564566",
     platform: { zh: "iPhone & iPad · 工具", en: "iPhone & iPad · Utility" },
@@ -80,6 +96,8 @@ const apps = [
   },
   {
     name: "Trio: Daily Logic Puzzles",
+    os: "ios",
+    kind: "game",
     icon: "assets/icons/trio.png",
     url: "https://apps.apple.com/cn/app/id6791609588",
     platform: { zh: "iPhone & iPad · 游戏", en: "iPhone & iPad · Game" },
@@ -91,6 +109,8 @@ const apps = [
   },
   {
     name: "Knots: Connect Puzzle",
+    os: "ios",
+    kind: "game",
     icon: "assets/icons/knots.png",
     url: "https://apps.apple.com/cn/app/id6790466420",
     platform: { zh: "iPhone & iPad · 游戏", en: "iPhone & iPad · Game" },
@@ -102,6 +122,8 @@ const apps = [
   },
   {
     name: "Spruce: Mac Cleaner",
+    os: "macos",
+    kind: "application",
     icon: "assets/icons/spruce.png",
     url: "https://apps.apple.com/cn/app/id6794152421",
     platform: { zh: "Mac · 工具", en: "Mac · Utility" },
@@ -113,6 +135,8 @@ const apps = [
   },
   {
     name: "Scentory: Fragrance Wardrobe",
+    os: "ios",
+    kind: "application",
     icon: "assets/icons/scentory.png",
     url: "https://apps.apple.com/cn/app/id6793348562",
     platform: { zh: "iPhone · 生活", en: "iPhone · Lifestyle" },
@@ -124,7 +148,7 @@ const apps = [
   },
 ];
 
-const appGrid = document.querySelector("#app-grid");
+const portfolioGroups = document.querySelector("#portfolio-groups");
 const languageButtons = [...document.querySelectorAll("[data-lang]")];
 let currentLanguage = getInitialLanguage();
 
@@ -139,15 +163,22 @@ function externalLinkIcon() {
 }
 
 function renderApps(lang) {
-  appGrid.innerHTML = apps
-    .map(
-      (app, index) => `
-        <article class="app-card">
+  const platforms = [
+    { id: "ios", label: "iOS", summary: copy[lang].iOSSummary },
+    { id: "macos", label: "macOS", summary: copy[lang].macOSSummary },
+  ];
+  const kinds = [
+    { id: "application", label: copy[lang].applicationGroup, hint: copy[lang].applicationHint },
+    { id: "game", label: copy[lang].gameGroup, hint: copy[lang].gameHint },
+  ];
+
+  const cardMarkup = (app, index) => `
+        <article class="app-card card-${index + 1}">
           <div class="card-top">
             <img class="app-icon" src="${app.icon}" alt="${app.name} icon" loading="lazy" />
             <span class="app-meta">${app.platform[lang]}</span>
           </div>
-          <h3>${app.name}</h3>
+          <h5>${app.name}</h5>
           <p class="app-subtitle">${app.subtitle[lang]}</p>
           <p class="app-description">${app.description[lang]}</p>
           <a class="app-link" href="${app.url}" target="_blank" rel="noopener noreferrer" aria-label="${copy[lang].appStore}: ${app.name}">
@@ -155,11 +186,49 @@ function renderApps(lang) {
           </a>
           <span class="card-index" aria-hidden="true">${String(index + 1).padStart(2, "0")}</span>
         </article>
-      `,
-    )
+      `;
+
+  let cardIndex = 0;
+  portfolioGroups.innerHTML = platforms
+    .map((platform) => {
+      const platformApps = apps.filter((app) => app.os === platform.id);
+      const categoryMarkup = kinds
+        .map((kind) => {
+          const categoryApps = platformApps.filter((app) => app.kind === kind.id);
+          if (!categoryApps.length) return "";
+          const cards = categoryApps.map((app) => cardMarkup(app, cardIndex++)).join("");
+          return `
+            <section class="category-block" aria-labelledby="${platform.id}-${kind.id}-heading">
+              <div class="category-heading reveal">
+                <div>
+                  <span class="category-line" aria-hidden="true"></span>
+                  <h4 id="${platform.id}-${kind.id}-heading">${kind.label}</h4>
+                </div>
+                <p>${kind.hint}</p>
+              </div>
+              <div class="app-grid${categoryApps.length === 1 ? " is-single" : ""}">${cards}</div>
+            </section>
+          `;
+        })
+        .join("");
+
+      return `
+        <section class="platform-section" aria-labelledby="${platform.id}-heading">
+          <header class="platform-heading reveal">
+            <div class="platform-name">
+              <span class="platform-badge" aria-hidden="true">${platform.id === "ios" ? "●" : "◆"}</span>
+              <h3 id="${platform.id}-heading">${platform.label}</h3>
+            </div>
+            <p>${platform.summary}</p>
+          </header>
+          ${categoryMarkup}
+        </section>
+      `;
+    })
     .join("");
 
   observeReveals(document.querySelectorAll(".app-card"));
+  observeReveals(portfolioGroups.querySelectorAll(".reveal"));
 }
 
 function setLanguage(lang) {
