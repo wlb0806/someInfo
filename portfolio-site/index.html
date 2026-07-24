@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f0e8" />
+    <meta
+      name="description"
+      content="Independent apps for useful moments and playful breaks — ReceiptGuard, CalendarKiller, Trio, Knots, Spruce and Scentory."
+    />
+    <meta property="og:title" content="Independent Apps · 独立应用作品集" />
+    <meta
+      property="og:description"
+      content="Six focused apps, thoughtfully made for Apple platforms."
+    />
+    <meta property="og:type" content="website" />
+    <title>Independent Apps · 独立应用作品集</title>
+    <link rel="icon" href="assets/icons/trio.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#apps" data-i18n="skip">跳到作品</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span data-i18n="brand">独立开发者</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#apps" data-i18n="navApps">作品</a>
+        <a href="#about" data-i18n="navAbout">关于</a>
+        <div class="language-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="zh" aria-pressed="true">中</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="eyebrow">为 Apple 平台打造 · 持续更新中</span>
+          </p>
+          <h1 id="hero-title">
+            <span data-i18n="heroLine1">小而专注的应用，</span>
+            <em data-i18n="heroLine2">认真做得更好。</em>
+          </h1>
+          <p class="hero-intro" data-i18n="heroIntro">
+            我是一名独立开发者，喜欢把日常里不够顺手的事，做成简单、漂亮、真正有用的产品。
+          </p>
+          <a class="primary-cta" href="#apps">
+            <span data-i18n="seeApps">查看全部作品</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>
+          </a>
+        </div>
+
+        <div class="icon-stage reveal" aria-label="App icon collection">
+          <div class="stage-glow" aria-hidden="true"></div>
+          <div class="icon-tile tile-receipt">
+            <img src="assets/icons/receiptguard.png" alt="ReceiptGuard" />
+          </div>
+          <div class="icon-tile tile-calendar">
+            <img src="assets/icons/calendarkiller.png" alt="CalendarKiller" />
+          </div>
+          <div class="icon-tile tile-trio">
+            <img src="assets/icons/trio.png" alt="Trio" />
+          </div>
+          <div class="icon-tile tile-knots">
+            <img src="assets/icons/knots.png" alt="Knots" />
+          </div>
+          <div class="icon-tile tile-spruce">
+            <img src="assets/icons/spruce.png" alt="Spruce" />
+          </div>
+          <div class="icon-tile tile-scentory">
+            <img src="assets/icons/scentory.png" alt="Scentory" />
+          </div>
+          <p class="stage-note" data-i18n="stageNote">六个想法，六种日常。</p>
+        </div>
+      </section>
+
+      <section class="stats reveal" aria-label="Portfolio summary">
+        <div><strong>6</strong><span data-i18n="statApps">款独立应用</span></div>
+        <div><strong>3</strong><span>iPhone · iPad · Mac</span></div>
+        <div><strong>2</strong><span data-i18n="statLanguages">种网站语言</span></div>
+      </section>
+
+      <section class="apps-section" id="apps" aria-labelledby="apps-heading">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker" data-i18n="selectedWork">SELECTED WORK</p>
+            <h2 id="apps-heading" data-i18n="appsHeading">我的作品</h2>
+          </div>
+          <p data-i18n="appsIntro">工具让生活轻一点，游戏让空闲有趣一点。</p>
+        </div>
+        <div class="app-grid" id="app-grid"></div>
+      </section>
+
+      <section class="about-section reveal" id="about" aria-labelledby="about-heading">
+        <div class="about-number" aria-hidden="true">06</div>
+        <div class="about-copy">
+          <p class="section-kicker" data-i18n="behindApps">BEHIND THE APPS</p>
+          <h2 id="about-heading" data-i18n="aboutHeading">独立制作，认真打磨。</h2>
+          <p data-i18n="aboutBody">
+            从一个具体的小问题出发，完成设计、开发和发布的每一步。没有庞大的团队，只有对清晰体验、可靠功能和细节的坚持。
+          </p>
+        </div>
+        <div class="principles" aria-label="Principles">
+          <span data-i18n="principle1">专注</span>
+          <span data-i18n="principle2">隐私</span>
+          <span data-i18n="principle3">品质</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <span class="footer-mark" aria-hidden="true"></span>
+        <span data-i18n="footerLine">为有用的时刻，也为放松的片刻。</span>
+      </div>
+      <span>© <span id="year"></span> · <span data-i18n="footerRights">用心制作</span></span>
+    </footer>
+
+    <noscript>
+      <p class="noscript">This portfolio needs JavaScript to display the app collection.</p>
+    </noscript>
+  </body>
+</html>
