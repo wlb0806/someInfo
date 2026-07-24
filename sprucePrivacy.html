@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spruce — Privacy Policy</title>
+<meta name="description" content="Spruce is a Mac disk cleaner that collects nothing and never connects to the internet.">
+<style>
+  :root{
+    --bg:#F0F4F1; --panel:#FFFFFF; --ink:#1B2620; --muted:#5B6961; --line:rgba(21,33,25,.12);
+    --mint:#2F7D5A; --accent:#2F7D5A;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    --mono:"SF Mono",ui-monospace,Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#0A120E; --panel:#111B15; --ink:#E2EAE4; --muted:#93A499;
+      --line:rgba(226,234,228,.12); --mint:#6FE8AF; --accent:#6FE8AF; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--font);color:var(--ink);line-height:1.7;
+    background:
+      radial-gradient(70% 50% at 85% -8%, rgba(82,229,163,.10), transparent 60%),
+      radial-gradient(60% 45% at 0% 108%, rgba(139,124,246,.08), transparent 60%),
+      var(--bg);
+    padding:clamp(28px,6vw,72px) 20px 80px}
+  .wrap{max-width:720px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:14px}
+  .logo{width:52px;height:52px;flex:none}
+  h1{font-size:clamp(26px,5vw,36px);font-weight:700;letter-spacing:-.02em;margin:0}
+  .tag{color:var(--muted);font-size:15px;margin:2px 0 0}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    padding:clamp(22px,4vw,40px);margin-top:28px}
+  .updated{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted);
+    text-transform:uppercase;margin:0 0 6px}
+  .lead{font-size:17px;margin:0 0 8px}
+  .big{font-weight:700;color:var(--mint)}
+  h2{font-size:16px;font-weight:600;letter-spacing:.02em;margin:30px 0 6px;
+    padding-top:22px;border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none;padding-top:8px;margin-top:18px}
+  p{margin:8px 0}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+  a:hover{border-bottom-color:currentColor}
+  footer{margin-top:34px;color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <svg class="logo" viewBox="0 0 1024 1024" role="img" aria-label="Spruce">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#123526"/><stop offset="1" stop-color="#07130D"/>
+      </linearGradient></defs>
+      <rect x="112" y="112" width="800" height="800" rx="182" fill="url(#g)"/>
+      <path d="M512 300 L608 460 L416 460 Z" fill="#8FF5C6"/>
+      <path d="M512 405 L650 575 L374 575 Z" fill="#7CEEBA"/>
+      <path d="M512 510 L694 700 L330 700 Z" fill="#57DFA0"/>
+      <rect x="484" y="698" width="56" height="82" rx="12" fill="#2FB585"/>
+      <circle cx="512" cy="286" r="13" fill="#EAFFF5"/>
+    </svg>
+    <div>
+      <h1>Spruce</h1>
+      <p class="tag">Privacy Policy</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="updated">Last updated · 2026-07-23</p>
+    <p class="lead">Spruce is a Mac disk-cleaning utility that runs entirely on your device.</p>
+
+    <h2>What we collect</h2>
+    <p><span class="big">Nothing.</span> Spruce does not collect, transmit, sell, or share any
+    personal data. It has no user accounts, no analytics or telemetry, no advertising, and no
+    crash-reporting service.</p>
+
+    <h2>Network access</h2>
+    <p>Spruce <span class="big">never connects to the internet.</span> It has no networking code and
+    makes no outbound requests of any kind. Everything it does — scanning, sizing, cleaning,
+    uninstalling — happens locally on your Mac.</p>
+
+    <h2>File access</h2>
+    <p>To measure and clean reclaimable space, Spruce asks your permission to access your home folder
+    using the standard macOS file picker (a requirement of the App Sandbox). This access is used only
+    on your device to display and remove files you select. Files are moved to the Trash and can be
+    recovered, unless you explicitly choose “Delete Permanently.” Spruce never uploads, copies, or
+    reads your files off your device.</p>
+
+    <h2>Data storage</h2>
+    <p>Spruce stores a small amount of information locally on your Mac — such as your scan preferences,
+    lifetime-freed total, and an operation log of what was cleaned — inside its own sandbox container.
+    This never leaves your device and is removed when you uninstall the app.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Spruce does not collect data from anyone, including children.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the updated version will be posted at this URL with a new “last updated”
+    date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy: <a href="mailto:wanglingbo0227@126.com">wanglingbo0227@126.com</a></p>
+  </div>
+
+  <footer>© 2026 Wang Lingbo · Spruce</footer>
+</div>
+</body>
+</html>
