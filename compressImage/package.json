@@ -1,0 +1,17 @@
+{
+  "name": "lightpress-image-compressor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --config vite.standalone.config.js && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@jsquash/oxipng": "2.3.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

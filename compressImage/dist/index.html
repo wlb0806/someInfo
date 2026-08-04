@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="在浏览器本地完成图片有损或无损压缩，快速、安全、无需上传。" data-i18n-content="metaDescription" />
+    <title>轻压图 · 本地图片压缩</title>
+    <script type="module" crossorigin src="./assets/index-CCi6SFtt.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BtN6U84X.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="轻压图首页" data-i18n-aria-label="homeAria">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M7 9.5h18v13H7z" fill="currentColor" opacity=".2"/><path d="m9 20 5-5 3 3 3-4 4 6H9Z" fill="currentColor"/><circle cx="11.5" cy="12.5" r="1.5" fill="currentColor"/><path d="M5 7h22v18H5z" stroke="currentColor" stroke-width="2" rx="4"/></svg>
+        </span>
+        <span data-i18n="brandName">轻压图</span>
+      </a>
+      <nav aria-label="主导航" data-i18n-aria-label="navAria">
+        <a href="#compressor" data-i18n="navCompress">开始压缩</a>
+        <a href="#features" data-i18n="navFeatures">产品特点</a>
+        <a href="#about" data-i18n="navHow">工作原理</a>
+      </nav>
+      <div class="header-actions">
+        <span class="privacy-pill"><span></span><b data-i18n="privacy">图片仅在本地处理</b></span>
+        <button class="language-toggle" id="languageToggle" type="button">EN</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <span class="eyebrow light">LOCAL IMAGE COMPRESSOR</span>
+          <h1 id="hero-title" data-i18n-html="heroTitle">让图片更轻，<br />让分享更快。</h1>
+          <p data-i18n="heroDescription">支持 JPG、PNG 与 WebP，最多一次处理 20 张。</p>
+        </div>
+
+        <section class="compressor-card" id="compressor" aria-label="图片压缩工具" data-i18n-aria-label="compressorAria">
+          <div class="mode-tabs" role="tablist" aria-label="压缩模式" data-i18n-aria-label="modeAria">
+            <button class="mode-tab active" data-mode="lossy" role="tab" aria-selected="true">
+              <span class="tab-icon">◐</span>
+              <span><strong data-i18n="lossy">有损压缩</strong><small data-i18n="lossyDescription">体积更小，画质可调</small></span>
+            </button>
+            <button class="mode-tab" data-mode="lossless" role="tab" aria-selected="false">
+              <span class="tab-icon">◇</span>
+              <span><strong data-i18n="lossless">无损压缩</strong><small data-i18n="losslessDescription">像素不变，深度优化</small></span>
+            </button>
+          </div>
+
+          <label class="drop-zone" id="dropZone" for="fileInput">
+            <input class="file-input" id="fileInput" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.jfif,.png,.webp" aria-label="选择图片" data-i18n-aria-label="chooseImages" multiple />
+            <div class="upload-illustration" aria-hidden="true">
+              <svg viewBox="0 0 72 72" fill="none">
+                <path d="M16 26.5 36 36l20-9.5L36 17 16 26.5Z" fill="#9AD7CB"/>
+                <path d="M18.5 29v22L36 60l17.5-9V29L36 38l-17.5-9Z" fill="#0B6E5F"/>
+                <path d="M36 38v22l17.5-9V29L36 38Z" fill="#084D45"/>
+                <path d="M36 32V10m0 0-8 8m8-8 8 8" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h2 data-i18n="dropTitle">把图片拖到这里</h2>
+            <p data-i18n-html="dropDescription">或 <span>点击选择图片</span> · 单张最大 20 MB</p>
+            <div class="format-list"><span>JPG</span><span>PNG</span><span>WEBP</span></div>
+          </label>
+
+          <div class="settings" id="lossySettings">
+            <label for="qualityRange"><span data-i18n="quality">压缩质量</span> <strong id="qualityValue">82%</strong></label>
+            <input id="qualityRange" type="range" min="35" max="95" value="82" />
+            <div class="range-labels"><span data-i18n="smallerFile">文件更小</span><span data-i18n="higherQuality">画质更高</span></div>
+            <label class="select-label" for="formatSelect" data-i18n="outputFormat">输出格式</label>
+            <select id="formatSelect">
+              <option value="auto" data-i18n="smartChoice">智能选择</option>
+              <option value="image/webp">WebP</option>
+              <option value="image/jpeg">JPG</option>
+            </select>
+          </div>
+
+          <div class="lossless-note" id="losslessNote" hidden>
+            <span class="note-icon">∞</span>
+            <div><strong data-i18n="losslessNoteTitle">格式专用无损优化</strong><p data-i18n="losslessNoteDescription">PNG 使用最高级编码，JPEG / WebP 清理冗余元数据；保留方向与色彩信息。</p></div>
+          </div>
+        </section>
+      </section>
+
+      <section class="workspace" id="workspace" hidden aria-live="polite">
+        <div class="workspace-heading">
+          <div><span class="eyebrow">YOUR IMAGES</span><h2 data-i18n="pendingImages">待处理图片</h2></div>
+          <div class="workspace-actions">
+            <button class="text-button" id="clearButton" data-i18n="clear">清空</button>
+            <button class="primary-button" id="compressButton"><span data-i18n="startCompress">开始压缩</span><b aria-hidden="true">→</b></button>
+            <button class="primary-button download-all" id="downloadAllButton" hidden><span data-i18n="downloadAll">全部下载</span><b aria-hidden="true">↓</b></button>
+          </div>
+        </div>
+        <div class="summary" id="summary" hidden>
+          <div><span data-i18n="originalSize">原始大小</span><strong id="originalTotal">0 MB</strong></div>
+          <div class="summary-arrow">→</div>
+          <div><span data-i18n="compressedSize">压缩后</span><strong id="compressedTotal">0 MB</strong></div>
+          <div class="saved-summary"><span data-i18n="totalSaved">共节省</span><strong id="savedTotal">0%</strong></div>
+        </div>
+        <div class="file-list" id="fileList"></div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="section-intro"><span class="eyebrow">WHY LIGHTPRESS</span><h2 data-i18n="featuresTitle">更聪明的图片压缩</h2><p data-i18n="featuresDescription">无需上传，也不牺牲你在意的细节。</p></div>
+        <div class="feature-grid">
+          <article><span class="feature-number">01</span><div class="feature-icon">⌁</div><h3 data-i18n="localProcessing">本地处理</h3><p data-i18n="localProcessingDescription">所有计算都在浏览器内完成，原图不会离开你的设备。</p></article>
+          <article><span class="feature-number">02</span><div class="feature-icon">◎</div><h3 data-i18n="dualModes">双压缩模式</h3><p data-i18n="dualModesDescription">按场景选择高效有损，或像素不变的格式专用无损优化。</p></article>
+          <article><span class="feature-number">03</span><div class="feature-icon">↯</div><h3 data-i18n="batchEfficient">批量高效</h3><p data-i18n="batchEfficientDescription">一次添加最多 20 张图片，集中查看结果并快速下载。</p></article>
+        </div>
+      </section>
+
+      <section class="how-it-works" id="about">
+        <div><span class="eyebrow">HOW IT WORKS</span><h2 data-i18n-html="howTitle">简单三步，<br />释放存储空间。</h2></div>
+        <ol>
+          <li><span>1</span><div><strong data-i18n="stepAdd">添加图片</strong><p data-i18n="stepAddDescription">拖拽或选择 JPG、PNG、WebP 图片。</p></div></li>
+          <li><span>2</span><div><strong data-i18n="stepChoose">选择模式</strong><p data-i18n="stepChooseDescription">调节有损质量，或开启格式专用无损优化。</p></div></li>
+          <li><span>3</span><div><strong data-i18n="stepDownload">下载结果</strong><p data-i18n="stepDownloadDescription">对比体积后单独或批量保存。</p></div></li>
+        </ol>
+      </section>
+    </main>
+
+    <footer><a class="brand" href="#top"><span class="brand-mark">◫</span><span data-i18n="brandName">轻压图</span></a><p data-i18n="footerTagline">更小的图片，更轻的网络。</p><span>© 2026 LightPress</span></footer>
+    <div class="toast" id="toast" role="status"></div>
+    <script>
+      window.__loadLightpressFallback = function () {
+        if (window.__LIGHTPRESS_READY__ || window.__LIGHTPRESS_FALLBACK_LOADING__) return;
+        window.__LIGHTPRESS_FALLBACK_LOADING__ = true;
+        var fallback = document.createElement("script");
+        fallback.src = "./app.bundle.js";
+        document.body.appendChild(fallback);
+      };
+      document.addEventListener("DOMContentLoaded", window.__loadLightpressFallback);
+    </script>
+  </body>
+</html>
