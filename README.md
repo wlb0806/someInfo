@@ -6,13 +6,13 @@ Seven independent, privacy-first apps for iPhone and Mac—made for users across
 
 | Icon | App | Platform | What it does | Download |
 | :---: | --- | :---: | --- | :---: |
-| <img src="receiptguard/ReceiptGuard/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png" width="64" alt="ReceiptGuard app icon"> | **ReceiptGuard: Returns** | iOS / iPhone | Receipt, return deadline, and warranty tracker | [App Store](https://apps.apple.com/app/id6791833165) |
-| <img src="calendar/CalendarKiller/CalendarKiller/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png" width="64" alt="CalendarKiller app icon"> | **CalendarKiller** | iOS / iPhone | Calendar spam, suspicious invitation, and duplicate-event cleaner | [App Store](https://apps.apple.com/app/id6787564566) |
-| <img src="game/trio/Trio/Assets.xcassets/AppIcon.appiconset/icon_1024.png" width="64" alt="Trio Daily Logic Puzzles app icon"> | **Trio: Daily Logic Puzzles** | iOS / iPhone | Three fresh, hand-verified logic puzzles every day | [App Store](https://apps.apple.com/app/id6791609588) |
-| <img src="game/killAI/Knots/Resources/Assets.xcassets/AppIcon.appiconset/icon-1024.png" width="64" alt="Knots Connect Puzzle app icon"> | **Knots: Connect Puzzle** | iOS / iPhone | A cozy connect-the-dots and fill-the-grid puzzle | [App Store](https://apps.apple.com/app/id6790466420) |
-| <img src="Spruce/Spruce/Resources/Assets.xcassets/AppIcon.appiconset/icon_1024.png" width="64" alt="Spruce Mac disk cleaner app icon"> | **Spruce: Disk Cleanup** | macOS / Mac | Private disk-space analyzer, junk cleaner, and app uninstaller | [Mac App Store](https://apps.apple.com/app/id6794152421) |
-| <img src="Scentory/Scentory/Support/Assets.xcassets/AppIcon.appiconset/icon_1024.png" width="64" alt="Scentory Fragrance Wardrobe app icon"> | **Scentory: Fragrance Wardrobe** | iOS / iPhone | Perfume and fragrance collection organizer | [App Store](https://apps.apple.com/app/id6793348562) |
-| <img src="DailyQuest/DailyQuest/Assets.xcassets/AppIcon.appiconset/icon-1024.png" width="64" alt="Daily Quest Habit and Goals app icon"> | **Daily Quest: Habit & Goals** | iOS / iPhone | Habit tracker, goal planner, streaks, and Live Activities | [App Store](https://apps.apple.com/app/id6797427767) |
+| <img src="./assets/app-icons/receiptguard.png" width="64" alt="ReceiptGuard app icon"> | **ReceiptGuard: Returns** | iOS / iPhone | Receipt, return deadline, and warranty tracker | [App Store](https://apps.apple.com/app/id6791833165) |
+| <img src="./assets/app-icons/calendarkiller.png" width="64" alt="CalendarKiller app icon"> | **CalendarKiller** | iOS / iPhone | Calendar spam, suspicious invitation, and duplicate-event cleaner | [App Store](https://apps.apple.com/app/id6787564566) |
+| <img src="./assets/app-icons/trio.png" width="64" alt="Trio Daily Logic Puzzles app icon"> | **Trio: Daily Logic Puzzles** | iOS / iPhone | Three fresh, hand-verified logic puzzles every day | [App Store](https://apps.apple.com/app/id6791609588) |
+| <img src="./assets/app-icons/knots.png" width="64" alt="Knots Connect Puzzle app icon"> | **Knots: Connect Puzzle** | iOS / iPhone | A cozy connect-the-dots and fill-the-grid puzzle | [App Store](https://apps.apple.com/app/id6790466420) |
+| <img src="./assets/app-icons/spruce.png" width="64" alt="Spruce Mac disk cleaner app icon"> | **Spruce: Disk Cleanup** | macOS / Mac | Private disk-space analyzer, junk cleaner, and app uninstaller | [Mac App Store](https://apps.apple.com/app/id6794152421) |
+| <img src="./assets/app-icons/scentory.png" width="64" alt="Scentory Fragrance Wardrobe app icon"> | **Scentory: Fragrance Wardrobe** | iOS / iPhone | Perfume and fragrance collection organizer | [App Store](https://apps.apple.com/app/id6793348562) |
+| <img src="./assets/app-icons/daily-quest.png" width="64" alt="Daily Quest Habit and Goals app icon"> | **Daily Quest: Habit & Goals** | iOS / iPhone | Habit tracker, goal planner, streaks, and Live Activities | [App Store](https://apps.apple.com/app/id6797427767) |
 
 ## ReceiptGuard: Returns
 
