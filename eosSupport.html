@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eos — Support</title>
+<meta name="description" content="Support and frequently asked questions for Eos, a free Mac disk cleaner.">
+<style>
+  :root{
+    --bg:#F0F4F1; --panel:#FFFFFF; --ink:#1B2620; --muted:#5B6961; --line:rgba(21,33,25,.12);
+    --mint:#B9964B; --accent:#9A742D;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    --mono:"SF Mono",ui-monospace,Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#0A120E; --panel:#111B15; --ink:#E2EAE4; --muted:#93A499;
+      --line:rgba(226,234,228,.12); --mint:#F2D487; --accent:#F2D487; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--font);color:var(--ink);line-height:1.7;
+    background:
+      radial-gradient(70% 50% at 85% -8%, rgba(82,229,163,.10), transparent 60%),
+      radial-gradient(60% 45% at 0% 108%, rgba(139,124,246,.08), transparent 60%),
+      var(--bg);
+    padding:clamp(28px,6vw,72px) 20px 80px}
+  .wrap{max-width:720px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:14px}
+  .logo{width:52px;height:52px;flex:none}
+  h1{font-size:clamp(26px,5vw,36px);font-weight:700;letter-spacing:-.02em;margin:0}
+  .tag{color:var(--muted);font-size:15px;margin:2px 0 0}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    padding:clamp(22px,4vw,40px);margin-top:26px}
+  .contact{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
+  .contact .k{font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--muted)}
+  .contact a{font-size:17px;font-weight:600}
+  .note{color:var(--muted);font-size:14px;margin:10px 0 0}
+  h2{font-size:15px;font-weight:600;margin:26px 0 4px;padding-top:20px;
+    border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none;padding-top:6px;margin-top:10px}
+  p{margin:6px 0}
+  .big{font-weight:700;color:var(--mint)}
+  ul{margin:8px 0;padding-left:20px}
+  li{margin:4px 0}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;word-break:break-word}
+  a:hover{border-bottom-color:currentColor}
+  .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .links a{font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:999px;
+    border:1px solid var(--line);color:var(--muted)}
+  .links a:hover{border-color:var(--mint);color:var(--mint)}
+  footer{margin-top:34px;color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <svg class="logo" viewBox="0 0 1024 1024" role="img" aria-label="Eos">
+      <defs><radialGradient id="g"><stop offset="0" stop-color="#493A21"/><stop offset="1" stop-color="#090806"/></radialGradient></defs>
+      <rect x="112" y="112" width="800" height="800" rx="182" fill="url(#g)"/>
+      <path d="M512 236 700 512 512 788 324 512Z" fill="#0A0908" stroke="#F2D487" stroke-width="30"/>
+      <path d="M512 236V788M324 512H700" stroke="#FFF0B0" stroke-width="22"/>
+      <circle cx="512" cy="512" r="54" fill="#FFF4C7"/>
+    </svg>
+    <div>
+      <h1>Eos</h1>
+      <p class="tag">Support</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="contact">
+      <span class="k">Email</span>
+      <a href="mailto:wanglingbo0227@126.com">wanglingbo0227@126.com</a>
+    </div>
+    <p class="note">Questions, bug reports and feature requests are all welcome. Please include your
+    macOS version and what you were doing when the problem happened — it makes fixes much faster.</p>
+  </div>
+
+  <div class="card">
+    <h2>Why does Eos ask for access to my home folder?</h2>
+    <p>macOS protects your files, and a sandboxed app can't look at them until you say so. On first
+    launch Eos opens the standard macOS file picker so you can grant access to your home folder —
+    that's where virtually all reclaimable space lives (caches, logs, downloads, developer files).
+    You grant it once; after that Eos scans with no further prompts. You can revoke access at any
+    time.</p>
+
+    <h2>Is anything deleted without asking me?</h2>
+    <p><span class="big">No.</span> Every item is listed for your review, and a final confirmation
+    shows exactly what will be removed, how much it frees, and where it goes. Items are moved to the
+    Trash, so you can put them back. Only if you explicitly choose “Delete Permanently” is removal
+    irreversible.</p>
+
+    <h2>I deleted something by mistake. Can I get it back?</h2>
+    <p>Yes — open the Trash, find the item, and choose “Put Back.” Eos never bypasses the Trash
+    unless you deliberately pick the permanent-delete option.</p>
+
+    <h2>Why can't Eos uninstall some apps?</h2>
+    <p>Apps installed by an installer package are owned by the system, and macOS requires an
+    administrator password to remove them — which a sandboxed app can't provide. When that happens,
+    Eos tells you plainly and offers to reveal the app in Finder so you can drag it to the Trash
+    yourself. Its leftover files are still cleaned up for you.</p>
+
+    <h2>Why doesn't Eos show my login items (the apps that open at startup)?</h2>
+    <p>macOS keeps that list in a protected system database that sandboxed apps can't read. Eos
+    shows the launch agents it can see and gives you a one-tap shortcut to System Settings → General →
+    Login Items, where you can switch the rest on or off.</p>
+
+    <h2>Does Eos delete my app data — chat history, photos, documents?</h2>
+    <p><span class="big">Never.</span> Eos only removes true caches and rebuildable files. It does
+    not touch app databases, message history, photo libraries, or documents, and it never disguises
+    your app data as “cache.”</p>
+
+    <h2>Does Eos send anything over the internet?</h2>
+    <p>No. Eos has no networking code at all — no accounts, no analytics, no ads, no crash
+    reporting. Everything happens on your Mac. See the
+    <a href="https://wlb0806.github.io/someInfo/eosPrivacy.html">Privacy Policy</a>.</p>
+
+    <h2>Is Eos really free?</h2>
+    <p>Yes — free, with no ads, no subscription and no in-app purchases.</p>
+
+    <h2>How do I uninstall Eos?</h2>
+    <p>Drag Eos from your Applications folder to the Trash. Its settings and logs live in its own
+    sandbox container and are removed with it.</p>
+  </div>
+
+  <div class="links">
+    <a href="https://apps.apple.com/app/id6794152421?action=write-review">Rate or review Eos</a>
+    <a href="https://wlb0806.github.io/someInfo/eosPrivacy.html">Privacy Policy</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">License Agreement</a>
+  </div>
+
+  <footer>© 2026 Wang Lingbo · Eos</footer>
+</div>
+</body>
+</html>
