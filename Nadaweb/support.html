@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Support and frequently asked questions for Nada, the private no-spend streak app.">
-  <meta name="theme-color" content="#141e16">
-  <title>Nada Support</title>
+  <meta name="description" content="Support and frequently asked questions for Dewday, the private no-spend streak app.">
+  <meta name="theme-color" content="#f3fbf9">
+  <title>Dewday Support</title>
   <style>
     :root {
-      color-scheme: dark;
-      --ground: #141e16;
-      --ink: #1b2a20;
-      --surface: #1d2a20;
-      --surface-2: #25342a;
-      --text: #ece7d8;
-      --muted: #a9b39d;
-      --brass: #e3b85f;
-      --sage: #9bb683;
-      --line: rgba(236, 231, 216, 0.14);
-      --shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
+      color-scheme: light;
+      --ground: #f3fbf9;
+      --ink: #153f42;
+      --surface: #ffffff;
+      --surface-2: #e4f5f1;
+      --text: #153f42;
+      --muted: #658584;
+      --aqua: #2d9f96;
+      --sage: #68be9b;
+      --line: rgba(21, 63, 66, 0.14);
+      --shadow: 0 24px 64px rgba(45, 159, 150, 0.10);
     }
 
     * { box-sizing: border-box; }
@@ -27,19 +27,19 @@
       margin: 0;
       min-height: 100vh;
       background:
-        radial-gradient(circle at 90% 0%, rgba(227, 184, 95, 0.10), transparent 34rem),
-        radial-gradient(circle at 0% 40%, rgba(155, 182, 131, 0.08), transparent 28rem),
+        radial-gradient(circle at 90% 0%, rgba(45, 159, 150, 0.10), transparent 34rem),
+        radial-gradient(circle at 0% 40%, rgba(104, 190, 155, 0.08), transparent 28rem),
         var(--ground);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: ui-rounded, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--brass); text-underline-offset: 0.2em; }
-    a:hover { color: #f0cb7b; }
+    a { color: var(--aqua); text-underline-offset: 0.2em; }
+    a:hover { color: #4bc9b7; }
     a:focus-visible, summary:focus-visible {
-      outline: 3px solid var(--brass);
+      outline: 3px solid var(--aqua);
       outline-offset: 4px;
       border-radius: 4px;
     }
@@ -50,8 +50,8 @@
       top: 12px;
       left: 12px;
       padding: 10px 14px;
-      background: var(--brass);
-      color: #20180a;
+      background: var(--aqua);
+      color: #ffffff;
       transform: translateY(-160%);
     }
     .skip-link:focus { transform: translateY(0); }
@@ -67,7 +67,7 @@
     }
     .brand {
       color: var(--text);
-      font-family: ui-serif, Georgia, serif;
+      font-family: ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 1.55rem;
       font-weight: 700;
       text-decoration: none;
@@ -75,7 +75,7 @@
     }
     .brand span {
       margin-left: 10px;
-      color: var(--brass);
+      color: var(--aqua);
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
       font-size: 0.65rem;
       letter-spacing: 0.18em;
@@ -96,7 +96,7 @@
       text-transform: uppercase;
     }
     h1, h2 {
-      font-family: ui-serif, Georgia, serif;
+      font-family: ui-rounded, -apple-system, BlinkMacSystemFont, sans-serif;
       letter-spacing: -0.035em;
       line-height: 1.08;
     }
@@ -117,7 +117,7 @@
       font-weight: 700;
       text-decoration: none;
     }
-    .button.primary { border-color: var(--brass); background: var(--brass); color: #20180a; }
+    .button.primary { border-color: var(--aqua); background: var(--aqua); color: #ffffff; }
 
     .grid {
       display: grid;
@@ -130,11 +130,11 @@
       padding: 28px;
       border: 1px solid var(--line);
       border-radius: 20px;
-      background: linear-gradient(145deg, rgba(37, 52, 42, 0.92), rgba(29, 42, 32, 0.84));
+      background: linear-gradient(145deg, rgba(228, 245, 241, 0.92), rgba(255, 255, 255, 0.84));
       box-shadow: var(--shadow);
     }
     .card .number {
-      color: var(--brass);
+      color: var(--aqua);
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
       font-size: 0.76rem;
       letter-spacing: 0.12em;
@@ -147,7 +147,7 @@
     details { border-bottom: 1px solid var(--line); padding: 22px 0; }
     summary { cursor: pointer; font-weight: 700; list-style: none; }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; float: right; color: var(--brass); font-size: 1.35rem; line-height: 1; }
+    summary::after { content: "+"; float: right; color: var(--aqua); font-size: 1.35rem; line-height: 1; }
     details[open] summary::after { content: "−"; }
     details p { max-width: 720px; margin: 14px 0 2px; color: var(--muted); }
 
@@ -158,9 +158,9 @@
       gap: 34px;
       margin-top: 100px;
       padding: 42px;
-      border: 1px solid rgba(227, 184, 95, 0.28);
+      border: 1px solid rgba(45, 159, 150, 0.28);
       border-radius: 24px;
-      background: rgba(227, 184, 95, 0.07);
+      background: rgba(45, 159, 150, 0.07);
     }
     .contact h2 { margin-bottom: 12px; }
     .contact p { margin: 0; color: var(--muted); }
@@ -196,7 +196,7 @@
 
   <div class="shell">
     <header>
-      <a class="brand" href="support.html">Nada <span>NO-SPEND STREAK</span></a>
+      <a class="brand" href="support.html">Dewday <span>NO-SPEND STREAK</span></a>
       <nav aria-label="Primary navigation">
         <a href="support.html" aria-current="page">Support</a>
         <a href="privacy.html">Privacy</a>
@@ -205,9 +205,9 @@
 
     <main id="main">
       <section aria-labelledby="support-title">
-        <p class="eyebrow">Nada Support</p>
+        <p class="eyebrow">Dewday Support</p>
         <h1 id="support-title">A little help keeping the streak.</h1>
-        <p class="lede">Nada is designed to stay simple, private, and entirely under your control. Find quick answers below, or email us if something still feels off.</p>
+        <p class="lede">Dewday is designed to stay simple, private, and entirely under your control. Find quick answers below, or email us if something still feels off.</p>
         <div class="actions">
           <a class="button primary" href="#contact">Contact support</a>
           <a class="button" href="#faq">Read the FAQ</a>
@@ -223,7 +223,7 @@
         <article class="card">
           <span class="number">02 / SYNC</span>
           <h3>iCloud sync is optional</h3>
-          <p>Nada can sync through your private CloudKit database. Turn it on from the gear menu, then restart Nada for the change to take effect.</p>
+          <p>Dewday can sync through your private CloudKit database. Turn it on from the gear menu, then restart Dewday for the change to take effect.</p>
         </article>
       </section>
 
@@ -233,7 +233,7 @@
         <div class="faq">
           <details>
             <summary>Do I need an account?</summary>
-            <p>No. Nada has no sign-up and no developer-operated account system. You can start a no-spend streak immediately after onboarding.</p>
+            <p>No. Dewday has no sign-up and no developer-operated account system. You can start a no-spend streak immediately after onboarding.</p>
           </details>
           <details>
             <summary>Where is my data stored?</summary>
@@ -245,11 +245,11 @@
           </details>
           <details>
             <summary>Why is the widget not up to date?</summary>
-            <p>Open Nada once and record or edit a check-in. iOS controls widget refresh timing, so updates may not appear instantly. If needed, remove the widget and add it again.</p>
+            <p>Open Dewday once and record or edit a check-in. iOS controls widget refresh timing, so updates may not appear instantly. If needed, remove the widget and add it again.</p>
           </details>
           <details>
             <summary>How do I delete my data?</summary>
-            <p>Because Nada has no developer account, there is no server account to delete. Remove local records from the app where available, or delete the app to remove its local container. If you enabled iCloud sync, you can manage Nada’s stored data from your Apple Account’s iCloud storage settings.</p>
+            <p>Because Dewday has no developer account, there is no server account to delete. Remove local records from the app where available, or delete the app to remove its local container. If you enabled iCloud sync, you can manage Dewday’s stored data from your Apple Account’s iCloud storage settings.</p>
           </details>
         </div>
       </section>
@@ -258,14 +258,14 @@
         <div>
           <p class="eyebrow">Still need help?</p>
           <h2 id="contact-title">Tell us what happened.</h2>
-          <p>Include your iOS version, Nada version, and the steps that led to the issue. Please do not send financial account details or other sensitive information.</p>
+          <p>Include your iOS version, Dewday version, and the steps that led to the issue. Please do not send financial account details or other sensitive information.</p>
         </div>
-        <a class="button primary" href="mailto:wanglingbo0227@126.com?subject=Nada%20Support">wanglingbo0227@126.com</a>
+        <a class="button primary" href="mailto:wanglingbo0227@126.com?subject=Dewday%20Support">wanglingbo0227@126.com</a>
       </section>
     </main>
 
     <footer>
-      <span>© 2026 Nada. All rights reserved.</span>
+      <span>© 2026 Dewday. All rights reserved.</span>
       <span><a href="privacy.html">Privacy Policy</a></span>
     </footer>
   </div>
