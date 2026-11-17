@@ -1,22 +1,205 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dearfolk Privacy Policy / 珍念隐私政策</title>
-<style>:root{--ink:#4b342d;--muted:#78655e;--coral:#f48969;--line:#efdcd1}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:linear-gradient(145deg,#fff7ed,#fffdf9);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{width:min(820px,calc(100% - 32px));margin:48px auto}header,section{background:#fffffff0;border:1px solid var(--line);border-radius:24px;box-shadow:0 14px 45px #613d2e14;padding:32px;margin:16px 0}.mark{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;color:white;background:var(--coral);font-size:25px}h1{margin:18px 0 4px;font-size:clamp(30px,6vw,48px);line-height:1.08}h2{margin:0}h3{margin:22px 0 5px;font-size:17px}p{margin:8px 0}.meta{color:var(--muted)}a{color:#c75d3f}nav a{margin-right:14px}footer{text-align:center;color:var(--muted);padding:28px}</style></head>
-<body><main><header><div class="mark">♥</div><h1>Dearfolk Privacy Policy</h1><p class="meta">珍念隐私政策 · Effective September 18, 2026</p><p>Dearfolk is a local-first people journal. Your records stay in the app’s private storage on your iPhone unless you explicitly use an Apple system feature to share or export something.</p><nav><a href="#english">English</a><a href="#chinese">简体中文</a><a href="support.html">Support</a></nav></header>
-<section id="english"><h2>English</h2>
-<h3>Information you add</h3><p>You may add names, relationship tags, birthdays and other dates, contact details, interests, notes, custom fields, moments, photos, videos, Live Photos, attention history, and a private-profile status. This content is stored locally in the app’s private container on your device.</p>
-<h3>Photos and camera</h3><p>Dearfolk accesses photos, videos, Live Photos, or the camera only after you choose the related action and grant Apple’s permission. Imported media is copied into the app’s local storage.</p>
-<h3>Notifications and calendar</h3><p>Reminder notifications are scheduled on your device. Dearfolk writes an event to Apple Calendar only when you explicitly choose to do so and grant calendar access.</p>
-<h3>Private profiles</h3><p>You can hide selected profiles behind a private-record password. The password verifier is stored in Apple Keychain. This feature controls visibility inside Dearfolk; it is not full device or file encryption. Protect your iPhone with a strong passcode and keep iOS up to date.</p>
-<h3>Collection, tracking, and sharing</h3><p>Dearfolk 1.0 requires no account and sends no personal content to a developer-operated server. We do not collect analytics, show ads, track you, sell personal information, or share your content with third parties. iCloud synchronization is not enabled in version 1.0.</p>
-<h3>Deletion and retention</h3><p>Deleting a profile removes its stored record and associated media from the app. Deleting the app removes its local app data, subject to normal device backup behavior managed by Apple.</p>
-<h3>Children and changes</h3><p>Dearfolk is a general-audience organizational tool and is not directed at children under 13. We may update this policy when the app changes; the effective date above will be revised.</p>
-<h3>Contact</h3><p><a href="mailto:wanglingbo0227@126.com">wanglingbo0227@126.com</a></p></section>
-<section id="chinese" lang="zh-Hans"><h2>简体中文</h2>
-<h3>你添加的信息</h3><p>你可以添加姓名、关系标签、生日和其他日期、联系方式、兴趣、备注、自定义字段、相处动态、照片、视频、实况照片、本机关注记录以及隐私人物状态。这些内容保存在你设备上本应用的私有存储空间中。</p>
-<h3>照片与相机</h3><p>只有当你主动选择相关功能并授予 Apple 系统权限后，珍念才会访问照片、视频、实况照片或相机。导入的媒体会复制到应用的本地存储中。</p>
-<h3>通知与日历</h3><p>提醒通知在你的设备上安排。只有当你主动选择并授予日历权限时，珍念才会向 Apple 日历写入事件。</p>
-<h3>隐私人物</h3><p>你可以用隐私档案密码隐藏指定人物。密码校验信息保存在 Apple 钥匙串中。此功能用于控制人物在珍念内的可见性，不等同于设备或文件的完整加密。请为 iPhone 设置可靠的设备密码并及时更新 iOS。</p>
-<h3>收集、跟踪与共享</h3><p>珍念 1.0 无需账号，不会把个人内容发送到开发者运营的服务器。我们不收集分析数据、不展示广告、不跟踪用户、不出售个人信息，也不会与第三方共享你的内容。1.0 版本暂未启用 iCloud 同步。</p>
-<h3>删除与保留</h3><p>删除人物会从应用中移除其记录和关联媒体。删除应用会移除应用的本地数据，但 Apple 管理的设备备份可能仍按系统规则保留。</p>
-<h3>儿童与政策变更</h3><p>珍念是面向一般用户的整理工具，并非专门面向 13 岁以下儿童。应用发生变化时，我们可能更新本政策，并同步修改生效日期。</p>
-<h3>联系我们</h3><p><a href="mailto:wanglingbo0227@126.com">wanglingbo0227@126.com</a></p></section><footer>© 2026 Lingbo Wang · Dearfolk / 珍念</footer></main></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Privacy Policy for Family & Friends Journal: local records, documents, permissions, exports, purchases, and your choices. Includes English and Simplified Chinese.">
+  <title>Family &amp; Friends Journal — Privacy Policy / 隐私政策</title>
+  <style>
+    :root { color-scheme: light dark; --paper: #faf7f2; --card: #fff; --ink: #342c29; --muted: #746b66; --accent: #a44e37; --line: #e9ddd6; --soft: #f4e5de; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 24px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; overflow-wrap: anywhere; }
+    main { max-width: 900px; margin: auto; padding: 48px 20px 24px; }
+    header { padding-bottom: 32px; }
+    .brand { margin: 0 0 12px; color: var(--accent); font-size: 14px; font-weight: 700; letter-spacing: .06em; }
+    h1 { margin: 0; font-size: clamp(30px, 6vw, 46px); line-height: 1.25; letter-spacing: -.025em; }
+    h2 { margin: 0 0 22px; font-size: 28px; line-height: 1.4; }
+    h3 { margin: 30px 0 8px; font-size: 19px; line-height: 1.5; }
+    p { margin: 10px 0; }
+    .meta, footer { color: var(--muted); font-size: 14px; }
+    .summary { border-left: 3px solid var(--accent); background: var(--soft); padding: 16px 20px; margin: 24px 0; border-radius: 0 12px 12px 0; }
+    .summary p { margin: 0; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 12px; }
+    nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 6px 14px; border: 1px solid var(--line); border-radius: 24px; text-decoration: none; background: var(--card); }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    article { margin: 0 0 28px; padding: 36px; background: var(--card); border: 1px solid var(--line); border-radius: 20px; }
+    ul { padding-left: 23px; }
+    li { margin: 8px 0; }
+    .notice { padding: 16px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    th, td { padding: 12px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: var(--paper); }
+    footer { padding: 12px 4px 28px; }
+    @media (max-width: 600px) { main { padding: 28px 16px 16px; } article { padding: 24px 18px; } h3 { margin-top: 26px; } th, td { padding: 10px; } }
+    @media (prefers-color-scheme: dark) { :root { --paper: #1b1816; --card: #25211e; --ink: #f5ede6; --muted: #c3b7af; --accent: #edac94; --line: #514039; --soft: #3a2922; } }
+    @media print { body { background: #fff; color: #000; } main { max-width: none; padding: 0; } nav { display: none; } article { border: 0; padding: 0; break-before: page; } a { color: inherit; } .summary, .notice, th { background: none; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="brand">FAMILY &amp; FRIENDS JOURNAL</p>
+    <h1>Privacy Policy<br><span lang="zh-Hans">隐私政策</span></h1>
+    <p class="meta">Updated and effective: <time datetime="2026-11-17">November 17, 2026</time><br><span lang="zh-Hans">更新及生效日期：2026 年 11 月 17 日</span></p>
+    <div class="summary">
+      <p>Your journal content stays in the app on your device. Optional system features, local transfers, and exports are explained below.<br><span lang="zh-Hans">人物、回忆和资料保存在设备本机；系统服务、局域网传输与主动导出的处理方式详见下文。</span></p>
+    </div>
+    <nav aria-label="Language and contact / 语言与联系">
+      <a href="#english" lang="en">English</a>
+      <a href="#chinese" lang="zh-Hans">简体中文</a>
+      <a href="mailto:wanglingbo0227@126.com">Contact / 联系我们</a>
+    </nav>
+  </header>
+
+  <article id="english" lang="en" aria-labelledby="english-title">
+    <h2 id="english-title">Privacy Policy</h2>
+    <p>This policy describes how <strong>Family &amp; Friends Journal</strong> (shown as “Family &amp; Friends” on your device, previously Dearfolk / 珍念) handles information. The app is developed by <strong>Lingbo Wang</strong> (“we”). This policy covers the current iOS app and this policy webpage.</p>
+
+    <h3>1. Local storage and developer access</h3>
+    <p>The app does not require an account. Person profiles, memories, imported media, and document images are stored in the app’s private storage on your device. We do not operate a server that receives or stores this journal content. The app does not include advertising or third-party analytics SDKs, and we do not sell personal information or use it for cross-app tracking.</p>
+    <p>The current app does not provide app-managed iCloud synchronization. Device backups, iCloud Photos, and calendar account synchronization are separate services controlled by your Apple and device settings; they may process copies as described below.</p>
+
+    <h3>2. Information processed on your device</h3>
+    <ul>
+      <li><strong>Profiles and memories:</strong> names, nicknames, relationships, closeness, birthdays, important dates, phone numbers, email addresses, interests, notes, custom fields, memory text, and information you choose to enter.</li>
+      <li><strong>Media and documents:</strong> photos, videos, Live Photos, scanned documents, screenshots, document names, image captions, notes, thumbnails, and file references. Document images are organized separately from everyday profile media.</li>
+      <li><strong>Local preferences and history:</strong> profile view counts and last-viewed times used for attention ordering, categories, reminder settings, calendar event identifiers, privacy status, and app preferences.</li>
+      <li><strong>Privacy-password data:</strong> a salted password verifier in Apple Keychain and a local failed-attempt counter. The app does not store your privacy password as plain text.</li>
+    </ul>
+    <p>We use these items to display and edit your journal, play media, organize records, manage private-profile visibility, and provide the features you select. We do not automatically upload document images to an OCR service or a generative AI service.</p>
+    <p>Some files, particularly original videos or Live Photos, may retain metadata such as capture time or location. We do not request device-location access, but do not promise to remove metadata from every imported or exported file. Please review files before sharing them.</p>
+
+    <h3>3. Permissions and optional features</h3>
+    <div class="table-wrap">
+      <table>
+        <caption>Access is used for the feature you choose.</caption>
+        <thead><tr><th scope="col">Permission / feature</th><th scope="col">Purpose</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Photos</th><td>The system picker provides the photos and videos you select. Reading the original components of a Live Photo may also require photo-library access. If an original is in iCloud Photos, Apple’s system services may download it.</td></tr>
+          <tr><th scope="row">Add to Photos</th><td>When you tap “Save to Photos,” the app requests add-only access and copies the current document image to your system photo library.</td></tr>
+          <tr><th scope="row">Camera and scanning</th><td>Used when you choose to take a photo or scan a document. Scanning uses Apple’s on-device document-camera feature to capture and correct document images. The resulting images are kept in the app when saved.</td></tr>
+          <tr><th scope="row">Notifications</th><td>Schedules reminders locally on your device. Depending on your reminder and lock-screen settings, notifications may reveal a person’s name or the date’s title.</td></tr>
+          <tr><th scope="row">Calendar</th><td>Optional calendar integration requests full event access to create, find, update, and remove events managed by the app. Entries may include the person’s name, event title, dates, notes, and alarms, and may sync through your calendar provider.</td></tr>
+          <tr><th scope="row">Local network</th><td>Receives videos from a computer on the same Wi-Fi network while the computer-transfer page is open.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>You may decline optional access or change it in iOS Settings. The related feature may then be unavailable; other features that do not need that access remain available. The current app does not request Contacts, microphone, or location access.</p>
+
+    <h3>4. Computer-to-device video transfer</h3>
+    <p>If you start a transfer, the app opens a temporary local HTTP address containing a random session token. Your browser sends the selected video directly to your device; the video does not pass through a developer-operated server. Local network addresses, transfer progress, and temporary files are processed to complete the transfer.</p>
+    <p>The local connection does not use HTTPS. Use a trusted private network and share the session address only with people you trust. The listener stops when you leave the transfer page or the app enters the background; incomplete transfers are discarded. Received videos remain subject to the editor’s save or cancel action.</p>
+
+    <h3>5. Save to Photos, export, and other system actions</h3>
+    <p><strong>Save to Photos</strong> creates a copy of the current document image in your photo library. <strong>Export</strong> opens Apple’s share sheet for the current image file, allowing you to save to Files, use AirDrop, or select another available app. We do not choose a recipient for you.</p>
+    <p>Exported copies are outside the app’s private storage and are handled by the destination you select. Photos, Files, or calendar data may sync to iCloud or another provider according to your settings. Removing an item from this app does not remove those external copies. Phone and email actions may pass the selected contact detail to the corresponding system app. Copy actions place the selected text or transfer address on the system clipboard.</p>
+
+    <h3>6. Private profiles and security</h3>
+    <p>The optional privacy password controls the visibility of private profiles inside the app. Verification data is stored in Keychain using device-only access while the device is unlocked. This feature is not a separate encrypted vault for all app files and does not protect copies you export or show in notifications.</p>
+    <p class="notice"><strong>Important:</strong> after 10 consecutive incorrect privacy-password attempts, the app attempts to delete all profiles marked private, their associated memories, media and document images, and the privacy-password credential. This is not limited to the currently viewed profile. Successful authentication resets the counter. We cannot recover a forgotten password or restore deleted local content for you.</p>
+    <p>Use a device passcode, keep iOS updated, and consider notification previews and backup settings when storing sensitive information. No storage or transmission method can be guaranteed completely secure.</p>
+
+    <h3>7. Purchases and Apple services</h3>
+    <p>Optional in-app purchases and purchase restoration are processed by Apple through StoreKit. The app reads transaction and entitlement information, such as the purchased product and its validity, to enable paid features. We do not receive your payment-card details. Apple handles purchase records, payments, and refunds under its policies.</p>
+    <p>Apple may provide developers with aggregated App Store reports or diagnostics depending on Apple’s services and your sharing settings. This is separate from an analytics SDK inside the app and does not give us access to your stored journal. See <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
+
+    <h3>8. Retention, deletion, and backups</h3>
+    <p>Saved journal content remains locally until you edit or delete it, remove the app, or a private-profile purge is triggered. You can remove document images, documents, media, memories, or profiles using the available app controls. Deleting a profile removes its associated records, media, and document images from app storage. Unsaved document images are held in a temporary editing session and discarded when that session is released.</p>
+    <p>The app removes its scheduled reminders and attempts to remove its associated calendar entries when deleting profiles, where access is still available. If calendar access has been revoked, or you have made independent copies, you may need to remove those entries yourself.</p>
+    <p>Removing the app deletes its local app container according to iOS behavior. Keychain entries and existing device or computer backups may persist separately. We do not control Apple’s backup retention, and restoration from a backup may restore previously backed-up content. Manage backups, exported files, and synced copies with the relevant service. App deletion does not itself cancel or refund an Apple purchase.</p>
+
+    <h3>9. Your choices and privacy requests</h3>
+    <p>You control the information you enter, optional permissions, reminder settings, exports, and local deletion. Please have appropriate permission or another valid basis before recording information about someone else, especially identity documents or children’s information. Add only what you need.</p>
+    <p>Where applicable law provides privacy rights, you may contact us to exercise them. Because we do not hold your local journal, we cannot remotely view, export, correct, or delete it; we can help explain the on-device controls. If you contact support, we receive your email address, message, and any attachments you choose to send, and use them to respond and resolve the request. Please avoid sending identity documents, passwords, or other sensitive journal content. Support correspondence may be retained as needed to handle the request and applicable obligations; you can ask us to delete it where permitted.</p>
+
+    <h3>10. This webpage and external services</h3>
+    <p>This policy is hosted on GitHub Pages. This HTML page contains no analytics scripts, advertising, third-party fonts, or cookies set by our page code. GitHub states that it logs visitors’ IP addresses for security purposes. Hosting, email, Apple services, and destinations you select process information under their own policies; we do not operate those services.</p>
+    <p>Read the <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages data-collection notice</a> and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Opening this page does not send your journal content to GitHub.</p>
+
+    <h3>11. Children, changes, and contact</h3>
+    <p>The app is a general-purpose personal journal and is not directed to children under 13. Parents or guardians should supervise use by children and the recording or sharing of their information.</p>
+    <p>We may revise this policy as the app or its data practices change. The updated version will be published here with a new date. Material changes will be communicated through the app or another appropriate notice.</p>
+    <p><strong>Developer:</strong> Lingbo Wang<br><strong>Privacy and support:</strong> <a href="mailto:wanglingbo0227@126.com">wanglingbo0227@126.com</a></p>
+    <p><a href="#chinese" lang="zh-Hans">阅读简体中文版 ↓</a></p>
+  </article>
+
+  <article id="chinese" lang="zh-Hans" aria-labelledby="chinese-title">
+    <h2 id="chinese-title">隐私政策</h2>
+    <p>本政策说明 <strong>Family &amp; Friends Journal</strong>（设备上显示为“Family &amp; Friends”，原名 Dearfolk / 珍念）如何处理信息。应用由 <strong>Lingbo Wang</strong>开发，以下称“我们”。本政策适用于当前 iOS 应用及本隐私政策网页。</p>
+
+    <h3>1. 本地存储与开发者访问</h3>
+    <p>应用无需注册账号。人物档案、动态回忆、导入的媒体和资料图片保存在你设备上应用的私有存储空间中。我们没有接收或保存这些日记内容的开发者服务器。应用未集成广告或第三方统计分析 SDK，我们不出售个人信息，也不利用这些信息进行跨应用追踪。</p>
+    <p>当前版本未提供应用自身管理的 iCloud 同步。设备备份、iCloud 照片和日历账号同步属于独立的系统服务，由你的 Apple 及设备设置控制，可能按下文说明处理相关副本。</p>
+
+    <h3>2. 在设备上处理的信息</h3>
+    <ul>
+      <li><strong>人物与回忆：</strong>姓名、昵称、关系、亲密度、生日、重要日子、电话、电子邮箱、爱好、备注、自定义字段、动态文字，以及你主动填写的其他内容。</li>
+      <li><strong>媒体与资料：</strong>照片、视频、实况照片、扫描文档、截图、资料名称、图片说明、备注、缩略图及文件引用。证件与重要资料图片和日常人物媒体分开组织。</li>
+      <li><strong>本地设置与记录：</strong>用于关注排序的人物查看次数与最近查看时间、人物分类、提醒设置、日历事件标识、隐私状态及应用偏好。</li>
+      <li><strong>隐私密码信息：</strong>保存在 Apple 钥匙串中的加盐密码校验信息，以及本地连续输错次数。应用不以明文保存隐私密码。</li>
+    </ul>
+    <p>这些信息用于展示和编辑记录、播放媒体、整理资料、管理隐私人物的可见性，以及提供你主动选择的功能。应用不会自动把资料图片上传到 OCR 文字识别服务或生成式人工智能服务。</p>
+    <p>部分文件，尤其是原始视频或实况照片，可能保留拍摄时间、位置等元数据。应用不申请设备定位权限，但不承诺清除每个导入或导出文件的全部元数据。分享前请自行检查。</p>
+
+    <h3>3. 系统权限与可选功能</h3>
+    <div class="table-wrap">
+      <table>
+        <caption>权限用于你主动选择的相应功能。</caption>
+        <thead><tr><th scope="col">权限或功能</th><th scope="col">用途</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">照片读取</th><td>系统照片选择器提供你选中的照片与视频。读取实况照片的原始图片和视频组件时，可能另行请求相册读取权限。原始内容位于 iCloud 照片时，Apple 系统服务可能下载该内容。</td></tr>
+          <tr><th scope="row">添加到相册</th><td>仅在你点击“保存到相册”时申请仅添加照片的权限，将当前资料图片复制到系统相册。</td></tr>
+          <tr><th scope="row">相机与扫描</th><td>仅在选择拍照或扫描时使用。扫描调用 Apple 的设备端文档相机功能进行拍摄和图像校正；保存后的图片留存在应用中。</td></tr>
+          <tr><th scope="row">通知</th><td>在设备本地安排提醒。根据你的提醒和锁屏设置，通知可能显示人物姓名或重要日子标题。</td></tr>
+          <tr><th scope="row">日历</th><td>可选的日历功能申请完整事件访问权限，用于创建、查找、更新和删除应用管理的事件。写入内容可能包括人物姓名、事件标题、日期、备注和提醒，并可能通过你的日历服务商同步。</td></tr>
+          <tr><th scope="row">本地网络</th><td>在电脑传视频页面打开期间，接收同一 Wi-Fi 网络中电脑发送的视频。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>你可以拒绝可选授权，或在 iOS 系统设置中修改权限。依赖该权限的功能可能无法使用，不依赖该权限的其他功能仍可使用。当前应用不申请通讯录、麦克风或定位权限。</p>
+
+    <h3>4. 电脑向设备传输视频</h3>
+    <p>你开启传输后，应用会建立一个包含随机会话标识的临时局域网 HTTP 地址。电脑浏览器把你选择的视频直接发送到设备，不经过开发者服务器。应用会处理完成传输所需的本地网络地址、进度和临时文件。</p>
+    <p>局域网连接未使用 HTTPS。请使用可信的私人网络，仅向可信的人提供会话地址。离开传输页面或应用进入后台时，监听服务停止，未完成的传输会被丢弃。已接收的视频仍受编辑页“保存”或“取消”操作控制。</p>
+
+    <h3>5. 保存到相册、导出与其他系统操作</h3>
+    <p><strong>“保存到相册”</strong>会在系统相册中创建当前资料图片的副本。<strong>“导出”</strong>会为当前图片文件打开 Apple 系统分享面板，你可以选择存储到“文件”、使用隔空投送，或交给其他可用应用。我们不会代你选择接收方。</p>
+    <p>导出的副本位于应用私有存储空间之外，由你选择的目标处理。相册、“文件”或日历内容可能按你的设置同步到 iCloud 或其他服务。删除本应用中的内容不会删除这些外部副本。拨打电话、发送邮件等操作可能把所选联系方式交给相应系统应用；复制操作会把所选文字或传输地址写入系统剪贴板。</p>
+
+    <h3>6. 隐私人物与安全保护</h3>
+    <p>可选的隐私密码控制隐私人物在应用内的可见性。密码校验信息保存在钥匙串中，设置为仅限本设备且设备解锁时可访问。此功能不等同于对应用全部文件另建加密保险箱，也不能保护你已导出或在通知中显示的内容。</p>
+    <p class="notice"><strong>重要说明：</strong>隐私密码连续输错 10 次后，应用会尝试删除所有标记为隐私的人物、其关联动态、媒体和资料图片，以及隐私密码凭据；并非仅删除当前查看的人物。密码验证成功会重置错误次数。我们无法替你找回遗忘的密码，也无法恢复已删除的本地内容。</p>
+    <p>存放敏感信息时，请设置设备锁屏密码、及时更新 iOS，并留意通知预览和备份设置。任何存储或传输方式都无法保证绝对安全。</p>
+
+    <h3>7. 应用内购买与 Apple 服务</h3>
+    <p>可选的应用内购买及恢复购买由 Apple 通过 StoreKit 处理。应用读取所购产品、购买有效状态等交易与权益信息，以启用付费功能。我们不会取得你的银行卡信息。购买记录、支付和退款由 Apple 按其政策处理。</p>
+    <p>根据 Apple 的服务及你的共享设置，Apple 可能向开发者提供汇总的 App Store 报表或诊断信息。这与应用内集成统计分析 SDK 不同，也不会使我们获得你存储的日记内容。详见 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</p>
+
+    <h3>8. 信息保留、删除与备份</h3>
+    <p>已保存的日记内容保留在本机，直至你编辑或删除、移除应用，或触发隐私人物清除机制。你可以使用应用提供的操作删除资料图片、整份资料、媒体、动态或人物。删除人物会从应用存储中删除其关联记录、媒体和资料图片。尚未提交的资料图片保存在临时编辑会话中，会在该会话释放时清理。</p>
+    <p>删除人物时，应用会移除自身安排的提醒，并在仍有权限时尝试删除关联日历事件。如果你已撤销日历权限，或自行创建了副本，可能需要在日历中手动删除。</p>
+    <p>移除应用后，iOS 会按系统规则删除本地应用容器。钥匙串条目和已有的设备或电脑备份可能独立保留。我们无法控制 Apple 的备份保留期限，从备份恢复设备也可能恢复此前备份的内容。请在对应服务中管理备份、导出文件和同步副本。删除应用本身不会取消 Apple 购买或自动退款。</p>
+
+    <h3>9. 你的选择与隐私请求</h3>
+    <p>你可以决定填写哪些信息、是否授予可选权限、如何设置提醒、是否导出，以及何时删除本地内容。记录他人信息，尤其是证件或儿童信息前，请确保已取得适当许可或具有其他合法依据，只录入必要的信息。</p>
+    <p>如果适用法律赋予你相关隐私权利，你可以联系我们提出请求。由于我们不持有你的本地日记，无法远程查看、导出、更正或删除其内容，但可以说明设备端的操作方式。你主动联系支持时，我们会收到你的电子邮箱、邮件内容及你自行发送的附件，用于回复和处理问题。请勿发送身份证件、密码或其他敏感日记内容。支持往来可能在处理请求及履行适用义务所需范围内保留；你可以要求我们在允许的范围内删除。</p>
+
+    <h3>10. 本网页与外部服务</h3>
+    <p>本政策由 GitHub Pages 托管。本 HTML 页面没有统计脚本、广告、第三方字体，页面代码也不设置 Cookie。GitHub 说明其会出于安全目的记录访问者的 IP 地址。网页托管、电子邮件、Apple 服务及你选择的导出目标按各自政策处理信息，我们不运营这些服务。</p>
+    <p>你可以阅读 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages 数据收集说明</a>及 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>。打开本网页不会向 GitHub 发送你的日记内容。</p>
+
+    <h3>11. 儿童、政策更新与联系</h3>
+    <p>应用是面向一般用户的个人记录工具，并非专门面向 13 岁以下儿童。儿童使用应用，以及记录或分享儿童信息时，应由父母或监护人适当指导和监督。</p>
+    <p>应用功能或信息处理方式变化时，我们可能更新本政策，并在本页标注新的日期。重大变化会通过应用内或其他适当方式告知。</p>
+    <p><strong>开发者：</strong>Lingbo Wang<br><strong>隐私与支持邮箱：</strong><a href="mailto:wanglingbo0227@126.com">wanglingbo0227@126.com</a></p>
+    <p><a href="#english" lang="en">Read in English ↑</a></p>
+  </article>
+  <footer>© 2026 Lingbo Wang · Family &amp; Friends Journal<br><a href="#english">English</a> · <a href="#chinese" lang="zh-Hans">简体中文</a></footer>
+</main>
+</body>
+</html>
