@@ -127,17 +127,17 @@
   },
   {
     "slug": "photo-maker", "group": "studio", "platform": "iPhone",
-    "store": "6798896113", "us_store_name": "IDMint: Passport Photo Maker",
+    "store": "6798896113",
     "privacy": "passport-photo-privacy.html", "support": "passport-photo-support.html",
     "en": {
-      "name": "Photo Maker: Standard Sizes", "tagline": "Photo sizing, background editing & print sheets",
-      "summary": "Crop photos to standard or custom dimensions, change backgrounds and arrange multiple copies on printable sheets.",
-      "features": ["Choose a preset or enter dimensions in millimeters, inches or pixels with your preferred DPI.", "Adjust the crop and background on-device. Export JPEG or PNG, or set a JPEG file-size limit.", "Arrange multiple copies on 4 × 6 inch, A5, A4 or Letter paper with optional cut lines. Check official size rules before submitting a document photo."]
+      "name": "IDMint: Passport Photo Maker",
+      "seo_title": "IDMint Passport & ID Photo Maker for iPhone | U.S., UK, Canada & Europe",
+      "summary": "Make passport, visa and ID photos on iPhone with size guides for the U.S., UK, Canada and Europe. Crop privately and export a JPEG, PNG or 4 × 6 print sheet."
     },
     "zh": {
-      "name": "照片制作：常用照片尺寸", "tagline": "照片裁剪、背景替换与打印排版",
-      "summary": "按常用或自定义尺寸制作照片，更换背景，并将多张照片排在同一页上打印。",
-      "features": ["选择常用尺寸，也可用毫米、英寸或像素自定义尺寸和 DPI。", "在本机调整裁剪和背景，可导出 JPEG 或 PNG，并设置 JPEG 文件大小上限。", "支持 4 × 6 英寸、A5、A4 和 Letter 排版及可选裁切线。提交证件照片前请查阅相关机构的要求。"]
+      "name": "IDMint：护照与证件照制作",
+      "seo_title": "IDMint 护照与证件照制作 App｜美国、英国、加拿大与欧洲尺寸",
+      "summary": "在 iPhone 上制作护照、签证和身份证照片，查看美国、英国、加拿大与欧洲多地尺寸。本机裁剪，可导出 JPEG、PNG 或 4 × 6 英寸打印排版。"
     }
   },
   {

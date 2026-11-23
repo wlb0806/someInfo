@@ -10,6 +10,8 @@ The public portfolio features 11 Apple-platform apps. The English and Simplified
 
 Edit `catalog.json` for app names, descriptions, and links. Edit `build.py` for shared page copy and markup, and `styles.css` for the layout. Icons are shared with the repository README in `assets/app-icons/`.
 
+The IDMint product page uses `idmint.py` for its country size guides and bilingual copy, and `idmint.css` for its layout. The images in `assets/idmint/` are web-sized copies of the English and Simplified Chinese screenshots from the publicly listed IDMint release.
+
 From the repository root, run:
 
 ```bash

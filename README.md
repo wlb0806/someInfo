@@ -17,7 +17,7 @@ Last updated: **November 23, 2026**. This inventory reflects the folders current
 | <img src="./assets/app-icons/daily-quest.png" width="64" alt="Daily Quest Habit and Goals app icon"> | **Daily Quest: Habit & Goals** | iOS / iPhone & iPad | Habit tracker, goal planner, streaks, and Live Activities | [App Store](https://apps.apple.com/app/id6797427767) · [Project](DailyQuest/) |
 | <img src="./assets/app-icons/homecue.png" width="64" alt="HomeCue app icon"> | **HomeCue: Receipts & Care** | iOS / iPhone & iPad | Item care, receipts, returns, warranties, and maintenance history | [App Store](https://apps.apple.com/app/id6810898865) · [Project](HomeCue/) |
 | <img src="./assets/app-icons/family-friends.png" width="64" alt="Family & Friends Journal app icon"> | **Family & Friends Journal** | iOS / iPhone | Private people profiles, memories, birthdays, and personal documents | [App Store](https://apps.apple.com/app/id6835294742) · [Project](importantPeople/) |
-| <img src="./assets/app-icons/photo-maker.png" width="64" alt="Photo Maker app icon"> | **Photo Maker: Standard Sizes** | iOS / iPhone | Standard and custom photo sizes, background editing, and multipage print sheets | [App Store](https://apps.apple.com/app/id6798896113) · [Project](PassportPhotoMaker/) |
+| <img src="./assets/app-icons/photo-maker.png" width="64" alt="IDMint app icon"> | **IDMint: Passport Photo Maker** | iOS / iPhone | Passport, visa and ID photos with U.S., UK, Canadian and European size guides | [Website](https://wlb0806.github.io/someInfo/portfolio-site/apps/photo-maker/) · [App Store](https://apps.apple.com/us/app/idmint-passport-photo-maker/id6798896113) |
 | <img src="./assets/app-icons/dewday.png" width="64" alt="Dewday app icon"> | **Dewday: Daily Savings** | iOS / iPhone | Daily spending check-ins, savings challenges, plant growth, badges, and a widget | [App Store](https://apps.apple.com/app/id6808116696) · [Project](Nada/) |
 
 ### Web Projects
@@ -138,17 +138,13 @@ The renamed app has a separate App Store Connect record, created on November 16,
 
 [App Store](https://apps.apple.com/app/id6835294742) · [Project folder](importantPeople/) · [Project README](importantPeople/README.md)
 
-## Photo Maker: Standard Sizes
+## IDMint: Passport Photo Maker
 
-### Private Photo Sizing, Background Editing & Print Sheets
+IDMint helps iPhone users prepare portrait photos for passport, visa and ID applications. The public version offers searchable references including U.S. passport and visa photos, Canadian passport photos, printed and online UK passport photos, and several European national ID and driving licence formats.
 
-Photo Maker, previously called IDMint, lives in the `PassportPhotoMaker` project folder. Import or capture a photo, choose a common portrait or print size, or save custom dimensions in millimeters, inches, or pixels with your preferred DPI. Adjust crop, position, and zoom, replace the background with a solid color, and preview the result before export.
+Crop and check your photo on-device, save custom dimensions, and export JPEG, PNG or a 4 × 6 inch print sheet. Check the issuing authority’s current instructions for photography and permitted edits before using a photo in an application.
 
-Export JPEG or PNG, set a JPEG file-size limit while keeping output dimensions, or save directly to Photos. Arrange multiple copies on 4 × 6 inch, A5, A4, or Letter paper at 300 DPI, with spacing and cut lines; additional copies continue onto new pages. Exported work remains in the local Creations gallery. Layouts adapt to folded and unfolded iPhone Duo displays.
-
-Creating and editing photos is available before purchase; export requires a monthly subscription or lifetime purchase. Processing and creations stay on-device, with no account, photo upload, advertising, tracking, or watermark. The app provides photo editing tools and does not guarantee official document-photo acceptance.
-
-[Photo Maker on the App Store](https://apps.apple.com/app/id6798896113) · [Project folder](PassportPhotoMaker/) · [Project README](PassportPhotoMaker/README.md) · [Current product description](PassportPhotoMaker/fastlane/metadata/en-US/description.txt)
+[IDMint product website](https://wlb0806.github.io/someInfo/portfolio-site/apps/photo-maker/) · [中文官网](https://wlb0806.github.io/someInfo/portfolio-site/zh/apps/photo-maker/) · [App Store](https://apps.apple.com/us/app/idmint-passport-photo-maker/id6798896113)
 
 ## Dewday: Daily Savings
 
@@ -174,9 +170,9 @@ The portfolio showcases all 11 apps in English and Simplified Chinese. Each app 
 
 Most utility apps keep their working data on the device and do not require a developer-operated account. Sync behavior varies by project:
 
-- **On-device working data:** Stayframe, Foliover, Eos, Daily Quest, HomeCue, Family & Friends Journal, and Photo Maker. Stayframe, HomeCue, and Family & Friends Journal do not currently provide iCloud sync. Foliover analyzes photos and calendars locally and requests access only for the selected service. Family & Friends Journal's optional computer video transfer runs over the local network.
+- **On-device working data:** Stayframe, Foliover, Eos, Daily Quest, HomeCue, Family & Friends Journal, and IDMint. Stayframe, HomeCue, and Family & Friends Journal do not currently provide iCloud sync. Foliover analyzes photos and calendars locally and requests access only for the selected service. Family & Friends Journal's optional computer video transfer runs over the local network.
 - **Local data with iCloud support:** Trio, Knots, Scentory, and Dewday. Sync settings and implementation vary by app; Scentory's private iCloud sync defaults to off.
-- **Local image processing:** Foliover and Photo Maker perform photo editing and output generation on-device.
+- **Local image processing:** Foliover and IDMint perform photo editing and output generation on-device.
 
 See each app's privacy policy and App Store listing for its complete disclosures.
 
@@ -189,4 +185,4 @@ See each app's privacy policy and App Store listing for its complete disclosures
 
 ---
 
-Search topics: iOS apps, macOS apps, indie apps, privacy-first apps, Stayframe, rental inspection, move-in records, move-out comparison, rental reports, receipt tracker, warranty tracker, return reminder, Foliover, calendar spam remover, daily logic puzzle, connect puzzle, Mac cleaner, disk cleanup, app uninstaller, perfume samples, scent trials, fragrance impressions, habit tracker, goal planner, Live Activities, HomeCue, home maintenance, vehicle maintenance, Family & Friends Journal, people journal, personal documents, birthday reminders, local video transfer, Photo Maker, custom photo sizes, photo print sheets, photo cleanup, timestamp camera, daily savings, no-spend check-ins, savings challenges, local image compression, app portfolio.
+Search topics: iOS apps, macOS apps, indie apps, privacy-first apps, Stayframe, rental inspection, move-in records, move-out comparison, rental reports, receipt tracker, warranty tracker, return reminder, Foliover, calendar spam remover, daily logic puzzle, connect puzzle, Mac cleaner, disk cleanup, app uninstaller, perfume samples, scent trials, fragrance impressions, habit tracker, goal planner, Live Activities, HomeCue, home maintenance, vehicle maintenance, Family & Friends Journal, people journal, personal documents, birthday reminders, local video transfer, IDMint, passport photo maker, visa photos, ID photos, custom photo sizes, photo print sheets, photo cleanup, timestamp camera, daily savings, no-spend check-ins, savings challenges, local image compression, app portfolio.

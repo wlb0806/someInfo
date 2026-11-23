@@ -1,0 +1,282 @@
+.mint {
+  --mint-ink: #123a34;
+  --mint-soft: #e0efdf;
+  --mint-edge: #c6d9cc;
+}
+
+.site-header .brand img, .mint-brand img {
+  border-radius: 24%;
+}
+
+.mint-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(30px, 6vw, 84px);
+  padding-block: clamp(44px, 6.25vw, 86px);
+}
+
+.mint-brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+  color: var(--mint-ink);
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.mint-brand small {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.mint-hero h1 {
+  color: var(--mint-ink);
+  font-size: clamp(43px, 5.4vw, 80px);
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+html[lang="zh-CN"] .mint-hero h1 {
+  font-size: clamp(39px, 5vw, 68px);
+  line-height: 1.15;
+}
+
+.mint-lead, .mint-section-intro {
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: clamp(16px, 1.5vw, 19px);
+}
+
+.mint-lead {
+  max-width: 43ch;
+  margin: 20px 0 25px;
+}
+
+.mint-actions, .mint-closing-actions, .mint-resources {
+  display: flex;
+  gap: 12px 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mint-jump, .mint-resources a {
+  color: var(--green);
+  font-weight: 650;
+  font-size: 14px;
+  text-underline-offset: .23em;
+}
+
+.mint-note {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.mint-showcase {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 49%;
+  align-items: center;
+  gap: clamp(8px, 2.2vw, 25px);
+  min-height: 390px;
+  padding: clamp(18px, 3vw, 38px);
+  background:
+    linear-gradient(0deg, #ffffff10 1px, transparent 1px) 0 0 / 26px 26px,
+    linear-gradient(90deg, #ffffff10 1px, transparent 1px) 0 0 / 26px 26px,
+    linear-gradient(135deg, #15574d, #103b35);
+  border-radius: 26px;
+}
+
+.mint-highlights {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mint-highlights li {
+  padding: clamp(9px, 1.5vw, 15px);
+  border: 1px solid #ffffff50;
+  border-radius: 11px;
+  background: #15473e;
+  color: #f3fbef;
+}
+
+.mint-highlights span {
+  display: block;
+  font-size: clamp(11px, 1.1vw, 13px);
+}
+
+.mint-highlights strong {
+  display: block;
+  margin-top: 2px;
+  font-size: clamp(16px, 2vw, 27px);
+  letter-spacing: -.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.mint-phone {
+  width: 100%;
+  max-width: 214px;
+  justify-self: center;
+  background: #132a25;
+  border: 1px solid #ffffff54;
+  border-radius: 21px;
+  padding: 5px;
+  box-shadow: 0 12px 22px #071e1966;
+}
+
+.mint-phone img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.mint-section {
+  border-top: 1px solid var(--line);
+  padding-block: clamp(36px, 5.2vw, 65px);
+}
+
+.mint-section h2, .mint-closing h2 {
+  color: var(--mint-ink);
+}
+
+.mint-section-intro {
+  margin-top: 13px;
+  max-width: 70ch;
+}
+
+.mint-table-wrap {
+  margin-top: 21px;
+  border: 1px solid var(--mint-edge);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.mint table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  font-size: 14px;
+}
+
+.mint th, .mint td {
+  border-bottom: 1px solid var(--mint-edge);
+  padding: 12px 15px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.mint thead { background: var(--mint-soft); color: var(--mint-ink); }
+.mint tbody tr:nth-child(even) { background: #f2f8f0; }
+.mint tbody tr:last-child > * { border-bottom: none; }
+.mint td a { color: var(--green); text-underline-offset: .2em; }
+.mint-size { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.mint-caution {
+  background: #ecefe4;
+  border-left: 3px solid #749480;
+  border-radius: 0 10px 10px 0;
+  margin-top: 16px;
+  padding: 13px 16px;
+  color: #394b40;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mint-workflow {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: clamp(25px, 5.5vw, 72px);
+}
+
+.mint-workflow ol {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 24px 0 0;
+}
+
+.mint-workflow li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  column-gap: 12px;
+  padding: 14px 0;
+}
+
+.mint-workflow li::before {
+  content: counter(step);
+  background: var(--mint-soft);
+  color: var(--mint-ink);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  grid-row: span 2;
+}
+.mint-workflow li h3 { font-size: 17px; margin-bottom: 5px; }
+.mint-workflow li p {
+  color: var(--muted);
+  line-height: 1.6;
+  grid-column: 2;
+}
+.mint-workflow-image {
+  display: grid;
+  place-items: center;
+  background: #e1ede7;
+  border-radius: 23px;
+  padding: clamp(16px, 3vw, 36px);
+}
+.mint-workflow-image img {
+  width: min(100%, 188px);
+  height: auto;
+  border: 3px solid #143331;
+  border-radius: 18px;
+}
+
+.mint-faq {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 22px;
+}
+.mint-faq details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+.mint-faq details:first-child { padding-top: 5px; }
+.mint-faq summary { cursor: pointer; font-weight: 680; line-height: 1.4; }
+.mint-faq details p { color: var(--muted); line-height: 1.65; margin-top: 10px; }
+.mint-closing {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px 30px;
+  align-items: center;
+  padding: clamp(21px, 4vw, 42px);
+  margin: 0 0 42px;
+  background: var(--mint-soft);
+  border-radius: 20px;
+}
+.mint-closing h2 { font-size: clamp(28px, 3.4vw, 43px); }
+.mint-closing p { color: var(--muted); margin-top: 10px; line-height: 1.5; font-size: 14px; }
+.mint-closing-actions { align-items: start; flex-direction: column; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .mint-showcase { min-height: auto; }
+}
+
+@media (max-width: 680px) {
+  .mint-hero, .mint-workflow, .mint-faq { grid-template-columns: 1fr; }
+  .mint-hero { padding-block: 32px; }
+  .mint-hero h1, html[lang="zh-CN"] .mint-hero h1 { max-width: 16ch; }
+  .mint-showcase { min-height: 260px; }
+  .mint th, .mint td { padding: 9px 6px; font-size: 12px; }
+  .mint table { overflow-wrap: anywhere; }
+  .mint-size { white-space: normal; }
+  .mint-closing { align-items: start; flex-direction: column; }
+}

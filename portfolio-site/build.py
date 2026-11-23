@@ -3,6 +3,9 @@ import json
 from html import escape as h
 from pathlib import Path
 from posixpath import relpath
+from urllib.parse import urljoin
+
+from idmint import APP_STORE as IDMINT_STORE, product_page as idmint_page
 
 ROOT = Path(__file__).resolve().parent
 BASE = "https://wlb0806.github.io/someInfo/portfolio-site/"
@@ -72,7 +75,7 @@ def icon(page, app, size, *, lazy=False, alt=""):
     return f'<img src="{src}" alt="{h(alt)}" width="{size}" height="{size}" decoding="async"{loading}>'
 
 
-def shell(lang, content, structured_data, app=None):
+def shell(lang, content, structured_data, app=None, *, product=False):
     t = COPY[lang]
     slug = app["slug"] if app else ""
     page = route(lang, slug)
@@ -84,12 +87,21 @@ def shell(lang, content, structured_data, app=None):
     title = t["title"]
     description = t["description"]
     image = ""
+    brand = '<span class="wordmark" aria-hidden="true">LW</span> Lingbo Wang'
+    brand_url = home
+    favicon = "trio"
+    styles = ""
     if app:
         copy = app[lang]
-        title = f'{copy["name"]} | {copy["tagline"]}'
+        title = copy["seo_title"] if product else f'{copy["name"]} | {copy["tagline"]}'
         description = copy["summary"]
-        image_url = BASE.removesuffix("portfolio-site/") + icon_path(slug).removeprefix("../")
+        image_url = urljoin(BASE, icon_path(slug))
         image = f'\n  <meta property="og:image" content="{h(image_url)}">'
+    if product:
+        brand = f"{icon(page, app, 36)} IDMint"
+        brand_url = "./"
+        favicon = slug
+        styles = f'\n  <link rel="stylesheet" href="{relative(page, "idmint.css")}">'
     data = json.dumps(structured_data, ensure_ascii=False, indent=2).replace("<", "\\u003c")
     return f"""<!doctype html>
 <html lang="{t['lang']}">
@@ -109,8 +121,8 @@ def shell(lang, content, structured_data, app=None):
   <meta property="og:title" content="{h(title)}">
   <meta property="og:description" content="{h(description)}">
   <meta property="og:url" content="{canonical}">{image}
-  <link rel="icon" href="{relative(page, icon_path('trio'))}">
-  <link rel="stylesheet" href="{relative(page, 'styles.css')}">
+  <link rel="icon" href="{relative(page, icon_path(favicon))}">
+  <link rel="stylesheet" href="{relative(page, 'styles.css')}">{styles}
   <script type="application/ld+json">
 {data}
   </script>
@@ -118,7 +130,7 @@ def shell(lang, content, structured_data, app=None):
 <body>
   <a class="skip-link" href="#main">{t['skip']}</a>
   <header class="site-header frame">
-    <a class="brand" href="{home}"><span class="wordmark" aria-hidden="true">LW</span> Lingbo Wang</a>
+    <a class="brand" href="{brand_url}">{brand}</a>
     <nav aria-label="{'主导航' if lang == 'zh' else 'Main navigation'}">
       <a class="nav-link" href="{home}#apps">{t['browse']}</a>
       <div class="languages">
@@ -292,6 +304,33 @@ def detail(lang, app):
     return shell(lang, content, structured_data, app)
 
 
+def idmint_detail(lang, app):
+    page = route(lang, app["slug"])
+    copy = app[lang]
+    content = idmint_page(
+        lang,
+        icon=icon(page, app, 54),
+        assets=relative(page, "assets/idmint"),
+        support=relative(page, "../" + app["support"]),
+        privacy=relative(page, "../" + app["privacy"]),
+    )
+    structured_data = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": copy["name"],
+        "alternateName": "IDMint",
+        "description": copy["summary"],
+        "url": BASE + page,
+        "image": urljoin(BASE, icon_path(app["slug"])),
+        "inLanguage": COPY[lang]["lang"],
+        "operatingSystem": "iOS",
+        "applicationCategory": "MultimediaApplication",
+        "author": {"@type": "Person", "name": "Lingbo Wang"},
+        "installUrl": IDMINT_STORE,
+    }
+    return shell(lang, content, structured_data, app, product=True)
+
+
 def write(path, content):
     target = ROOT / path
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -306,7 +345,8 @@ def build():
         urls.append(BASE + home)
         for app in APPS:
             page = route(lang, app["slug"])
-            write(page + "index.html", detail(lang, app))
+            render = idmint_detail if app["slug"] == "photo-maker" else detail
+            write(page + "index.html", render(lang, app))
             urls.append(BASE + page)
     entries = "\n".join(f"  <url><loc>{h(url)}</loc></url>" for url in urls)
     write("sitemap.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
