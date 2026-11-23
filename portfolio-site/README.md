@@ -10,7 +10,7 @@ The public portfolio features 11 Apple-platform apps. The English and Simplified
 
 Edit `catalog.json` for app names, descriptions, and links. Edit `build.py` for shared page copy and markup, and `styles.css` for the layout. Icons are shared with the repository README in `assets/app-icons/`.
 
-The IDMint product page uses `idmint.py` for its country size guides and bilingual copy, and `idmint.css` for its layout. The images in `assets/idmint/` are web-sized copies of the English and Simplified Chinese screenshots from the publicly listed IDMint release.
+The IDMint product page uses `idmint.py` for its country size guides and bilingual copy, and `idmint.css` for its layout. The images in `assets/idmint/` are web-sized copies of the English and Simplified Chinese screenshots from the publicly listed IDMint release. Stayframe and Eos use `release_products.py` for bilingual copy and `release-products.css` for layout. Their web images come from the projects’ localized release and App Store screenshots.
 
 From the repository root, run:
 

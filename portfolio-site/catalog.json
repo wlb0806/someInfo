@@ -3,14 +3,14 @@
     "slug": "stayframe", "group": "everyday", "platform": "iPhone",
     "store": "6791833165", "privacy": "Receiptpolicy.html",
     "en": {
-      "name": "Stayframe", "tagline": "Rental inspections & move-out reports",
-      "summary": "Document your rental at move-in, compare room conditions at move-out, and share a report with your landlord.",
-      "features": ["Record photos, videos and notes for each room. Track cleanliness and physical condition separately.", "Compare the same rooms at move-out and keep repairs, communications and handover records in an archive.", "Preview and export reports as PDF or images. Property records stay on your device."]
+      "name": "Stayframe",
+      "seo_title": "Stayframe | Rental Inspection, Move-In Reports & Move-Out Comparison",
+      "summary": "Record rental inspections on iPhone, compare move-in and move-out conditions, and share a room-by-room PDF or image report with your landlord."
     },
     "zh": {
-      "name": "Stayframe", "tagline": "租房验房与退租报告",
-      "summary": "用照片、视频和笔记记录入住状况，退租时逐间对照，并导出报告与房东沟通。",
-      "features": ["按房间记录照片、视频和备注，分别记录清洁度和物品状况。", "退租时对照同一房间的入住记录，归档维修、沟通和交接信息。", "预览并导出 PDF 或图片报告，房屋记录保存在本机。"]
+      "name": "Stayframe",
+      "seo_title": "Stayframe 租房验房 App｜入住报告、退租房况对比",
+      "summary": "用 iPhone 逐间记录租房入住和退租房况，对照照片与备注，导出 PDF 或图片验房报告与房东沟通。"
     }
   },
   {
@@ -57,16 +57,16 @@
   },
   {
     "slug": "eos", "group": "studio", "platform": "Mac",
-    "store": "6794152421", "listed_in_cn": true, "privacy": "eosPrivacy.html", "support": "eosSupport.html", "website": "eos.html",
+    "store": "6794152421", "listed_in_cn": true, "privacy": "eosPrivacy.html", "support": "eosSupport.html",
     "en": {
-      "name": "Eos: Disk Cleanup", "tagline": "Mac disk analyzer & app uninstaller",
-      "summary": "Find large files, exact duplicates, app leftovers and developer caches. Review what each cleanup will remove.",
-      "features": ["See what takes up Mac storage, including large media files, exact duplicates and old application data.", "Find developer clutter from Xcode and package managers such as Homebrew, npm and CocoaPods.", "Review each result before cleanup. Scans run locally, and items go to the Trash by default."]
+      "name": "Eos: Disk Cleanup",
+      "seo_title": "Eos | Free Mac Disk Cleanup, Xcode Caches & Duplicate File Finder",
+      "summary": "Find what takes up space on your Mac. Review Xcode caches, exact duplicates, large files and app leftovers before cleanup. Free and on-device."
     },
     "zh": {
-      "name": "Eos：磁盘清理", "tagline": "Mac 磁盘分析与应用卸载",
-      "summary": "找出占空间的大文件、完全重复的文件、应用残留和开发缓存，确认后再清理。",
-      "features": ["查看 Mac 空间占用，包括大型影音文件、完全相同的副本和旧应用数据。", "查找 Xcode、Homebrew、npm 和 CocoaPods 等开发工具留下的缓存。", "清理前可逐项复核。扫描在本机完成，默认将清理项目移入废纸篓。"]
+      "name": "Eos：磁盘清理",
+      "seo_title": "Eos 免费 Mac 磁盘清理｜Xcode 缓存、重复文件与应用卸载",
+      "summary": "免费查看 Mac 磁盘占用，查找 Xcode 缓存、大文件、完全重复的文件与应用残留。在本机扫描，复核后再清理。"
     }
   },
   {

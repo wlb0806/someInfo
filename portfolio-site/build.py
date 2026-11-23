@@ -6,6 +6,7 @@ from posixpath import relpath
 from urllib.parse import urljoin
 
 from idmint import APP_STORE as IDMINT_STORE, product_page as idmint_page
+from release_products import PRODUCTS as RELEASE_PRODUCTS, product_page as release_page
 
 ROOT = Path(__file__).resolve().parent
 BASE = "https://wlb0806.github.io/someInfo/portfolio-site/"
@@ -75,7 +76,7 @@ def icon(page, app, size, *, lazy=False, alt=""):
     return f'<img src="{src}" alt="{h(alt)}" width="{size}" height="{size}" decoding="async"{loading}>'
 
 
-def shell(lang, content, structured_data, app=None, *, product=False):
+def shell(lang, content, structured_data, app=None, *, product_brand=None, product_css=None):
     t = COPY[lang]
     slug = app["slug"] if app else ""
     page = route(lang, slug)
@@ -93,15 +94,15 @@ def shell(lang, content, structured_data, app=None, *, product=False):
     styles = ""
     if app:
         copy = app[lang]
-        title = copy["seo_title"] if product else f'{copy["name"]} | {copy["tagline"]}'
+        title = copy["seo_title"] if product_brand else f'{copy["name"]} | {copy["tagline"]}'
         description = copy["summary"]
         image_url = urljoin(BASE, icon_path(slug))
         image = f'\n  <meta property="og:image" content="{h(image_url)}">'
-    if product:
-        brand = f"{icon(page, app, 36)} IDMint"
+    if product_brand:
+        brand = f"{icon(page, app, 36)} {h(product_brand)}"
         brand_url = "./"
         favicon = slug
-        styles = f'\n  <link rel="stylesheet" href="{relative(page, "idmint.css")}">'
+        styles = f'\n  <link rel="stylesheet" href="{relative(page, product_css)}">'
     data = json.dumps(structured_data, ensure_ascii=False, indent=2).replace("<", "\\u003c")
     return f"""<!doctype html>
 <html lang="{t['lang']}">
@@ -328,7 +329,35 @@ def idmint_detail(lang, app):
         "author": {"@type": "Person", "name": "Lingbo Wang"},
         "installUrl": IDMINT_STORE,
     }
-    return shell(lang, content, structured_data, app, product=True)
+    return shell(lang, content, structured_data, app, product_brand="IDMint", product_css="idmint.css")
+
+
+def release_detail(lang, app):
+    slug = app["slug"]
+    product = RELEASE_PRODUCTS[slug]
+    page = route(lang, slug)
+    copy = app[lang]
+    resources = {key: relative(page, "../" + app[key]) for key in ("support", "privacy") if key in app}
+    content = release_page(
+        slug, lang,
+        icon=icon(page, app, 46),
+        assets=relative(page, f"assets/{slug}"),
+        resources=resources,
+    )
+    structured_data = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": copy["name"],
+        "description": copy["summary"],
+        "url": BASE + page,
+        "image": urljoin(BASE, icon_path(slug)),
+        "inLanguage": COPY[lang]["lang"],
+        "operatingSystem": "macOS" if slug == "eos" else "iOS",
+        "applicationCategory": "UtilitiesApplication" if slug == "eos" else "LifestyleApplication",
+        "author": {"@type": "Person", "name": "Lingbo Wang"},
+        "installUrl": product[lang]["store_url"],
+    }
+    return shell(lang, content, structured_data, app, product_brand=product["brand"], product_css="release-products.css")
 
 
 def write(path, content):
@@ -338,6 +367,7 @@ def write(path, content):
 
 
 def build():
+    product_pages = {"photo-maker": idmint_detail, "stayframe": release_detail, "eos": release_detail}
     urls = []
     for lang in LANGUAGES:
         home = route(lang)
@@ -345,7 +375,7 @@ def build():
         urls.append(BASE + home)
         for app in APPS:
             page = route(lang, app["slug"])
-            render = idmint_detail if app["slug"] == "photo-maker" else detail
+            render = product_pages.get(app["slug"], detail)
             write(page + "index.html", render(lang, app))
             urls.append(BASE + page)
     entries = "\n".join(f"  <url><loc>{h(url)}</loc></url>" for url in urls)

@@ -8,11 +8,11 @@ Last updated: **November 23, 2026**. This inventory reflects the folders current
 
 | Icon | App | Platform | What it does | Links |
 | :---: | --- | :---: | --- | :---: |
-| <img src="./assets/app-icons/stayframe.png" width="64" alt="Stayframe app icon"> | **Stayframe** | iOS / iPhone | Rental-home condition records, move-in/out comparisons, and reports | [App Store record](https://apps.apple.com/app/id6791833165) · [Project](receiptguard/) |
+| <img src="./assets/app-icons/stayframe.png" width="64" alt="Stayframe app icon"> | **Stayframe** | iOS / iPhone | Rental-home condition records, move-in/out comparisons, and reports | [Website](https://wlb0806.github.io/someInfo/portfolio-site/apps/stayframe/) · [App Store](https://apps.apple.com/us/app/stayframe/id6791833165) |
 | <img src="./assets/app-icons/foliover.png" width="64" alt="Foliover app icon"> | **Foliover: Photos & Space** | iOS / iPhone & iPad | Photo cleanup, timestamp camera, photo & print, image compression, and calendar cleanup | [App Store](https://apps.apple.com/app/id6787564566) · [Project](calendar/CalendarKiller/) |
 | <img src="./assets/app-icons/trio.png" width="64" alt="Trio Daily Logic Puzzles app icon"> | **Trio: Daily Logic Puzzles** | iOS / iPhone | Three fresh logic puzzles every day, each verified to have one solution | [App Store](https://apps.apple.com/app/id6791609588) · [Project](game/trio/) |
 | <img src="./assets/app-icons/knots.png" width="64" alt="Knots Connect Puzzle app icon"> | **Knots: Connect Puzzle** | iOS / iPhone & iPad | A cozy connect-the-dots puzzle with full-grid Perfect goals | [App Store](https://apps.apple.com/app/id6790466420) · [Project](game/killAI/) |
-| <img src="./assets/app-icons/eos.png" width="64" alt="Eos Mac disk cleaner app icon"> | **Eos: Disk Cleanup** | macOS / Mac | Private disk-space analyzer, junk cleaner, and app uninstaller | [Mac App Store](https://apps.apple.com/app/id6794152421) · [Project](Spruce/) |
+| <img src="./assets/app-icons/eos.png" width="64" alt="Eos Mac disk cleaner app icon"> | **Eos: Disk Cleanup** | macOS / Mac | Private disk-space analyzer, junk cleaner, and app uninstaller | [Website](https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/) · [Mac App Store](https://apps.apple.com/app/id6794152421) |
 | <img src="./assets/app-icons/scentory.png" width="64" alt="Scentory Perfume Samples app icon"> | **Scentory: Perfume Samples** | iOS / iPhone | Sample boxes, scent trials, impressions, decisions, and private iCloud sync | [App Store](https://apps.apple.com/app/id6793348562) · [Project](Scentory/) |
 | <img src="./assets/app-icons/daily-quest.png" width="64" alt="Daily Quest Habit and Goals app icon"> | **Daily Quest: Habit & Goals** | iOS / iPhone & iPad | Habit tracker, goal planner, streaks, and Live Activities | [App Store](https://apps.apple.com/app/id6797427767) · [Project](DailyQuest/) |
 | <img src="./assets/app-icons/homecue.png" width="64" alt="HomeCue app icon"> | **HomeCue: Receipts & Care** | iOS / iPhone & iPad | Item care, receipts, returns, warranties, and maintenance history | [App Store](https://apps.apple.com/app/id6810898865) · [Project](HomeCue/) |
@@ -36,7 +36,7 @@ Choose a property type and the spaces you rent, then capture photos, videos, and
 
 Preview saved reports and export PDFs or images; video attachments are shared separately. Report sending requires explicit confirmation from the user, and local reminders can help follow up on sending the move-in report. Records stay on-device, with no account or current iCloud sync. English and Simplified Chinese are supported. The app organizes records for communication and does not determine responsibility or guarantee a deposit outcome.
 
-[Existing App Store record](https://apps.apple.com/app/id6791833165) · [Project folder](receiptguard/) · [Project README](receiptguard/README.md)
+[Stayframe product website](https://wlb0806.github.io/someInfo/portfolio-site/apps/stayframe/) · [中文官网](https://wlb0806.github.io/someInfo/portfolio-site/zh/apps/stayframe/) · [App Store](https://apps.apple.com/us/app/stayframe/id6791833165)
 
 ## Foliover: Photos & Space
 
@@ -90,7 +90,7 @@ Eos, formerly Spruce, shows exactly what is using your Mac storage and lets you 
 
 Eos works entirely on your Mac with no account, ads, subscription, analytics, or network access. Nothing is deleted without review, protected paths and running apps are skipped, and cleanup uses the Trash by default. Individual results and safe categories can be cleaned directly after confirmation.
 
-[Eos: Disk Cleanup on the Mac App Store](https://apps.apple.com/app/id6794152421) · [Project folder](Spruce/)
+[Eos product website](https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/) · [中文官网](https://wlb0806.github.io/someInfo/portfolio-site/zh/apps/eos/) · [Mac App Store](https://apps.apple.com/app/id6794152421)
 
 ## Scentory: Perfume Samples
 
