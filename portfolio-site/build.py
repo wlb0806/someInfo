@@ -28,11 +28,6 @@ COPY = {
         "directory": "The app collection", "skip": "Skip to content",
         "about": "About", "about_title": "Made by Lingbo Wang",
         "about_body": "Most of my apps keep your records and processing on your device. Some offer optional private iCloud sync. Each app’s page explains what it does and links to its store listing and privacy policy where available.",
-        "home": "All apps", "features": "What you can do", "more": "More in this collection",
-        "store": "View on the App Store", "mac_store": "View on the Mac App Store",
-        "privacy": "Privacy policy", "support": "Support", "website": "Product website",
-        "availability": "The public App Store link is pending.",
-        "store_name": "Listed as {name} on the U.S. App Store.",
     },
     "zh": {
         "lang": "zh-CN", "site": "Lingbo Wang · 独立应用",
@@ -44,16 +39,12 @@ COPY = {
         "directory": "应用作品集", "skip": "跳到正文",
         "about": "关于", "about_title": "关于开发者",
         "about_body": "我是 Lingbo Wang。多数应用在你的设备上保存记录和处理数据，部分提供可选的私人 iCloud 同步。每款应用的页面都有功能介绍，并提供已有的商店和隐私政策链接。",
-        "home": "全部应用", "features": "主要功能", "more": "同类应用",
-        "store": "前往 App Store", "mac_store": "前往 Mac App Store",
-        "privacy": "隐私政策", "support": "使用支持", "website": "产品网站",
-        "availability": "公开 App Store 链接待补充。",
-        "store_name": "美区 App Store 上的名称为 {name}。",
-        "outside_cn": "已在美区上架，中国大陆 App Store 暂未提供。",
     },
 }
 LANGUAGES = tuple(COPY)
 FEATURED = ("stayframe", "eos", "trio", "dewday")
+# Both language versions were published or substantially revised on this date.
+UPDATED = dict.fromkeys(("", *BY_SLUG), "2026-11-23")
 
 
 def route(lang, slug=""):
@@ -94,7 +85,7 @@ def shell(lang, content, structured_data, app=None, *, product_brand=None, produ
     styles = ""
     if app:
         copy = app[lang]
-        title = copy["seo_title"] if product_brand else f'{copy["name"]} | {copy["tagline"]}'
+        title = copy["seo_title"]
         description = copy["summary"]
         image_url = urljoin(BASE, icon_path(slug))
         image = f'\n  <meta property="og:image" content="{h(image_url)}">'
@@ -150,7 +141,7 @@ def shell(lang, content, structured_data, app=None, *, product_brand=None, produ
 """
 
 
-def directory_card(lang, page, app, heading="h4"):
+def directory_card(lang, page, app):
     copy = app[lang]
     name = h(copy["name"])
     link = relative(page, route(lang, app["slug"]))
@@ -158,7 +149,7 @@ def directory_card(lang, page, app, heading="h4"):
           {icon(page, app, 64, lazy=True)}
           <div class="card-copy">
             <p class="platform">{app['platform']}</p>
-            <{heading}><a href="{link}">{name}</a></{heading}>
+            <h4><a href="{link}">{name}</a></h4>
             <p class="app-summary">{h(copy['summary'])}</p>
           </div>
           <span class="card-arrow" aria-hidden="true">↗</span>
@@ -231,80 +222,6 @@ def landing(lang):
     return shell(lang, content, structured_data)
 
 
-def detail(lang, app):
-    t, copy = COPY[lang], app[lang]
-    page = route(lang, app["slug"])
-    home = relative(page, route(lang))
-    group = app["group"]
-    name = h(copy["name"])
-    store_id = app.get("store")
-    storefront = (
-        "cn/" if app.get("listed_in_cn") else "us/"
-    ) if lang == "zh" else ""
-    store = f"https://apps.apple.com/{storefront}app/id{store_id}" if store_id else ""
-    store_label = t["mac_store"] if app["platform"] == "Mac" else t["store"]
-    action = (
-        f'<a class="button" href="{store}">{store_label} <span aria-hidden="true">↗</span></a>'
-        if store else f'<p class="availability">{t["availability"]}</p>'
-    )
-    store_notes = []
-    if "us_store_name" in app:
-        store_notes.append(t["store_name"].format(name=app["us_store_name"]))
-    if store and lang == "zh" and not app.get("listed_in_cn"):
-        store_notes.append(t["outside_cn"])
-    availability = f'\n        <p class="store-notes">{h(" ".join(store_notes))}</p>' if store_notes else ""
-    links = "".join(
-        f'<a href="{h(relative(page, "../" + app[key]))}">{t[key]} <span aria-hidden="true">↗</span></a>'
-        for key in ("website", "support", "privacy") if key in app
-    )
-    resources = f'\n      <div class="resource-links">{links}</div>' if links else ""
-    features = "\n".join(f"        <li>{h(feature)}</li>" for feature in copy["features"])
-    related = [item for item in APPS if item["group"] == group and item != app][:3]
-    related_cards = "\n".join(directory_card(lang, page, item, "h3") for item in related)
-    content = f"""  <main class="frame detail" id="main">
-    <nav class="breadcrumbs" aria-label="{'当前位置' if lang == 'zh' else 'Breadcrumb'}">
-      <a href="{home}#apps">{t['home']}</a><span aria-hidden="true">/</span>
-      <a href="{home}#{group}">{GROUPS[group][lang]}</a>
-    </nav>
-    <section class="detail-hero" aria-labelledby="app-title">
-      <div class="detail-art group-{group}">{icon(page, app, 190)}</div>
-      <div class="detail-copy">
-        <p class="eyebrow">{app['platform']}</p>
-        <h1 id="app-title">{name}</h1>
-        <p class="tagline">{h(copy['tagline'])}</p>
-        <p class="detail-summary">{h(copy['summary'])}</p>
-        {action}{availability}
-      </div>
-    </section>
-    <section class="features" aria-labelledby="features-title">
-      <h2 id="features-title">{t['features']}</h2>
-      <ul>
-{features}
-      </ul>{resources}
-    </section>
-    <section class="related" aria-labelledby="related-title">
-      <h2 id="related-title">{t['more']}</h2>
-      <div class="app-grid">
-{related_cards}
-      </div>
-    </section>
-  </main>"""
-    structured_data = {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": copy["name"],
-        "description": copy["summary"],
-        "url": BASE + page,
-        "inLanguage": t["lang"],
-        "operatingSystem": {"Mac": "macOS", "iPhone": "iOS", "iPhone · iPad": "iOS, iPadOS"}[app["platform"]],
-        "applicationCategory": "GameApplication" if group == "games" else "LifestyleApplication" if group == "everyday" else "UtilitiesApplication",
-        "author": {"@type": "Person", "name": "Lingbo Wang"},
-    }
-    if store:
-        structured_data["installUrl"] = store
-    return shell(lang, content, structured_data, app)
-
-
 def idmint_detail(lang, app):
     page = route(lang, app["slug"])
     copy = app[lang]
@@ -338,6 +255,8 @@ def release_detail(lang, app):
     page = route(lang, slug)
     copy = app[lang]
     resources = {key: relative(page, "../" + app[key]) for key in ("support", "privacy") if key in app}
+    if "privacy_url" in app:
+        resources["privacy"] = app["privacy_url"]
     content = release_page(
         slug, lang,
         icon=icon(page, app, 46),
@@ -353,7 +272,11 @@ def release_detail(lang, app):
         "image": urljoin(BASE, icon_path(slug)),
         "inLanguage": COPY[lang]["lang"],
         "operatingSystem": "macOS" if slug == "eos" else "iOS",
-        "applicationCategory": "UtilitiesApplication" if slug == "eos" else "LifestyleApplication",
+        "applicationCategory": {
+            "games": "GameApplication",
+            "studio": "UtilitiesApplication",
+            "everyday": "LifestyleApplication",
+        }[app["group"]],
         "author": {"@type": "Person", "name": "Lingbo Wang"},
         "installUrl": product[lang]["store_url"],
     }
@@ -367,18 +290,17 @@ def write(path, content):
 
 
 def build():
-    product_pages = {"photo-maker": idmint_detail, "stayframe": release_detail, "eos": release_detail}
     urls = []
     for lang in LANGUAGES:
         home = route(lang)
         write(home + "index.html", landing(lang))
-        urls.append(BASE + home)
+        urls.append((BASE + home, UPDATED[""]))
         for app in APPS:
             page = route(lang, app["slug"])
-            render = product_pages.get(app["slug"], detail)
+            render = idmint_detail if app["slug"] == "photo-maker" else release_detail
             write(page + "index.html", render(lang, app))
-            urls.append(BASE + page)
-    entries = "\n".join(f"  <url><loc>{h(url)}</loc></url>" for url in urls)
+            urls.append((BASE + page, UPDATED[app["slug"]]))
+    entries = "\n".join(f"  <url><loc>{h(url)}</loc><lastmod>{date}</lastmod></url>" for url, date in urls)
     write("sitemap.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {entries}

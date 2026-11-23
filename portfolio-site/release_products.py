@@ -1,5 +1,7 @@
-"""Localized product pages for Stayframe and Eos."""
+"""Render localized product pages using app copy and release screenshots."""
+import json
 from html import escape as h
+from pathlib import Path
 
 PRODUCTS = {
     "stayframe": {
@@ -149,11 +151,13 @@ PRODUCTS = {
         },
     },
 }
+PRODUCTS.update(json.loads(Path(__file__).with_name("app_websites.json").read_text(encoding="utf-8")))
 
 
 def product_page(slug, lang, *, icon, assets, resources):
     product = PRODUCTS[slug]
     copy = product[lang]
+    image_language = product.get("image_language", lang)
     cards = "\n".join(
         f"        <article><h3>{h(title)}</h3><p>{h(text)}</p></article>"
         for title, text in copy["features"]
@@ -169,7 +173,8 @@ def product_page(slug, lang, *, icon, assets, resources):
     jump = "example" if slug == "stayframe" else "features"
     hero, hero_width, hero_height = product["hero_image"]
     example, example_width, example_height = product["example_image"]
-    return f"""  <main id="main" class="release-product release-{slug} frame">
+    portrait = " release-portrait" if hero_width < hero_height and slug != "stayframe" else ""
+    return f"""  <main id="main" class="release-product release-{slug}{portrait} frame">
     <section class="release-hero" aria-labelledby="product-title">
       <div class="release-intro">
         <div class="release-platform">{icon}<p>{h(copy['platform'])}</p></div>
@@ -182,7 +187,7 @@ def product_page(slug, lang, *, icon, assets, resources):
         <p class="release-note">{h(copy['note'])}</p>
       </div>
       <div class="release-showcase">
-        <img src="{assets}/{hero}-{lang}.webp" width="{hero_width}" height="{hero_height}" fetchpriority="high" alt="{h(copy['hero_alt'])}">
+        <img src="{assets}/{hero}-{image_language}.webp" width="{hero_width}" height="{hero_height}" fetchpriority="high" alt="{h(copy['hero_alt'])}">
       </div>
     </section>
     <section class="release-section" id="features" aria-labelledby="features-title">
@@ -203,9 +208,9 @@ def product_page(slug, lang, *, icon, assets, resources):
         </ul>
       </div>
       <figure>
-        <img src="{assets}/{example}-{lang}.webp" width="{example_width}" height="{example_height}" loading="lazy" decoding="async" alt="{h(copy['example_alt'])}">
+        <img src="{assets}/{example}-{image_language}.webp" width="{example_width}" height="{example_height}" loading="lazy" decoding="async" alt="{h(copy['example_alt'])}">
         <figcaption>
-        <a href="{assets}/{example}-{lang}.webp">
+        <a href="{assets}/{example}-{image_language}.webp">
           {h(copy['enlarge'])} <span aria-hidden="true">↗</span>
         </a>
         </figcaption>

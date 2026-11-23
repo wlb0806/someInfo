@@ -1,0 +1,442 @@
+{
+  "foliover": {
+    "brand": "Foliover", "hero_image": ["overview", 560, 1217], "example_image": ["detail", 560, 1217],
+    "en": {
+      "platform": "iPhone & iPad · iOS 17 or later",
+      "headline": "Clean up photos and calendars",
+      "lead": "Review duplicate photos and unwanted calendar events before removing them. Foliover also compresses images, adds timestamps and prepares photo print sheets.",
+      "store": "View on the App Store", "store_url": "https://apps.apple.com/us/app/foliover-photos-space/id6787564566",
+      "note": "Five on-device tools. No app account required.", "jump": "Explore the tools",
+      "hero_alt": "Foliover home screen showing its photo, calendar, timestamp, print and compression tools",
+      "features_title": "Free up space and manage calendar clutter",
+      "features_intro": "Choose a tool for the task at hand and review its results before making changes.",
+      "features": [
+        ["Find duplicate and similar photos", "Review matching photos, screenshots, large items and videos. Confirm what to remove. Photos go to Recently Deleted."],
+        ["Review unwanted calendar events", "Scan a date range for duplicates, suspicious invitations and subscriptions. Select editable events individually or in a batch."],
+        ["Resize, stamp and print photos", "Compress or convert images, add a visible date and time, or crop a portrait and arrange copies on a print sheet."]
+      ],
+      "example_title": "Find your exported photos again",
+      "example_text": "Finished photo exports appear in Your work. Reopen them to share an image or review an earlier result.",
+      "example_points": ["Timestamping saves a new copy, so your original stays in Photos.", "Photo & Print supports JPG, PNG and PDF exports."],
+      "example_alt": "Foliover’s Your work gallery with completed photo, timestamp and compression exports",
+      "enlarge": "Open the full screenshot", "faq_title": "Photo and calendar cleanup questions",
+      "questions": [
+        ["Does Foliover delete duplicate photos automatically?", "You review the results and choose what to remove. Confirmed removals go to Recently Deleted in Photos."],
+        ["Can Foliover remove a subscribed calendar?", "Read-only subscriptions may need to be removed in Apple’s Calendar app. Use the scan to identify the source first."],
+        ["How do the free use and lifetime unlock work?", "Each tool includes one free successful use. A completed optional share can add one use for that tool, or you can choose a one-time unlock."]
+      ],
+      "closing": "Review your photos and calendar with Foliover", "privacy": "Privacy policy", "support": "Support"
+    },
+    "zh": {
+      "platform": "iPhone 与 iPad · iOS 17 或更高版本",
+      "headline": "整理重复照片和日历",
+      "lead": "先查看重复照片和不需要的日历事件，再决定删除哪些。也可以压缩图片、添加时间戳和制作打印排版。",
+      "store": "查看美区 App Store", "store_url": "https://apps.apple.com/us/app/foliover-photos-space/id6787564566",
+      "note": "五项工具均在本机运行，无需注册账号。", "jump": "查看工具",
+      "hero_alt": "Foliover 首页，展示照片、日历、时间戳、打印和压缩工具",
+      "features_title": "释放照片空间，整理日历杂项",
+      "features_intro": "按任务选择工具。清理前可以查看扫描结果。",
+      "features": [
+        ["查找重复和相似照片", "查看相似照片、截图、大文件和视频，确认后移除。被移除的照片进入系统相册的「最近删除」。"],
+        ["检查不需要的日历事件", "按日期范围查找重复事件、可疑邀请和订阅。可以逐条或批量选择可编辑的事件。"],
+        ["压缩、加时间戳和排版", "压缩图片、调整尺寸或转换格式，给照片添加可见的日期和时间，或裁剪人像并排版打印。"]
+      ],
+      "example_title": "导出后还能找到作品",
+      "example_text": "完成的照片导出会出现在「你的作品」里。之后还可以再次打开、核对或分享。",
+      "example_points": ["添加时间戳会生成新副本，原图留在系统相册。", "照片与打印支持导出 JPG、PNG 或 PDF。"],
+      "example_alt": "Foliover「你的作品」界面，展示照片、时间戳和压缩导出",
+      "enlarge": "查看完整截图", "faq_title": "照片和日历清理常见问题",
+      "questions": [
+        ["Foliover 会自动删除重复照片吗？", "先由你复核并选择要移除的项目。确认移除后，照片进入系统相册的「最近删除」。"],
+        ["能直接移除订阅日历吗？", "可以用扫描结果识别来源，只读订阅可能需要在 Apple 日历中取消订阅。"],
+        ["免费使用和终身解锁怎么算？", "每项工具含一次成功的免费使用。完成一次可选分享可增加该工具的一次使用，也可一次性购买解锁。"]
+      ],
+      "closing": "用 Foliover 检查照片和日历", "privacy": "隐私政策", "support": "使用支持"
+    }
+  },
+  "trio": {
+    "brand": "Trio", "hero_image": ["overview", 560, 1214], "example_image": ["detail", 560, 1214],
+    "en": {
+      "platform": "iPhone · iOS 17 or later",
+      "headline": "Three daily logic puzzles",
+      "lead": "Draw a path, balance suns and moons, and place crowns. Everyone gets the same three puzzles each day, and each has a unique solution.",
+      "store": "View on the App Store", "store_url": "https://apps.apple.com/us/app/trio-daily-logic-puzzles/id6791609588",
+      "note": "Daily puzzles are free. Core play works offline.", "jump": "Meet the three puzzles",
+      "hero_alt": "Trio’s Today screen listing Trace, Lumen and Crowns",
+      "features_title": "Learn Trace, Lumen and Crowns",
+      "features_intro": "Each puzzle has its own rule set. The daily set gets more challenging as the week goes on.",
+      "features": [
+        ["Trace", "Draw one continuous path through the numbers in order and cover every cell."],
+        ["Lumen", "Balance suns and moons in each line. Avoid three in a row and follow the equals and crosses clues."],
+        ["Crowns", "Place one crown per row, column and color region. Crowns may not touch, even diagonally."]
+      ],
+      "example_title": "A closer look at Crowns",
+      "example_text": "Try spotting a restricted color region before placing a crown. A placement rules out the rest of its row and column as well as every neighboring square.",
+      "example_points": ["Compare solve times or share a result card for the same daily board.", "Use hints and practice when you want to work on a particular puzzle."],
+      "example_alt": "A colored Crowns puzzle grid in Trio with several crowns placed",
+      "enlarge": "Open the full puzzle screenshot", "faq_title": "Trio puzzle questions",
+      "questions": [
+        ["Can I play today’s puzzles offline?", "Core play works offline and requires no account. Private iCloud progress sync is optional."],
+        ["What does Trio Pro unlock?", "The one-time purchase opens the past puzzle archive, unlimited practice and hints, and more detailed statistics."],
+        ["Does every puzzle have a unique solution?", "Yes. Every daily puzzle is verified to have exactly one solution."]
+      ],
+      "closing": "Try today’s three puzzles", "privacy": "Privacy policy"
+    },
+    "zh": {
+      "platform": "iPhone · iOS 17 或更高版本",
+      "headline": "每天三道逻辑谜题",
+      "lead": "一笔连路径、平衡太阳和月亮、在棋盘上放皇冠。全球玩家每天做同样三道题，每题只有一个解。",
+      "store": "查看美区 App Store", "store_url": "https://apps.apple.com/us/app/trio-daily-logic-puzzles/id6791609588",
+      "note": "每日谜题免费，核心玩法支持离线。", "jump": "查看三种玩法",
+      "hero_alt": "Trio 今日页面，列出 Trace、Lumen 和 Crowns",
+      "features_title": "Trace、Lumen 和 Crowns 怎么玩",
+      "features_intro": "三种谜题各有自己的规则，一周内的每日题目会逐渐变难。",
+      "features": [
+        ["Trace 路径", "从起点按数字顺序画出一条连续路线，并覆盖每个格子。"],
+        ["Lumen 日月", "让每行每列的太阳和月亮数量相等，避免连续三个相同符号，同时遵循等号和叉号提示。"],
+        ["Crowns 皇冠", "每行、每列和每个色块各放一顶皇冠，两顶皇冠不能相邻，包括对角线。"]
+      ],
+      "example_title": "看看皇冠题怎么下手",
+      "example_text": "先观察位置很受限的色块。放下一顶皇冠后，就可以排除它所在行、列，以及四周相邻的格子。",
+      "example_points": ["同一天的棋盘完全相同，可以比较解题用时或分享成绩卡。", "想熟悉某一种题时，可以使用提示和练习。"],
+      "example_alt": "Trio 皇冠谜题彩色棋盘，已有部分皇冠落位",
+      "enlarge": "查看完整棋盘", "faq_title": "Trio 常见问题",
+      "questions": [
+        ["每日谜题可以离线玩吗？", "核心玩法支持离线，无需账号。可以按需使用私人 iCloud 同步进度。"],
+        ["Trio Pro 解锁什么？", "一次性购买可解锁往期题库、无限练习和提示，以及更详细的统计。"],
+        ["每道题都有唯一解吗？", "有。每日谜题都经过验证，每道题只有一个解。"]
+      ],
+      "closing": "试试今天的三道题", "privacy": "隐私政策"
+    }
+  },
+  "knots": {
+    "brand": "Knots", "hero_image": ["overview", 560, 1214], "example_image": ["detail", 560, 1214],
+    "en": {
+      "platform": "iPhone & iPad · iOS 17 or later",
+      "headline": "Connect the dots without a timer",
+      "lead": "Link matching colors without crossing lines, then fill the board for a Perfect result. Play 999 levels or take on the daily puzzle.",
+      "store": "View on the App Store", "store_url": "https://apps.apple.com/us/app/knots-connect-puzzle/id6790466420",
+      "note": "Offline play · No ads · Optional one-time Pro unlock", "jump": "Learn how to play",
+      "hero_alt": "Knots connect-the-dots puzzle with colored endpoints and partly connected paths",
+      "features_title": "A quiet color-matching puzzle",
+      "features_intro": "Start with a small grid and work up to larger boards at your own pace.",
+      "features": [
+        ["Connect matching colors", "Trace a path between each pair. Keep paths from crossing and leave room for the other colors."],
+        ["Fill the whole grid", "A Perfect result uses every cell. Grids range from 5 × 5 to 12 × 12."],
+        ["Play daily or offline", "Take on the same daily puzzle as everyone else, use a hint when stuck, or play a level away from the internet."]
+      ],
+      "example_title": "One new board each day",
+      "example_text": "Open Daily Challenge for a fresh board. Finish it to build a streak and review previous results in History.",
+      "example_points": ["Regular levels let you practice at your own pace.", "Knots Pro adds all levels, unlimited hints and Endless Mode."],
+      "example_alt": "Knots Daily Challenge screen with a play button, streak and history",
+      "enlarge": "Open the full screenshot", "faq_title": "Knots puzzle questions",
+      "questions": [
+        ["What counts as Perfect in Knots?", "Connect each matching pair and fill every square. You can rearrange paths if the connections leave unused cells."],
+        ["Can I play without a time limit?", "Yes. Regular play has no timer, and the app supports offline play."],
+        ["Is Knots Pro a subscription?", "It’s an optional one-time purchase. Knots does not run ads."]
+      ],
+      "closing": "Find a few quiet minutes for Knots", "privacy": "Privacy policy"
+    },
+    "zh": {
+      "platform": "iPhone 与 iPad · iOS 17 或更高版本",
+      "headline": "没有计时的同色连线谜题",
+      "lead": "连接同色圆点，让路线互不交叉。铺满棋盘就能拿到完美成绩。可以玩 999 个关卡，也可以挑战每日谜题。",
+      "store": "查看美区 App Store", "store_url": "https://apps.apple.com/us/app/knots-connect-puzzle/id6790466420",
+      "note": "支持离线 · 无广告 · 可选一次性 Pro 解锁", "jump": "查看玩法",
+      "hero_alt": "Knots 同色连线棋盘，部分彩色圆点已连接",
+      "features_title": "慢慢连接，直到铺满棋盘",
+      "features_intro": "从小棋盘开始，按自己的节奏挑战更大的棋盘。",
+      "features": [
+        ["连接同色圆点", "给每对圆点画出一条线路。路线不能交叉，也要给其他颜色留出空间。"],
+        ["用完每个格子", "铺满整个棋盘可获得完美成绩。棋盘从 5 × 5 到 12 × 12。"],
+        ["每日挑战与离线关卡", "挑战全球同题，卡住时使用提示，没网时也可以玩已解锁关卡。"]
+      ],
+      "example_title": "每天换一张棋盘",
+      "example_text": "打开每日挑战即可开始当天的谜题。完成后可以累积连胜，并在历史记录中查看成绩。",
+      "example_points": ["普通关卡可以慢慢练习，无需赶时间。", "Knots Pro 解锁全部关卡、无限提示和无尽模式。"],
+      "example_alt": "Knots 每日挑战页面，展示开始按钮、连胜和历史入口",
+      "enlarge": "查看完整截图", "faq_title": "Knots 常见问题",
+      "questions": [
+        ["怎样才能拿到完美成绩？", "连接所有同色圆点，并让线路覆盖每一格。连通后还有空格时，可以重新调整走线。"],
+        ["可以不限时间地玩吗？", "可以，普通关卡没有计时，应用支持离线。"],
+        ["Knots Pro 需要订阅吗？", "Pro 是可选的一次性购买。Knots 没有广告。"]
+      ],
+      "closing": "打开 Knots，慢慢解一题", "privacy": "隐私政策"
+    }
+  },
+  "scentory": {
+    "brand": "Scentory", "hero_image": ["overview", 560, 1217], "example_image": ["detail", 560, 1217],
+    "en": {
+      "platform": "iPhone · iOS 17 or later",
+      "headline": "Track perfume samples and wear tests",
+      "lead": "Give each sample a place in your collection. Keep first impressions and later notes together, then decide what to try again or buy.",
+      "store": "View on the App Store", "store_url": "https://apps.apple.com/us/app/scentory-perfume-samples/id6793348562",
+      "note": "Works offline. Private iCloud sync is optional.", "jump": "Explore the scent journal",
+      "hero_alt": "Scentory sample box screen showing a photo of the vial organizer and two saved perfume samples",
+      "features_title": "From sample box to scent journal",
+      "features_intro": "Find the vial you want, record how it wears, and keep your own reasons for a decision.",
+      "features": [
+        ["Organize and find samples", "Group vials into boxes, add photos or position numbers, and search your collection. You can also mark a position on your own box photo."],
+        ["Record a perfume wear test", "Keep the first impression and later observations in the same trial. Add scent tags, a note, or an optional reminder to revisit it."],
+        ["Decide whether to buy a bottle", "Mark a sample to keep, retry, pass on or buy. Revisit your reasons and earlier decisions in the timeline."]
+      ],
+      "example_title": "What did the scent smell like later?",
+      "example_text": "Open an existing trial to add how the fragrance changed after the first spray. Keeping the observations together makes a later retest easier to compare.",
+      "example_points": ["Try a suggestion from your own untested or recently loved samples.", "Browse the bundled perfume catalog offline, or add your own sample."],
+      "example_alt": "Scentory fragrance impression form with sample details, feelings, scent tags and notes",
+      "enlarge": "Open the full screenshot", "faq_title": "Perfume sample journal questions",
+      "questions": [
+        ["Do I need a catalog entry for each sample?", "No. Add a sample manually, or look it up in the bundled offline catalog."],
+        ["Can I use Scentory without iCloud?", "Yes. Records can stay on your device. Private iCloud sync is optional, and Scentory can export JSON backups."],
+        ["How many samples can I start with?", "The free plan includes ten samples, the default box and one custom box. Scentory Pro removes sample and custom-box limits."]
+      ],
+      "closing": "Start a journal for your samples", "privacy": "Privacy policy", "support": "Support"
+    },
+    "zh": {
+      "platform": "iPhone · iOS 17 或更高版本",
+      "headline": "整理香水小样，记录每次试香",
+      "lead": "给小样安排位置，把初闻和后续感受记在一起，再决定要复试、留样还是买正装。",
+      "store": "查看美区 App Store", "store_url": "https://apps.apple.com/us/app/scentory-perfume-samples/id6793348562",
+      "note": "支持离线，私人 iCloud 同步可选。", "jump": "查看试香笔记",
+      "hero_alt": "Scentory 小样盒界面，显示小样盒照片和两支已记录的小样",
+      "features_title": "从小样收纳到试香笔记",
+      "features_intro": "找到想试的小样，记下香气怎样变化，保存每个决定的理由。",
+      "features": [
+        ["收纳并查找香水小样", "用样盒分组，添加照片和位置编号，或直接在自己的样盒照片上标注位置。"],
+        ["记录香水的留香变化", "把初闻和后续观察记在同一次试香中，加上气味标签、笔记或可选的回访提醒。"],
+        ["决定是否买正装", "为小样记录留样、复试、放弃或购买正装。需要时按时间线回看原因与旧决定。"]
+      ],
+      "example_title": "几小时后闻起来怎么样？",
+      "example_text": "打开同一次试香，补记香气后来的变化。把不同时段的感受放在一起，复试时方便对照。",
+      "example_points": ["从已有小样中挑一支没试过、适合复试或最近喜欢的。", "内置香水目录可以离线浏览，也支持手动添加小样。"],
+      "example_alt": "Scentory 试香感受表单，可记录小样、感受、气味标签和备注",
+      "enlarge": "查看完整截图", "faq_title": "小样管理与试香常见问题",
+      "questions": [
+        ["目录里没有的香水可以添加吗？", "可以手动加小样，也可以从内置离线目录选择。"],
+        ["可以关掉 iCloud 用吗？", "可以只用本机存储。私人 iCloud 同步可选，也可以导出 JSON 备份。"],
+        ["免费可以记录多少小样？", "免费包含 10 支小样、默认样盒和一个自定义样盒。Scentory Pro 可解除小样和自定义样盒限制。"]
+      ],
+      "closing": "给你的小样建一本笔记", "privacy": "隐私政策", "support": "使用支持"
+    }
+  },
+  "daily-quest": {
+    "brand": "Daily Quest", "hero_image": ["overview", 560, 1217], "example_image": ["detail", 560, 1217], "image_language": "en",
+    "en": {
+      "platform": "iPhone & iPad · iOS 17 or later",
+      "headline": "Build habits one quest at a time",
+      "lead": "Check off recurring habits, break longer goals into steps, and see each bit of progress bring Mochi’s world to life.",
+      "store": "Download on the App Store", "store_url": "https://apps.apple.com/us/app/daily-quest-habit-goals/id6797427767",
+      "note": "Free · No ads or in-app purchases · Your records stay on-device", "jump": "See how habits and goals work",
+      "hero_alt": "Daily Quest Today screen with recurring habits and an entry to Mochi Home",
+      "features_title": "Track a daily habit or work toward a finish line",
+      "features_intro": "Use a recurring habit for things you want to keep doing and a goal expedition for a target you can finish.",
+      "features": [
+        ["Check off repeating habits", "Set a habit to repeat daily, on selected weekdays or every few days. Review streaks and recent check-ins."],
+        ["Plan a goal expedition", "Set a deadline and target count. Record one step at a time and see how far you still have to go."],
+        ["See progress with Mochi", "Daily check-ins help Mochi grow and goals unlock places in its world. Local reminders and Live Activities help you see what’s next."]
+      ],
+      "example_title": "Turn a goal into steps you can count",
+      "example_text": "Use an expedition for a goal like reading twelve books by the end of the year. Pick a target and deadline, then log each finished book.",
+      "example_points": ["Review active and completed goals together.", "Use a repeating habit, such as reading for ten minutes, if the routine itself is what you want to track."],
+      "example_alt": "Daily Quest Goal Expeditions screen showing active and recently completed goals and progress bars",
+      "enlarge": "Open the full screenshot", "faq_title": "Habit and goal tracking questions",
+      "questions": [
+        ["Can I set habits for particular days?", "Yes. You can repeat a habit daily, on weekdays you choose, or at a set interval of days."],
+        ["Can I see today’s habits from the Lock Screen?", "On compatible devices, Live Activities show today’s progress on the Lock Screen and Dynamic Island."],
+        ["Do I need a Daily Quest account?", "No. The app keeps tasks and progress on your device and has no ads or in-app purchases."]
+      ],
+      "closing": "Start a habit with Mochi", "privacy": "Privacy policy", "support": "Support"
+    },
+    "zh": {
+      "platform": "iPhone 与 iPad · iOS 17 或更高版本",
+      "headline": "把习惯和目标变成每日任务",
+      "lead": "为重复习惯打卡，把长期目标拆成小步。每一点进度都能帮助 Mochi 和它的世界成长。",
+      "store": "在 App Store 下载", "store_url": "https://apps.apple.com/cn/app/%E6%AF%8F%E6%97%A5%E4%BB%BB%E5%8A%A1-%E4%B9%A0%E6%83%AF%E4%B8%8E%E7%9B%AE%E6%A0%87%E6%89%93%E5%8D%A1/id6797427767",
+      "note": "免费 · 无广告及应用内购买 · 记录保存在本机", "jump": "看看习惯和目标怎么记录",
+      "hero_alt": "每日任务的今日打卡页面，展示重复习惯和 Mochi 小屋入口，英文界面",
+      "features_title": "既能坚持习惯，也能完成目标",
+      "features_intro": "想持续做的事可以设为习惯，有完成期限和次数的事可以设为目标探险。",
+      "features": [
+        ["为重复习惯打卡", "设置每天、指定星期或每隔几天重复，回顾连胜和近期记录。"],
+        ["为目标安排探险", "设定次数和截止日期，每完成一步就记一次，随时看剩余进度。"],
+        ["看 Mochi 随进度成长", "习惯打卡帮助 Mochi 成长，目标进度能解锁新地点。本地提醒和实时活动方便查看下一项任务。"]
+      ],
+      "example_title": "把长期目标拆成可记录的步骤",
+      "example_text": "例如想在年底前读完 12 本书，可以建一个目标探险，设置目标次数和截止日期，每读完一本记一次。",
+      "example_points": ["进行中和已完成的目标可以一起回看。", "如果只是想每天读 10 分钟，可以另设为重复习惯。"],
+      "example_alt": "每日任务的目标探险页面，展示进行中、已完成的目标及进度条，英文界面",
+      "enlarge": "查看完整截图（英文界面）", "faq_title": "习惯打卡和目标记录常见问题",
+      "questions": [
+        ["习惯可以只在指定星期提醒吗？", "可以。重复频率可选每天、指定星期或每隔几天，再为需要的习惯设置本地提醒。"],
+        ["可以在锁屏查看今日进度吗？", "在兼容机型上可以用实时活动查看今日进度，支持锁屏和灵动岛。"],
+        ["使用每日任务需要账号吗？", "无需账号。任务和进度保存在本机，应用没有广告或应用内购买。"]
+      ],
+      "closing": "和 Mochi 一起开始第一个习惯", "privacy": "隐私政策", "support": "使用支持"
+    }
+  },
+  "homecue": {
+    "brand": "HomeCue", "hero_image": ["overview", 560, 1217], "example_image": ["detail", 560, 1217],
+    "en": {
+      "platform": "iPhone & iPad · iOS 17 or later",
+      "headline": "Track home care, receipts and warranties",
+      "lead": "Keep a receipt with the thing it belongs to. Set return reminders and schedule maintenance for appliances or vehicles by date, mileage or both.",
+      "store": "View on the App Store", "store_url": "https://apps.apple.com/us/app/homecue-receipts-care/id6810898865",
+      "note": "Records and text recognition stay on your device.", "jump": "See how to track an item",
+      "hero_alt": "HomeCue home dashboard with everyday care, receipts, returns, warranties and care history",
+      "features_title": "Give every item a care record",
+      "features_intro": "Start with one of 48 illustrated templates, then confirm the details and care tasks that apply to your equipment.",
+      "features": [
+        ["Schedule maintenance by date or mileage", "Set a date, a mileage threshold or whichever comes first. Use the manufacturer’s instructions to choose the right interval."],
+        ["Scan receipts and link them to items", "Scan several pages or add photos or PDFs. Text recognition runs on-device, and a single receipt can link to several items."],
+        ["Remember returns and warranties", "Set a return deadline, track partial returns, and keep warranty dates, manuals and service history together."]
+      ],
+      "example_title": "Find purchase proof when you need it",
+      "example_text": "Open an item to see its receipt, return deadline and service history. Keep the original proof alongside the details you have reviewed.",
+      "example_points": ["Attach photos, invoices or other documents to service records.", "Share records as a PDF or export a complete local backup."],
+      "example_alt": "HomeCue purchase proof screen with an example receipt, its stored details and items linked to it",
+      "enlarge": "Open the full screenshot", "faq_title": "Maintenance and receipt tracking questions",
+      "questions": [
+        ["Can I track vehicle maintenance by mileage?", "Yes. Use a mileage threshold or pair it with a date. Update the recorded vehicle mileage so HomeCue can show how close you are to the next service."],
+        ["Can I link one receipt to multiple items?", "Yes. A receipt can be linked to several items, and returns can be tracked item by item."],
+        ["Does HomeCue sync to other devices?", "HomeCue stores records locally. You can export and restore a backup. Check your App Store for current pricing and unlock availability."]
+      ],
+      "closing": "Start a record for the things you own", "privacy": "Privacy policy", "support": "Support"
+    },
+    "zh": {
+      "platform": "iPhone 与 iPad · iOS 17 或更高版本",
+      "headline": "家居维护、收据和保修一起管",
+      "lead": "把收据归到对应物品，设置退货提醒，按日期或里程安排家电和车辆保养。",
+      "store": "查看美区 App Store", "store_url": "https://apps.apple.com/us/app/homecue-receipts-care/id6810898865",
+      "note": "记录和收据文字识别均在本机处理。", "jump": "查看物品怎么管理",
+      "hero_alt": "HomeCue 首页，包含日常维护、收据归档、退货提醒、保修管理和维护记录",
+      "features_title": "为每件物品建一份维护记录",
+      "features_intro": "从 48 个插画模板任选其一，再核对适用于你设备的资料和维护事项。",
+      "features": [
+        ["按日期或里程安排维护", "可按日期、里程或先到的一项规划维护。具体保养间隔请参考设备或车辆厂商的说明。"],
+        ["扫描收据并关联物品", "可扫描多页，或添加图片、PDF。在本机识别文字，一张收据也能关联多件物品。"],
+        ["记下退货截止日与保修", "设置退货提醒，记下部分退货，并把保修日期、说明书和维修历史保存在同一处。"]
+      ],
+      "example_title": "需要时能找到购买凭证",
+      "example_text": "打开对应物品即可查看收据、退货截止日和维护历史。保留原始凭证，也能随时查看自己核对过的资料。",
+      "example_points": ["维护记录可以附加照片、账单等文件。", "可分享 PDF 记录，或导出完整的本机备份。"],
+      "example_alt": "HomeCue 的购买凭证页面，展示示例收据、购买资料和关联物品",
+      "enlarge": "查看完整截图", "faq_title": "维护和收据管理常见问题",
+      "questions": [
+        ["可以按里程提醒汽车保养吗？", "可以选里程条件，或同时设置日期。更新当前里程后，HomeCue 能据此显示离下次保养还有多远。"],
+        ["一张收据可以关联多个物品吗？", "可以关联多件物品，并分别记录退货。"],
+        ["HomeCue 支持跨设备同步吗？", "记录保存在本机，可通过备份导出和恢复。当前价格和解锁方式请查看所在地区的 App Store。"]
+      ],
+      "closing": "为你拥有的物品建一份记录", "privacy": "隐私政策", "support": "使用支持"
+    }
+  },
+  "family-friends": {
+    "brand": "Family & Friends Journal", "hero_image": ["overview", 560, 1217], "example_image": ["detail", 560, 1217],
+    "en": {
+      "platform": "iPhone · iOS 17 or later",
+      "headline": "A private journal for the people you love",
+      "lead": "Bring each person’s photos, memories and birthday into one place. Set reminders for important dates and file personal documents by person.",
+      "store": "View on the App Store", "store_url": "https://apps.apple.com/us/app/family-friends-journal/id6835294742",
+      "note": "Records and imported media stay on your iPhone.", "jump": "Explore profiles and reminders",
+      "hero_alt": "Family & Friends Journal home screen with sample family profiles and photos",
+      "features_title": "Keep memories and dates together",
+      "features_intro": "Make a private profile for a parent, partner, child or close friend, and add only what you want to remember.",
+      "features": [
+        ["Create a profile and photo journal", "Add a photo or Live Photo cover, keep moments with photos and videos, and use custom fields for details worth remembering."],
+        ["Remember Gregorian or lunar birthdays", "Record birthdays and other important dates. Schedule local reminders and add selected dates to Apple Calendar when you choose."],
+        ["File personal documents by person", "Scan, photograph or import documents. You can hide selected profiles behind a private-record password."]
+      ],
+      "example_title": "See important dates at a glance",
+      "example_text": "Open Important Dates to see upcoming birthdays and anniversaries with the person each date belongs to. Set reminders for the dates that matter to you.",
+      "example_points": ["Gregorian and lunar birthdays can sit together in the same journal.", "Calendar export is optional."],
+      "example_alt": "Family & Friends Journal Important Dates screen with sample birthdays and anniversaries",
+      "enlarge": "Open the full screenshot", "faq_title": "Private family journal questions",
+      "questions": [
+        ["Can I set reminders for lunar birthdays?", "Yes. The app supports both Gregorian and lunar birthdays and can schedule local reminders."],
+        ["Are my photos uploaded to a server?", "The app has no developer-operated server. Version 1.0 keeps profiles and imported media on your iPhone, with iCloud sync disabled."],
+        ["How many people can I add?", "The free plan includes three people and ten media items per person. The optional one-time Pro purchase removes those limits."]
+      ],
+      "closing": "Start a journal for someone close", "privacy": "Privacy policy", "support": "Support"
+    },
+    "zh": {
+      "platform": "iPhone · iOS 17 或更高版本",
+      "headline": "为亲友留一本私密日记",
+      "lead": "把每位亲友的照片、回忆和生日放在一起，设置重要日期提醒，也能按人归档私人文件。",
+      "store": "查看美区 App Store", "store_url": "https://apps.apple.com/us/app/family-friends-journal/id6835294742",
+      "note": "人物档案和导入的媒体保存在 iPhone 上。", "jump": "查看人物档案与提醒",
+      "hero_alt": "Family & Friends Journal 首页，展示示例亲友档案与照片",
+      "features_title": "把照片、回忆和重要日期放在一起",
+      "features_intro": "为父母、伴侣、孩子或好朋友建档，记下你想保留的点滴。",
+      "features": [
+        ["建立人物档案与相册", "设置照片或实况照片封面，用照片和视频保存共同回忆，也可用自定义字段记下重要细节。"],
+        ["记录公历与农历生日", "保存生日和其他重要日期，在本机设置提醒，也可以按需添加到 Apple 日历。"],
+        ["按人物归档私人文件", "扫描、拍摄或导入文件。可以将指定人物设为私密档案，用专用密码查看。"]
+      ],
+      "example_title": "一眼看见快到的重要日期",
+      "example_text": "打开「重要日期」，查看接下来的生日和纪念日以及对应人物。只为想提醒的日期设置通知。",
+      "example_points": ["公历和农历生日可以放在同一本日记里。", "按需导出到 Apple 日历。"],
+      "example_alt": "Family & Friends Journal 的重要日期列表，展示示例生日和纪念日",
+      "enlarge": "查看完整截图", "faq_title": "亲友日记常见问题",
+      "questions": [
+        ["农历生日可以设置提醒吗？", "可以。应用支持公历、农历生日，以及本地日期提醒。"],
+        ["亲友照片会上传到服务器吗？", "应用没有开发者服务器。1.0 版的档案和导入媒体保存在 iPhone 上，暂未启用 iCloud 同步。"],
+        ["免费可以添加几个人？", "免费支持 3 人，每人可添加 10 个媒体项目。可选的一次性 Pro 购买会解除这两项限制。"]
+      ],
+      "closing": "为一位亲友建一本日记", "privacy": "隐私政策", "support": "使用支持"
+    }
+  },
+  "dewday": {
+    "brand": "Dewday", "hero_image": ["overview", 560, 1217], "example_image": ["detail", 560, 1217],
+    "en": {
+      "platform": "iPhone · iOS 17 or later",
+      "headline": "Build a daily no-spend habit",
+      "lead": "Check in when you avoid extra spending, note a purchase you skipped, and grow a virtual plant while you work on a savings challenge.",
+      "store": "View on the App Store", "store_url": "https://apps.apple.com/us/app/dewday-daily-savings/id6808116696",
+      "note": "No bank connection or developer account required.", "jump": "See how a savings challenge works",
+      "hero_alt": "Dewday home screen showing a no-spend streak, a check-in and an estimated amount kept",
+      "features_title": "Track spending choices and set a savings challenge",
+      "features_intro": "Start with a daily check-in or choose an amount to set aside yourself.",
+      "features": [
+        ["Check in on no-spend days", "Record no spending, essentials only, or other spending. Use the calendar to see streaks or correct a past entry."],
+        ["Set a savings challenge", "Choose seven days, one calendar month or one calendar year. Set a daily amount and a personal reward."],
+        ["Log purchases you skipped", "Record something you chose not to buy and what it would have cost. Share progress cards and earn virtual growth as you go."]
+      ],
+      "example_title": "Start with a seven-day challenge",
+      "example_text": "For example, set a personal target of $5 a day for seven days and set the money aside yourself. Record each day in Dewday and watch your plant grow.",
+      "example_points": ["The seven-day target in that example is $35.", "Dewday records your progress. It does not move money or read bank balances."],
+      "example_alt": "Dewday challenge planner offering a seven-day, monthly or yearly challenge with a custom daily amount",
+      "enlarge": "Open the full screenshot", "faq_title": "No-spend and savings challenge questions",
+      "questions": [
+        ["Do I need to connect a bank account?", "No. You enter spending choices and amounts yourself. The estimated amount kept is a record, not a bank balance."],
+        ["Can I fill in a check-in I missed?", "Yes. Review and edit past check-ins in the calendar."],
+        ["How do I keep access after the first day?", "After the initial 24 hours, continued use is available through a subscription or an optional completed share to unlock the current day. Historical records remain viewable."]
+      ],
+      "closing": "Make your first no-spend check-in", "privacy": "Privacy policy", "support": "Support"
+    },
+    "zh": {
+      "platform": "iPhone · iOS 17 或更高版本",
+      "headline": "养成每日不花钱打卡习惯",
+      "lead": "记录没有额外花费的日子和忍住没买的东西。参加存钱挑战，让虚拟植物随打卡慢慢长大。",
+      "store": "查看美区 App Store", "store_url": "https://apps.apple.com/us/app/dewday-daily-savings/id6808116696",
+      "note": "无需连接银行账户或注册开发者账号。", "jump": "看看存钱挑战怎么做",
+      "hero_alt": "Dewday 首页，展示不花钱连胜、打卡入口以及估算省下的金额",
+      "features_title": "记录花费选择，设定存钱挑战",
+      "features_intro": "可以先从每天打卡开始，也可以设定每天由自己存下的金额。",
+      "features": [
+        ["给不花钱的日子打卡", "记录不花钱、仅必需支出或其他支出。在日历里查看连胜，也能补记或更正。"],
+        ["给自己设一个存钱挑战", "选择 7 天、一个自然月或一个自然年，自己定每天金额与完成奖励。"],
+        ["记下忍住没买的东西", "记录想买但没买的物品和价格。打卡后可累计虚拟成长，也可以分享进度卡片。"]
+      ],
+      "example_title": "从一个 7 天存钱挑战开始",
+      "example_text": "例如计划连续 7 天每天存下 5 元，由自己把钱留出来，再在 Dewday 里记下每一天，看植物慢慢长大。",
+      "example_points": ["这个例子的 7 天目标是 35 元。", "Dewday 只记录进度，应用不会转账或读取银行余额。"],
+      "example_alt": "Dewday 存钱挑战设置，提供 7 天、一个月和一年选项及自定义每日金额",
+      "enlarge": "查看完整截图", "faq_title": "不花钱打卡和存钱挑战常见问题",
+      "questions": [
+        ["需要绑定银行卡吗？", "不用。消费选择和金额由你填写，页面展示的省钱金额是估算记录。"],
+        ["忘了打卡可以补记吗？", "可以在日历里查看、补记或更正过去的打卡。"],
+        ["最初 24 小时结束后怎么继续使用？", "可选择订阅，也可以完成一次可选分享来解锁当天。历史记录仍然可以查看。"]
+      ],
+      "closing": "开始第一次不花钱打卡", "privacy": "隐私政策", "support": "使用支持"
+    }
+  }
+}
