@@ -5,6 +5,7 @@ from pathlib import Path
 from posixpath import relpath
 from urllib.parse import urljoin
 
+from guides import GUIDES, guide_content, teaser as guide_teaser
 from idmint import APP_STORE as IDMINT_STORE, product_page as idmint_page
 from release_products import PRODUCTS as RELEASE_PRODUCTS, product_page as release_page
 
@@ -47,9 +48,10 @@ FEATURED = ("stayframe", "eos", "trio", "dewday")
 UPDATED = dict.fromkeys(("", *BY_SLUG), "2026-11-23")
 
 
-def route(lang, slug=""):
+def route(lang, slug="", guide_path=""):
     prefix = "zh/" if lang == "zh" else ""
-    return prefix + (f"apps/{slug}/" if slug else "")
+    page = prefix + (f"apps/{slug}/" if slug else "")
+    return page + (f"guides/{guide_path}/" if guide_path else "")
 
 
 def relative(page, target):
@@ -67,13 +69,14 @@ def icon(page, app, size, *, lazy=False, alt=""):
     return f'<img src="{src}" alt="{h(alt)}" width="{size}" height="{size}" decoding="async"{loading}>'
 
 
-def shell(lang, content, structured_data, app=None, *, product_brand=None, product_css=None):
+def shell(lang, content, structured_data, app=None, *, product_brand=None, product_css=None, guide=None):
     t = COPY[lang]
     slug = app["slug"] if app else ""
-    page = route(lang, slug)
+    guide_path = guide["path"] if guide else ""
+    page = route(lang, slug, guide_path)
     canonical = BASE + page
     home = relative(page, route(lang))
-    en, zh = (relative(page, route(key, slug)) for key in LANGUAGES)
+    en, zh = (relative(page, route(key, slug, guide_path)) for key in LANGUAGES)
     en_current = ' aria-current="page"' if lang == "en" else ""
     zh_current = ' aria-current="page"' if lang == "zh" else ""
     title = t["title"]
@@ -83,6 +86,7 @@ def shell(lang, content, structured_data, app=None, *, product_brand=None, produ
     brand_url = home
     favicon = "trio"
     styles = ""
+    page_type = "website"
     if app:
         copy = app[lang]
         title = copy["seo_title"]
@@ -91,9 +95,14 @@ def shell(lang, content, structured_data, app=None, *, product_brand=None, produ
         image = f'\n  <meta property="og:image" content="{h(image_url)}">'
     if product_brand:
         brand = f"{icon(page, app, 36)} {h(product_brand)}"
-        brand_url = "./"
+        brand_url = relative(page, route(lang, slug))
         favicon = slug
         styles = f'\n  <link rel="stylesheet" href="{relative(page, product_css)}">'
+    if guide:
+        title = guide[lang]["title"]
+        description = guide[lang]["intro"]
+        image = f'\n  <meta property="og:image" content="{h(structured_data["image"])}">'
+        page_type = "article"
     data = json.dumps(structured_data, ensure_ascii=False, indent=2).replace("<", "\\u003c")
     return f"""<!doctype html>
 <html lang="{t['lang']}">
@@ -104,10 +113,10 @@ def shell(lang, content, structured_data, app=None, *, product_brand=None, produ
   <meta name="description" content="{h(description)}">
   <meta name="theme-color" content="#f7f6f0">
   <link rel="canonical" href="{canonical}">
-  <link rel="alternate" hreflang="en" href="{BASE + route('en', slug)}">
-  <link rel="alternate" hreflang="zh-CN" href="{BASE + route('zh', slug)}">
-  <link rel="alternate" hreflang="x-default" href="{BASE + route('en', slug)}">
-  <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="en" href="{BASE + route('en', slug, guide_path)}">
+  <link rel="alternate" hreflang="zh-CN" href="{BASE + route('zh', slug, guide_path)}">
+  <link rel="alternate" hreflang="x-default" href="{BASE + route('en', slug, guide_path)}">
+  <meta property="og:type" content="{page_type}">
   <meta property="og:site_name" content="{h(t['site'])}">
   <meta property="og:locale" content="{'zh_CN' if lang == 'zh' else 'en_US'}">
   <meta property="og:title" content="{h(title)}">
@@ -222,6 +231,14 @@ def landing(lang):
     return shell(lang, content, structured_data)
 
 
+def product_guide_promo(lang, slug, page):
+    guide = GUIDES.get(slug)
+    if not guide:
+        return ""
+    href = relative(page, route(lang, slug, guide["path"]))
+    return "\n" + guide_teaser(lang, guide, href)
+
+
 def idmint_detail(lang, app):
     page = route(lang, app["slug"])
     copy = app[lang]
@@ -231,6 +248,7 @@ def idmint_detail(lang, app):
         assets=relative(page, "assets/idmint"),
         support=relative(page, "../" + app["support"]),
         privacy=relative(page, "../" + app["privacy"]),
+        guide_promo=product_guide_promo(lang, app["slug"], page),
     )
     structured_data = {
         "@context": "https://schema.org",
@@ -262,6 +280,7 @@ def release_detail(lang, app):
         icon=icon(page, app, 46),
         assets=relative(page, f"assets/{slug}"),
         resources=resources,
+        guide_promo=product_guide_promo(lang, slug, page),
     )
     structured_data = {
         "@context": "https://schema.org",
@@ -283,6 +302,36 @@ def release_detail(lang, app):
     return shell(lang, content, structured_data, app, product_brand=product["brand"], product_css="release-products.css")
 
 
+def illustrated_guide(lang, app, guide):
+    slug = app["slug"]
+    page = route(lang, slug, guide["path"])
+    copy = guide[lang]
+    folder = f'assets/{guide["image_folder"]}'
+    brand = "IDMint" if slug == "photo-maker" else RELEASE_PRODUCTS[slug]["brand"]
+    store = IDMINT_STORE if slug == "photo-maker" else RELEASE_PRODUCTS[slug][lang]["store_url"]
+    content = guide_content(
+        slug, lang,
+        guide=guide,
+        product_url=relative(page, route(lang, slug)),
+        store_url=store,
+        asset_prefix=relative(page, folder),
+    )
+    structured_data = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": copy["title"],
+        "description": copy["intro"],
+        "url": BASE + page,
+        "mainEntityOfPage": BASE + page,
+        "datePublished": guide["date"],
+        "image": BASE + f'{folder}/{copy["steps"][0]["image"]}-{lang}.webp',
+        "inLanguage": COPY[lang]["lang"],
+        "author": {"@type": "Person", "name": "Lingbo Wang", "url": BASE},
+        "about": {"@type": "SoftwareApplication", "name": app[lang]["name"], "url": BASE + route(lang, slug)},
+    }
+    return shell(lang, content, structured_data, app, product_brand=brand, product_css="guides.css", guide=guide)
+
+
 def write(path, content):
     target = ROOT / path
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -300,6 +349,11 @@ def build():
             render = idmint_detail if app["slug"] == "photo-maker" else release_detail
             write(page + "index.html", render(lang, app))
             urls.append((BASE + page, UPDATED[app["slug"]]))
+            guide = GUIDES.get(app["slug"])
+            if guide:
+                guide_page = route(lang, app["slug"], guide["path"])
+                write(guide_page + "index.html", illustrated_guide(lang, app, guide))
+                urls.append((BASE + guide_page, guide["date"]))
     entries = "\n".join(f"  <url><loc>{h(url)}</loc><lastmod>{date}</lastmod></url>" for url, date in urls)
     write("sitemap.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

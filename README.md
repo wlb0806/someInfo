@@ -36,7 +36,7 @@ Choose a property type and the spaces you rent, then capture photos, videos, and
 
 Preview saved reports and export PDFs or images; video attachments are shared separately. Report sending requires explicit confirmation from the user, and local reminders can help follow up on sending the move-in report. Records stay on-device, with no account or current iCloud sync. English and Simplified Chinese are supported. The app organizes records for communication and does not determine responsibility or guarantee a deposit outcome.
 
-[Stayframe product website](https://wlb0806.github.io/someInfo/portfolio-site/apps/stayframe/) · [中文官网](https://wlb0806.github.io/someInfo/portfolio-site/zh/apps/stayframe/) · [App Store](https://apps.apple.com/us/app/stayframe/id6791833165)
+[Stayframe product website](https://wlb0806.github.io/someInfo/portfolio-site/apps/stayframe/) · [Illustrated guide](https://wlb0806.github.io/someInfo/portfolio-site/apps/stayframe/guides/rental-move-in-checklist/) · [中文官网](https://wlb0806.github.io/someInfo/portfolio-site/zh/apps/stayframe/) · [App Store](https://apps.apple.com/us/app/stayframe/id6791833165)
 
 ## Foliover: Photos & Space
 
@@ -90,7 +90,7 @@ Eos, formerly Spruce, shows exactly what is using your Mac storage and lets you 
 
 Eos works entirely on your Mac with no account, ads, subscription, analytics, or network access. Nothing is deleted without review, protected paths and running apps are skipped, and cleanup uses the Trash by default. Individual results and safe categories can be cleaned directly after confirmation.
 
-[Eos product website](https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/) · [中文官网](https://wlb0806.github.io/someInfo/portfolio-site/zh/apps/eos/) · [Mac App Store](https://apps.apple.com/app/id6794152421)
+[Eos product website](https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/) · [Illustrated guide](https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/guides/clear-xcode-caches/) · [中文官网](https://wlb0806.github.io/someInfo/portfolio-site/zh/apps/eos/) · [Mac App Store](https://apps.apple.com/app/id6794152421)
 
 ## Scentory: Perfume Samples
 
@@ -144,7 +144,7 @@ IDMint helps iPhone users prepare portrait photos for passport, visa and ID appl
 
 Crop and check your photo on-device, save custom dimensions, and export JPEG, PNG or a 4 × 6 inch print sheet. Check the issuing authority’s current instructions for photography and permitted edits before using a photo in an application.
 
-[IDMint product website](https://wlb0806.github.io/someInfo/portfolio-site/apps/photo-maker/) · [中文官网](https://wlb0806.github.io/someInfo/portfolio-site/zh/apps/photo-maker/) · [App Store](https://apps.apple.com/us/app/idmint-passport-photo-maker/id6798896113)
+[IDMint product website](https://wlb0806.github.io/someInfo/portfolio-site/apps/photo-maker/) · [Illustrated guide](https://wlb0806.github.io/someInfo/portfolio-site/apps/photo-maker/guides/us-uk-canada-passport-photo-sizes/) · [中文官网](https://wlb0806.github.io/someInfo/portfolio-site/zh/apps/photo-maker/) · [App Store](https://apps.apple.com/us/app/idmint-passport-photo-maker/id6798896113)
 
 ## Dewday: Daily Savings
 

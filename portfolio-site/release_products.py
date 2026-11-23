@@ -154,7 +154,7 @@ PRODUCTS = {
 PRODUCTS.update(json.loads(Path(__file__).with_name("app_websites.json").read_text(encoding="utf-8")))
 
 
-def product_page(slug, lang, *, icon, assets, resources):
+def product_page(slug, lang, *, icon, assets, resources, guide_promo=""):
     product = PRODUCTS[slug]
     copy = product[lang]
     image_language = product.get("image_language", lang)
@@ -189,7 +189,7 @@ def product_page(slug, lang, *, icon, assets, resources):
       <div class="release-showcase">
         <img src="{assets}/{hero}-{image_language}.webp" width="{hero_width}" height="{hero_height}" fetchpriority="high" alt="{h(copy['hero_alt'])}">
       </div>
-    </section>
+    </section>{guide_promo}
     <section class="release-section" id="features" aria-labelledby="features-title">
       <div class="release-section-heading">
         <h2 id="features-title">{h(copy['features_title'])}</h2>

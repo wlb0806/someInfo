@@ -106,7 +106,7 @@ COPY = {
 }
 
 
-def product_page(lang, *, icon, assets, support, privacy):
+def product_page(lang, *, icon, assets, support, privacy, guide_promo=""):
     copy = COPY[lang]
     is_zh = lang == "zh"
     offset = int(is_zh)
@@ -151,7 +151,7 @@ def product_page(lang, *, icon, assets, support, privacy):
           <img src="{assets}/formats-{lang}.webp" width="560" height="1216" fetchpriority="high" alt="{h(copy['formats_alt'])}">
         </div>
       </div>
-    </section>
+    </section>{guide_promo}
     <section class="mint-section" id="formats" aria-labelledby="formats-title">
       <h2 id="formats-title">{h(copy['formats_title'])}</h2>
       <p class="mint-section-intro">{h(copy['formats_intro'])}</p>

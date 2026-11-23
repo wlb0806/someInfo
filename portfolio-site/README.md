@@ -12,6 +12,8 @@ Edit `catalog.json` for app names, descriptions, and links. Edit `build.py` for 
 
 The IDMint product page uses `idmint.py` for its country size guides and bilingual copy, and `idmint.css` for its layout. The images in `assets/idmint/` are web-sized copies of the English and Simplified Chinese screenshots from the publicly listed IDMint release. The other app websites use `release_products.py` for shared markup and `release-products.css` for layout. The bilingual copy for the eight newer sites lives in `app_websites.json`. The web images come from the projects’ App Store screenshots or the captures used to prepare them. Daily Quest uses the published English screenshots on both pages.
 
+The illustrated guides for Eos, Stayframe and IDMint use `guides.json` for bilingual copy, screenshots and publication dates, `guides.py` for markup, and `guides.css` for layout. The build links each guide from its product page and adds both language versions to the sitemap.
+
 From the repository root, run:
 
 ```bash

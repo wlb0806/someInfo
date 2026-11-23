@@ -1,0 +1,220 @@
+{
+  "eos": {
+    "path": "clear-xcode-caches",
+    "date": "2026-11-23",
+    "image_folder": "eos",
+    "images": {
+      "results": {"en": [1229, 768], "zh": [1229, 768]},
+      "confirm": {"en": [460, 314], "zh": [460, 298]}
+    },
+    "en": {
+      "title": "How to clear Xcode caches on Mac with Eos",
+      "intro": "Xcode stores build output, simulator caches and saved archives in different places. Use Eos to see what takes up space, identify files Xcode can rebuild, and review exactly what will go to the Trash.",
+      "teaser": "Find Derived Data and simulator caches, understand what gets rebuilt, and review the cleanup before confirming.",
+      "steps": [
+        {
+          "title": "Scan, then open Developer Junk",
+          "body": ["In Eos, run Smart Scan. In the results, open Developer Junk to see Xcode and other development files grouped by type.", "Look for Xcode — Derived Data, Xcode — simulator and old device support. The results depend on the files Eos can scan on your Mac."],
+          "image": "results", "alt": "Eos Smart Scan results with Developer Junk visible in the sidebar and in the results",
+          "caption": "Open Developer Junk from the scan results to see the files behind the total."
+        },
+        {
+          "title": "Choose the files you can rebuild",
+          "body": ["For a first pass, review Derived Data for a project you can build again. Xcode recreates that output on the next build, which may take longer.", "Inspect simulator cache and old device support entries separately. Leave an archive untouched if you need the build or are unsure whether you have another copy."]
+        },
+        {
+          "title": "Review the selection and leave the Trash available",
+          "body": ["Choose Review & Clean and check the selected categories and size. Deselect any item you didn’t intend to include, then use Move to Trash when you’re ready.", "Build a project or launch the simulator again before emptying the Trash. Until the Trash is emptied, moving files there may not increase available disk space."],
+          "image": "confirm", "alt": "Eos Review before cleaning dialog listing selected categories, sizes, and Trash as the destination",
+          "caption": "The confirmation shows the selected items by category and where they will go. The amounts are from an example scan."
+        }
+      ],
+      "table": {
+        "title": "Which Xcode files should I review?",
+        "headers": ["What Eos found", "What to expect"],
+        "rows": [
+          ["Derived Data", "Xcode rebuilds this output. The next build may take longer."],
+          ["Simulator caches", "Simulator tools can recreate these. The next launch may take longer."],
+          ["Old device support", "Review the supported device and iOS versions before removing older files."],
+          ["Xcode Archives", "Archives can contain builds or debug symbols you still need. Eos leaves them unselected by default."]
+        ]
+      }
+    },
+    "zh": {
+      "title": "如何用 Eos 清理 Mac 上的 Xcode 缓存",
+      "intro": "Xcode 的构建产物、模拟器缓存和归档保存在不同位置。用 Eos 先看空间占用，找出可以重新生成的文件，再复核哪些会移入废纸篓。",
+      "teaser": "查看 Derived Data 和模拟器缓存，了解哪些可以重建，再确认清理范围。",
+      "steps": [
+        {
+          "title": "开始智能扫描，打开开发垃圾",
+          "body": ["打开 Eos，开始智能扫描。扫描完成后，从结果里进入「开发垃圾」，按类别查看 Xcode 和其他开发工具的文件。", "留意 Xcode 的 Derived Data、模拟器缓存和旧设备支持文件。能看到哪些类别取决于这台 Mac 上可供扫描的内容。"],
+          "image": "results", "alt": "Eos 智能扫描结果，侧栏和结果列表均有开发垃圾",
+          "caption": "从扫描结果进入「开发垃圾」，查看总占用背后的具体文件。"
+        },
+        {
+          "title": "优先选择可以重新生成的文件",
+          "body": ["第一次清理，可以先查看还能重新构建的项目的 Derived Data。Xcode 下次构建时会重新生成，第一次构建可能更慢。", "单独检查模拟器缓存和旧设备支持文件。还需要的归档，或不确定有没有副本的归档，先保留。"]
+        },
+        {
+          "title": "复核清理范围，先移入废纸篓",
+          "body": ["打开清理确认，逐项核对已选类别和大小。取消不打算清理的项目，确认后选择移入废纸篓。", "建议先重新构建项目或打开模拟器，确认可正常使用。废纸篓清空之前，移进去的文件可能仍占用磁盘空间。"],
+          "image": "confirm", "alt": "Eos 清理确认框，列出已选类别、大小以及移入废纸篓的选项",
+          "caption": "清理前可查看各类别的选中内容和目标位置。截图中的大小来自示例扫描。"
+        }
+      ],
+      "table": {
+        "title": "哪些 Xcode 文件需要复核？",
+        "headers": ["扫描结果", "清理后的影响"],
+        "rows": [
+          ["Derived Data", "Xcode 会重新生成构建产物，下次构建可能更慢。"],
+          ["模拟器缓存", "模拟器工具会按需重新生成，下次启动可能更慢。"],
+          ["旧设备支持文件", "移除之前，先确认还需要哪些设备和 iOS 版本。"],
+          ["Xcode Archives", "归档可能包含还需要的构建或调试符号。Eos 默认不会勾选。"]
+        ]
+      }
+    }
+  },
+  "stayframe": {
+    "path": "rental-move-in-checklist",
+    "date": "2026-11-23",
+    "image_folder": "stayframe",
+    "images": {
+      "move-in": {"en": [560, 1217], "zh": [560, 1217]},
+      "report": {"en": [760, 1651], "zh": [760, 1651]},
+      "comparison": {"en": [560, 1217], "zh": [560, 1217]}
+    },
+    "en": {
+      "title": "Rental move-in checklist: photos, reports and move-out comparison",
+      "intro": "What should you photograph when you get the keys? Start with the same views you’ll want at move-out. This walkthrough uses a sample property in Stayframe to show how to record each room, share a report and compare conditions later.",
+      "teaser": "See what to photograph, how to share a room-by-room report and what to compare when you move out.",
+      "steps": [
+        {
+          "title": "Photograph the room and note existing wear",
+          "body": ["Add your property and select the spaces you rent. In the move-in record for each room, take a wide shot for context and closer photos of any marks, scratches or damaged fittings.", "Record cleanliness separately from physical condition. Use a specific note such as “scuff on the wall under the living room window” so you can find the same spot later."],
+          "image": "move-in", "alt": "Stayframe’s sample living room record with condition notes and a photo",
+          "caption": "The sample living-room record keeps a photo and a note with the move-in condition."
+        },
+        {
+          "title": "Preview and send the move-in report",
+          "body": ["Open the move-in report preview and check that the rooms, photos and notes are included. Export a PDF or an image, then share it through the channel you use with your landlord.", "Share video attachments separately. After you actually send the report, mark it as sent in Stayframe and keep any replies with your records."],
+          "image": "report", "alt": "Stayframe sample move-in report preview for Maple Cottage with image and PDF export buttons",
+          "caption": "This report preview uses a fictional property. It shows how the exported record groups notes and photos by room."
+        },
+        {
+          "title": "At move-out, compare the same rooms",
+          "body": ["Before handing back the keys, take another set of photos from similar angles. Add them to the move-out records for the same spaces.", "Open the comparison to see the two records side by side. If an item needs discussion, share the relevant room or difference report. Follow your lease and local requirements for the formal handover."],
+          "image": "comparison", "alt": "Two Stayframe cards comparing move-in and move-out records for the same living room",
+          "caption": "Compare observations for the same room, so it’s easier to identify what changed."
+        }
+      ],
+      "checklist": {
+        "title": "A checklist to use when you get the keys",
+        "items": ["A wide photo of each room and close-ups of existing marks.", "Separate notes about cleanliness and the condition of walls, floors and fixtures.", "Photos or notes for keys, meters and shared spaces if relevant to your handover.", "A saved copy of the report and any replies from your landlord."]
+      }
+    },
+    "zh": {
+      "title": "租房入住验房清单：拍照、发报告和退租对比",
+      "intro": "拿到钥匙后应该拍哪些照片？先想想退租时要核对哪些位置。这里用 Stayframe 的示例房屋演示逐间记录、导出报告，以及退租时怎样回看。",
+      "teaser": "看看入住时该拍什么、怎样发验房报告，以及退租时怎样对照同一个房间。",
+      "steps": [
+        {
+          "title": "先拍房间全景，再记录已有磨损",
+          "body": ["添加房屋，选择实际租用的空间。为每个房间拍一张全景，再为已有的污渍、刮痕或破损拍近照。", "把清洁度和物品状况分开记录。备注可以写成「客厅窗户下方墙面有擦痕」，方便退租时找到同一位置。"],
+          "image": "move-in", "alt": "Stayframe 的示例客厅入住记录，包含房况备注和照片",
+          "caption": "示例客厅的照片和备注，都保存在对应的入住记录里。"
+        },
+        {
+          "title": "预览入住报告，发给房东",
+          "body": ["在报告预览里检查房间、照片和备注是否齐全，再导出 PDF 或图片，用平时与房东沟通的方式发送。", "视频附件可以单独发送。实际发出后，再在 Stayframe 中标记已发送，并保留房东的回复。"],
+          "image": "report", "alt": "Stayframe 虚构房屋的入住报告预览，包含图片和 PDF 导出按钮",
+          "caption": "截图使用虚构房屋，展示报告如何按房间整理照片和说明。"
+        },
+        {
+          "title": "退租时对照同一空间",
+          "body": ["交还钥匙前，从相近的角度重新拍照，把新照片放到同一房间的退租记录里。", "打开房况对比，查看入住和退租两份记录。需要讨论某处差异时，可分享相关房间或差异报告。正式交接按租约和当地要求办理。"],
+          "image": "comparison", "alt": "Stayframe 同一个客厅的入住和退租记录并排对比",
+          "caption": "查看同一个房间的两次观察，方便说明哪一处发生了变化。"
+        }
+      ],
+      "checklist": {
+        "title": "拿钥匙时可以照着做的清单",
+        "items": ["每个房间拍全景，已有痕迹再拍近照。", "清洁度和墙面、地板、设施的状况分开写。", "交接涉及钥匙、表计或共享空间时，也补拍照片或记下读数。", "留一份已发送的报告，并保存房东的回复。"]
+      }
+    }
+  },
+  "photo-maker": {
+    "path": "us-uk-canada-passport-photo-sizes",
+    "date": "2026-11-23",
+    "image_folder": "idmint",
+    "images": {
+      "formats": {"en": [560, 1216], "zh": [560, 1216]},
+      "custom-size": {"en": [560, 1216], "zh": [560, 1216]}
+    },
+    "en": {
+      "title": "U.S., UK and Canadian passport photo sizes and how to check them",
+      "intro": "A U.S. printed passport photo is square. A UK printed photo is taller, and a Canadian printed photo is larger again. Compare the dimensions below and use IDMint to locate the matching reference on iPhone.",
+      "teaser": "Compare U.S., UK and Canadian photo dimensions and find the right reference for print or online applications.",
+      "steps": [
+        {
+          "title": "Start with the country and application type",
+          "body": ["Check your passport authority’s instructions before taking or editing a photo. A printed photo and a digital upload can have different sizes and submission rules.", "Open IDMint’s format list and search for your country. Select the relevant printed or online reference when both are available."],
+          "image": "formats", "alt": "IDMint format list showing U.S., Canadian, UK and other passport photo references",
+          "caption": "Search by country or document type. IDMint provides separate UK references for print and online applications."
+        },
+        {
+          "title": "If editing is permitted, use the right units",
+          "body": ["Use the listed reference or enter an exact custom width and height. Printed sizes are often specified in inches or millimeters, while digital uploads use pixels.", "Use the reference for planning or previewing size. Only crop or export a photo for submission if your authority’s instructions allow it. Don’t assume that changing the background, retouching the image or taking it yourself is permitted."],
+          "image": "custom-size", "alt": "IDMint custom size panel with millimeter and pixel options and editable width and height",
+          "caption": "The custom size screen lets you choose units and enter width and height separately."
+        },
+        {
+          "title": "Check the rules again before you submit",
+          "body": ["U.S. passport guidance restricts digital alterations. UK digital applicants should check the required framing, file size and whether they need a photo code. Canada generally requires a commercial photographer or studio to take the photo in person.", "The size in the app is a reference. Check the authority’s current instructions, especially if it requires a photographer, a stamp, a digital code or an original file."]
+        }
+      ],
+      "table": {
+        "title": "Passport photo sizes at a glance",
+        "headers": ["Application", "Dimensions", "Official instructions"],
+        "rows": [
+          ["United States · printed", "2 × 2 in (about 51 × 51 mm)", ["U.S. State Department", "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html"]],
+          ["United Kingdom · printed", "35 × 45 mm", ["GOV.UK printed photos", "https://www.gov.uk/photos-for-passports/photo-requirements"]],
+          ["United Kingdom · online", "At least 600 × 750 px", ["GOV.UK digital photos", "https://www.gov.uk/photos-for-passports"]],
+          ["Canada · printed", "50 × 70 mm", ["Government of Canada", "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/photos.html"]]
+        ]
+      }
+    },
+    "zh": {
+      "title": "美国、英国、加拿大护照照片尺寸怎么选",
+      "intro": "美国纸质护照照片是正方形，英国纸质照片更窄长，加拿大纸质照片又更大。先对照下表，再在 iPhone 上用 IDMint 找到对应的参考规格。",
+      "teaser": "对照美国、英国和加拿大护照照片尺寸，区分纸质照片与在线申请。",
+      "steps": [
+        {
+          "title": "先确定国家和申请方式",
+          "body": ["拍照或编辑之前，先看签发机构的最新指引。纸质照片与网上上传的电子照片，可能有不同尺寸和提交规则。", "打开 IDMint 的规格列表，搜索国家。看到纸质和在线两种规格时，按自己的申请方式选择。"],
+          "image": "formats", "alt": "IDMint 规格列表，包含美国、加拿大、英国等护照照片参考",
+          "caption": "支持按国家或证件类型搜索。英国纸质和在线护照照片有各自的参考规格。"
+        },
+        {
+          "title": "允许编辑时，再按正确单位设置",
+          "body": ["可以选内置规格，也可以自定义宽高。纸质尺寸通常用英寸或毫米，电子上传通常用像素。", "规格可用来核对和预览尺寸。只有申请机构允许时，才用应用裁剪或导出用于提交的照片。更换背景、修图或自拍是否允许，需要分别确认。"],
+          "image": "custom-size", "alt": "IDMint 自定义尺寸界面，可选毫米或像素并分别输入宽高",
+          "caption": "自定义尺寸可以切换单位，再分别填入宽度和高度。"
+        },
+        {
+          "title": "提交前再核对官方要求",
+          "body": ["美国护照照片对数字修改有限制。英国在线申请需核对构图、文件大小和是否使用照片码。加拿大通常要求本人到商业摄影师或照相馆拍摄。", "应用里的尺寸是参考。提交时以官方的拍摄方式、照片背面标注、照片码或原始文件要求为准。"]
+        }
+      ],
+      "table": {
+        "title": "三国护照照片尺寸对照",
+        "headers": ["申请类型", "宽 × 高", "官方指引"],
+        "rows": [
+          ["美国 · 纸质", "2 × 2 英寸（约 51 × 51 毫米）", ["美国国务院", "https://travel.state.gov/content/travel/en/passports/how-apply/photos.html"]],
+          ["英国 · 纸质", "35 × 45 毫米", ["英国政府纸质照片要求", "https://www.gov.uk/photos-for-passports/photo-requirements"]],
+          ["英国 · 在线", "至少 600 × 750 像素", ["英国政府电子照片要求", "https://www.gov.uk/photos-for-passports"]],
+          ["加拿大 · 纸质", "50 × 70 毫米", ["加拿大政府", "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/photos.html"]]
+        ]
+      }
+    }
+  }
+}

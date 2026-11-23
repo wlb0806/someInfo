@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to clear Xcode caches on Mac with Eos</title>
+  <meta name="description" content="Xcode stores build output, simulator caches and saved archives in different places. Use Eos to see what takes up space, identify files Xcode can rebuild, and review exactly what will go to the Trash.">
+  <meta name="theme-color" content="#f7f6f0">
+  <link rel="canonical" href="https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/guides/clear-xcode-caches/">
+  <link rel="alternate" hreflang="en" href="https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/guides/clear-xcode-caches/">
+  <link rel="alternate" hreflang="zh-CN" href="https://wlb0806.github.io/someInfo/portfolio-site/zh/apps/eos/guides/clear-xcode-caches/">
+  <link rel="alternate" hreflang="x-default" href="https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/guides/clear-xcode-caches/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Lingbo Wang · Independent Apps">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="How to clear Xcode caches on Mac with Eos">
+  <meta property="og:description" content="Xcode stores build output, simulator caches and saved archives in different places. Use Eos to see what takes up space, identify files Xcode can rebuild, and review exactly what will go to the Trash.">
+  <meta property="og:url" content="https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/guides/clear-xcode-caches/">
+  <meta property="og:image" content="https://wlb0806.github.io/someInfo/portfolio-site/assets/eos/results-en.webp">
+  <link rel="icon" href="../../../../../assets/app-icons/eos.png">
+  <link rel="stylesheet" href="../../../../styles.css">
+  <link rel="stylesheet" href="../../../../guides.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to clear Xcode caches on Mac with Eos",
+  "description": "Xcode stores build output, simulator caches and saved archives in different places. Use Eos to see what takes up space, identify files Xcode can rebuild, and review exactly what will go to the Trash.",
+  "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/guides/clear-xcode-caches/",
+  "mainEntityOfPage": "https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/guides/clear-xcode-caches/",
+  "datePublished": "2026-11-23",
+  "image": "https://wlb0806.github.io/someInfo/portfolio-site/assets/eos/results-en.webp",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "name": "Lingbo Wang",
+    "url": "https://wlb0806.github.io/someInfo/portfolio-site/"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Eos: Disk Cleanup",
+    "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/"
+  }
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header frame">
+    <a class="brand" href="../../"><img src="../../../../../assets/app-icons/eos.png" alt="" width="36" height="36" decoding="async"> Eos</a>
+    <nav aria-label="Main navigation">
+      <a class="nav-link" href="../../../../#apps">Explore apps</a>
+      <div class="languages">
+        <a href="./" lang="en" hreflang="en" aria-current="page">EN</a>
+        <a href="../../../../zh/apps/eos/guides/clear-xcode-caches/" lang="zh-CN" hreflang="zh-CN">中文</a>
+      </div>
+    </nav>
+  </header>
+  <main class="frame guide guide-eos" id="main">
+    <article aria-labelledby="guide-title">
+      <header class="guide-header">
+        <div>
+          <p class="guide-label">Illustrated guide</p>
+          <h1 id="guide-title">How to clear Xcode caches on Mac with Eos</h1>
+          <p class="guide-intro">Xcode stores build output, simulator caches and saved archives in different places. Use Eos to see what takes up space, identify files Xcode can rebuild, and review exactly what will go to the Trash.</p>
+        </div>
+        <nav class="guide-contents" aria-label="In this guide">
+          <p>In this guide</p>
+          <ol>
+          <li><a href="#step-1">Scan, then open Developer Junk</a></li>
+          <li><a href="#step-2">Choose the files you can rebuild</a></li>
+          <li><a href="#step-3">Review the selection and leave the Trash available</a></li>
+          </ol>
+        </nav>
+      </header>
+      <section id="reference" class="guide-reference" aria-labelledby="reference-title">
+        <h2 id="reference-title">Which Xcode files should I review?</h2>
+        <div class="guide-table">
+          <table>
+            <thead><tr><th scope="col">What Eos found</th><th scope="col">What to expect</th></tr></thead>
+            <tbody>
+            <tr><th scope="row">Derived Data</th><td>Xcode rebuilds this output. The next build may take longer.</td></tr>
+            <tr><th scope="row">Simulator caches</th><td>Simulator tools can recreate these. The next launch may take longer.</td></tr>
+            <tr><th scope="row">Old device support</th><td>Review the supported device and iOS versions before removing older files.</td></tr>
+            <tr><th scope="row">Xcode Archives</th><td>Archives can contain builds or debug symbols you still need. Eos leaves them unselected by default.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <div class="guide-steps">
+        <section class="guide-step" id="step-1" aria-labelledby="step-1-title">
+          <div class="guide-step-copy">
+            <h2 id="step-1-title"><span>1.</span> Scan, then open Developer Junk</h2>
+            <p>In Eos, run Smart Scan. In the results, open Developer Junk to see Xcode and other development files grouped by type.</p>
+            <p>Look for Xcode — Derived Data, Xcode — simulator and old device support. The results depend on the files Eos can scan on your Mac.</p>
+          </div>
+          <figure class="guide-figure">
+            <img src="../../../../assets/eos/results-en.webp" width="1229" height="768" alt="Eos Smart Scan results with Developer Junk visible in the sidebar and in the results" decoding="async">
+            <figcaption>Open Developer Junk from the scan results to see the files behind the total. <a href="../../../../assets/eos/results-en.webp" aria-label="Open full screenshot · Eos Smart Scan results with Developer Junk visible in the sidebar and in the results">Open full screenshot <span aria-hidden="true">↗</span></a></figcaption>
+          </figure>
+        </section>
+        <section class="guide-step" id="step-2" aria-labelledby="step-2-title">
+          <div class="guide-step-copy">
+            <h2 id="step-2-title"><span>2.</span> Choose the files you can rebuild</h2>
+            <p>For a first pass, review Derived Data for a project you can build again. Xcode recreates that output on the next build, which may take longer.</p>
+            <p>Inspect simulator cache and old device support entries separately. Leave an archive untouched if you need the build or are unsure whether you have another copy.</p>
+          </div>
+        </section>
+        <section class="guide-step" id="step-3" aria-labelledby="step-3-title">
+          <div class="guide-step-copy">
+            <h2 id="step-3-title"><span>3.</span> Review the selection and leave the Trash available</h2>
+            <p>Choose Review &amp; Clean and check the selected categories and size. Deselect any item you didn’t intend to include, then use Move to Trash when you’re ready.</p>
+            <p>Build a project or launch the simulator again before emptying the Trash. Until the Trash is emptied, moving files there may not increase available disk space.</p>
+          </div>
+          <figure class="guide-figure">
+            <img src="../../../../assets/eos/confirm-en.webp" width="460" height="314" alt="Eos Review before cleaning dialog listing selected categories, sizes, and Trash as the destination" loading="lazy" decoding="async">
+            <figcaption>The confirmation shows the selected items by category and where they will go. The amounts are from an example scan. <a href="../../../../assets/eos/confirm-en.webp" aria-label="Open full screenshot · Eos Review before cleaning dialog listing selected categories, sizes, and Trash as the destination">Open full screenshot <span aria-hidden="true">↗</span></a></figcaption>
+          </figure>
+        </section>
+      </div>
+      <div class="guide-end">
+        <a href="../../"><span aria-hidden="true">←</span> Back to product</a>
+        <a class="button" href="https://apps.apple.com/us/app/eos-disk-cleanup/id6794152421?mt=12">View in the App Store <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer frame">
+    <span>© 2026 Lingbo Wang</span>
+    <a href="../../../../#about">About</a>
+  </footer>
+</body>
+</html>
