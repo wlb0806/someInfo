@@ -27,6 +27,7 @@ COPY = {
         "hero1": "Apps for daily life", "hero2": "and a little play.",
         "platforms": "iPhone, iPad & Mac", "browse": "Explore apps",
         "directory": "The app collection", "skip": "Skip to content",
+        "card_site": "Website", "card_store": "App Store", "card_mac_store": "Mac App Store",
         "about": "About", "about_title": "Made by Lingbo Wang",
         "about_body": "Most of my apps keep your records and processing on your device. Some offer optional private iCloud sync. Each app’s page explains what it does and links to its store listing and privacy policy where available.",
     },
@@ -38,6 +39,7 @@ COPY = {
         "hero1": "让日常轻一点，", "hero2": "让闲暇有趣一点。",
         "platforms": "iPhone、iPad 与 Mac", "browse": "浏览应用",
         "directory": "应用作品集", "skip": "跳到正文",
+        "card_site": "打开官网", "card_store": "App Store", "card_mac_store": "Mac App Store",
         "about": "关于", "about_title": "关于开发者",
         "about_body": "我是 Lingbo Wang。多数应用在你的设备上保存记录和处理数据，部分提供可选的私人 iCloud 同步。每款应用的页面都有功能介绍，并提供已有的商店和隐私政策链接。",
     },
@@ -150,18 +152,31 @@ def shell(lang, content, structured_data, app=None, *, product_brand=None, produ
 """
 
 
+def app_store_url(lang, slug):
+    if slug == "photo-maker":
+        return IDMINT_STORE
+    return RELEASE_PRODUCTS[slug][lang]["store_url"]
+
+
 def directory_card(lang, page, app):
+    t = COPY[lang]
     copy = app[lang]
+    slug = app["slug"]
     name = h(copy["name"])
-    link = relative(page, route(lang, app["slug"]))
+    link = relative(page, route(lang, slug))
+    store = h(app_store_url(lang, slug))
+    store_label = t["card_mac_store"] if app["platform"] == "Mac" else t["card_store"]
     return f"""        <article class="app-card">
           {icon(page, app, 64, lazy=True)}
           <div class="card-copy">
             <p class="platform">{app['platform']}</p>
-            <h4><a href="{link}">{name}</a></h4>
+            <h4>{name}</h4>
             <p class="app-summary">{h(copy['summary'])}</p>
           </div>
-          <span class="card-arrow" aria-hidden="true">↗</span>
+          <div class="card-actions">
+            <a class="card-site" href="{link}" aria-label="{t['card_site']} · {name}">{t['card_site']} <span aria-hidden="true">→</span></a>
+            <a class="card-store" href="{store}" aria-label="{store_label} · {name}">{store_label} <span aria-hidden="true">↗</span></a>
+          </div>
         </article>"""
 
 
@@ -308,7 +323,7 @@ def illustrated_guide(lang, app, guide):
     copy = guide[lang]
     folder = f'assets/{guide["image_folder"]}'
     brand = "IDMint" if slug == "photo-maker" else RELEASE_PRODUCTS[slug]["brand"]
-    store = IDMINT_STORE if slug == "photo-maker" else RELEASE_PRODUCTS[slug][lang]["store_url"]
+    store = app_store_url(lang, slug)
     content = guide_content(
         slug, lang,
         guide=guide,

@@ -153,7 +153,8 @@ h2 { font-size: clamp(32px, 4vw, 52px); letter-spacing: -.04em; line-height: 1.1
 .app-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .app-card {
   display: grid;
-  grid-template-columns: 54px minmax(0, 1fr) 14px;
+  grid-template-columns: 54px minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
   align-items: start;
   gap: 13px;
   padding: 17px;
@@ -166,11 +167,30 @@ h2 { font-size: clamp(32px, 4vw, 52px); letter-spacing: -.04em; line-height: 1.1
 .app-card img { width: 54px; height: 54px; border-radius: 22%; }
 .platform { font-size: 11px; margin-bottom: 4px; }
 .app-card h3, .app-card h4 { font-size: 16px; line-height: 1.3; overflow-wrap: anywhere; }
-.app-card a { text-decoration: none; }
-.app-card a::after { content: ""; position: absolute; inset: 0; border-radius: 16px; }
-.app-card a:hover { text-decoration: underline; text-underline-offset: .16em; }
 .app-summary { margin-top: 7px; color: var(--muted); font-size: 13px; line-height: 1.55; }
-.card-arrow { color: var(--green); }
+.card-actions { display: flex; flex-wrap: wrap; gap: 8px; grid-column: 2; }
+.card-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 6px 9px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.card-site { background: var(--green); color: #fff; }
+.card-site:hover { background: #173d30; }
+.card-site::after { content: ""; position: absolute; inset: -1px; border-radius: 16px; cursor: pointer; }
+.card-actions .card-store {
+  position: relative;
+  z-index: 1;
+  border-color: var(--line);
+  color: var(--green);
+}
+.card-store:hover { background: #e6eee3; }
 .about {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
