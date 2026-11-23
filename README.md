@@ -16,7 +16,7 @@ Last updated: **November 23, 2026**. This inventory reflects the folders current
 | <img src="./assets/app-icons/scentory.png" width="64" alt="Scentory Perfume Samples app icon"> | **Scentory: Perfume Samples** | iOS / iPhone | Sample boxes, scent trials, impressions, decisions, and private iCloud sync | [App Store](https://apps.apple.com/app/id6793348562) · [Project](Scentory/) |
 | <img src="./assets/app-icons/daily-quest.png" width="64" alt="Daily Quest Habit and Goals app icon"> | **Daily Quest: Habit & Goals** | iOS / iPhone & iPad | Habit tracker, goal planner, streaks, and Live Activities | [App Store](https://apps.apple.com/app/id6797427767) · [Project](DailyQuest/) |
 | <img src="./assets/app-icons/homecue.png" width="64" alt="HomeCue app icon"> | **HomeCue: Receipts & Care** | iOS / iPhone & iPad | Item care, receipts, returns, warranties, and maintenance history | [App Store](https://apps.apple.com/app/id6810898865) · [Project](HomeCue/) |
-| <img src="./assets/app-icons/family-friends.png" width="64" alt="Family & Friends Journal app icon"> | **Family & Friends Journal** | iOS / iPhone | Private people profiles, memories, birthdays, and personal documents | [App Store Connect](https://appstoreconnect.apple.com/apps/6835294742/distribution) · [Project](importantPeople/) |
+| <img src="./assets/app-icons/family-friends.png" width="64" alt="Family & Friends Journal app icon"> | **Family & Friends Journal** | iOS / iPhone | Private people profiles, memories, birthdays, and personal documents | [App Store](https://apps.apple.com/app/id6835294742) · [Project](importantPeople/) |
 | <img src="./assets/app-icons/photo-maker.png" width="64" alt="Photo Maker app icon"> | **Photo Maker: Standard Sizes** | iOS / iPhone | Standard and custom photo sizes, background editing, and multipage print sheets | [App Store](https://apps.apple.com/app/id6798896113) · [Project](PassportPhotoMaker/) |
 | <img src="./assets/app-icons/dewday.png" width="64" alt="Dewday app icon"> | **Dewday: Daily Savings** | iOS / iPhone | Daily spending check-ins, savings challenges, plant growth, badges, and a widget | [App Store](https://apps.apple.com/app/id6808116696) · [Project](Nada/) |
 
@@ -134,9 +134,9 @@ Family & Friends Journal is the current name of the app in `importantPeople`; th
 
 Keep Gregorian and lunar birthdays and other important dates together, schedule local reminders, and optionally add dates to Apple Calendar. Scan, photograph, or import personal documents and organize them by person. Selected profiles can be hidden behind a private-record password. The free tier supports three people and ten media items per person; the optional one-time Family & Friends Pro purchase removes these limits. Records stay on the iPhone, with no account, developer server, ads, analytics, tracking, or enabled iCloud sync in the current version.
 
-The renamed app has a separate App Store Connect record, created on November 16, 2026, with Apple ID `6835294742` and bundle identifier `com.wanglingbo.familyfriends`. Release preparation is documented in the project README; public availability is not verified by this inventory.
+The renamed app has a separate App Store Connect record, created on November 16, 2026, with Apple ID `6835294742` and bundle identifier `com.wanglingbo.familyfriends`. The listing is available on the U.S. App Store.
 
-[App Store Connect](https://appstoreconnect.apple.com/apps/6835294742/distribution) · [Project folder](importantPeople/) · [Project README](importantPeople/README.md)
+[App Store](https://apps.apple.com/app/id6835294742) · [Project folder](importantPeople/) · [Project README](importantPeople/README.md)
 
 ## Photo Maker: Standard Sizes
 

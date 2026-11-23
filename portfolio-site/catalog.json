@@ -57,7 +57,7 @@
   },
   {
     "slug": "eos", "group": "studio", "platform": "Mac",
-    "store": "6794152421", "privacy": "eosPrivacy.html", "support": "eosSupport.html", "website": "eos.html",
+    "store": "6794152421", "listed_in_cn": true, "privacy": "eosPrivacy.html", "support": "eosSupport.html", "website": "eos.html",
     "en": {
       "name": "Eos: Disk Cleanup", "tagline": "Mac disk analyzer & app uninstaller",
       "summary": "Find large files, exact duplicates, app leftovers and developer caches. Review what each cleanup will remove.",
@@ -85,7 +85,7 @@
   },
   {
     "slug": "daily-quest", "group": "everyday", "platform": "iPhone · iPad",
-    "store": "6797427767", "privacy": "DailyQuestWeb/privacy-policy.html", "support": "DailyQuestWeb/support.html",
+    "store": "6797427767", "listed_in_cn": true, "privacy": "DailyQuestWeb/privacy-policy.html", "support": "DailyQuestWeb/support.html",
     "en": {
       "name": "Daily Quest: Habit & Goals", "tagline": "Habit tracker & goal planner",
       "summary": "Check off recurring habits, advance goals step by step, and watch Mochi and its world grow.",
@@ -113,7 +113,7 @@
   },
   {
     "slug": "family-friends", "group": "everyday", "platform": "iPhone",
-    "privacy": "Dearfolk/privacy.html", "support": "Dearfolk/support.html",
+    "store": "6835294742", "privacy": "Dearfolk/privacy.html", "support": "Dearfolk/support.html",
     "en": {
       "name": "Family & Friends Journal", "tagline": "Private people journal with birthday reminders",
       "summary": "Give each person a private place for photos, memories, birthdays and important documents.",
@@ -127,7 +127,8 @@
   },
   {
     "slug": "photo-maker", "group": "studio", "platform": "iPhone",
-    "store": "6798896113", "privacy": "passport-photo-privacy.html", "support": "passport-photo-support.html",
+    "store": "6798896113", "us_store_name": "IDMint: Passport Photo Maker",
+    "privacy": "passport-photo-privacy.html", "support": "passport-photo-support.html",
     "en": {
       "name": "Photo Maker: Standard Sizes", "tagline": "Photo sizing, background editing & print sheets",
       "summary": "Crop photos to standard or custom dimensions, change backgrounds and arrange multiple copies on printable sheets.",

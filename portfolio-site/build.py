@@ -28,6 +28,7 @@ COPY = {
         "store": "View on the App Store", "mac_store": "View on the Mac App Store",
         "privacy": "Privacy policy", "support": "Support", "website": "Product website",
         "availability": "The public App Store link is pending.",
+        "store_name": "Listed as {name} on the U.S. App Store.",
     },
     "zh": {
         "lang": "zh-CN", "site": "Lingbo Wang · 独立应用",
@@ -43,6 +44,8 @@ COPY = {
         "store": "前往 App Store", "mac_store": "前往 Mac App Store",
         "privacy": "隐私政策", "support": "使用支持", "website": "产品网站",
         "availability": "公开 App Store 链接待补充。",
+        "store_name": "美区 App Store 上的名称为 {name}。",
+        "outside_cn": "已在美区上架，中国大陆 App Store 暂未提供。",
     },
 }
 LANGUAGES = tuple(COPY)
@@ -221,12 +224,22 @@ def detail(lang, app):
     home = relative(page, route(lang))
     group = app["group"]
     name = h(copy["name"])
-    store = f'https://apps.apple.com/app/id{app["store"]}' if "store" in app else ""
+    store_id = app.get("store")
+    storefront = (
+        "cn/" if app.get("listed_in_cn") else "us/"
+    ) if lang == "zh" else ""
+    store = f"https://apps.apple.com/{storefront}app/id{store_id}" if store_id else ""
     store_label = t["mac_store"] if app["platform"] == "Mac" else t["store"]
     action = (
         f'<a class="button" href="{store}">{store_label} <span aria-hidden="true">↗</span></a>'
         if store else f'<p class="availability">{t["availability"]}</p>'
     )
+    store_notes = []
+    if "us_store_name" in app:
+        store_notes.append(t["store_name"].format(name=app["us_store_name"]))
+    if store and lang == "zh" and not app.get("listed_in_cn"):
+        store_notes.append(t["outside_cn"])
+    availability = f'\n        <p class="store-notes">{h(" ".join(store_notes))}</p>' if store_notes else ""
     links = "".join(
         f'<a href="{h(relative(page, "../" + app[key]))}">{t[key]} <span aria-hidden="true">↗</span></a>'
         for key in ("website", "support", "privacy") if key in app
@@ -247,7 +260,7 @@ def detail(lang, app):
         <h1 id="app-title">{name}</h1>
         <p class="tagline">{h(copy['tagline'])}</p>
         <p class="detail-summary">{h(copy['summary'])}</p>
-        {action}
+        {action}{availability}
       </div>
     </section>
     <section class="features" aria-labelledby="features-title">
