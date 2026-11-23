@@ -1,6 +1,6 @@
 # My Apps — Privacy-First Utilities, Puzzles & Productivity Apps
 
-This workspace contains **12 native Apple-platform app projects** (11 iOS projects and one macOS project) and **one portfolio website**. The collection covers rental-home records, receipts and maintenance, personal memories, photo editing and cleanup, perfume samples, habits, savings, disk cleanup, and games. Foliover combines five utility services in a single app project.
+This workspace contains **11 native Apple-platform app projects** (10 iOS projects and one macOS project) and **one portfolio website**. The collection covers rental-home records, receipts and maintenance, personal memories, photo editing and cleanup, perfume samples, habits, savings, disk cleanup, and games. Foliover combines five utility services in a single app project.
 
 Last updated: **November 23, 2026**. This inventory reflects the folders currently present, local source code, project documentation, and English Fastlane metadata. Some project folders retain earlier working names. App Store links come from project records; the descriptions reflect local development and may differ from a published version. Store availability and commercial terms are determined by each App Store listing. An App Store Connect record does not by itself mean an app is publicly available.
 
@@ -18,8 +18,7 @@ Last updated: **November 23, 2026**. This inventory reflects the folders current
 | <img src="./assets/app-icons/homecue.png" width="64" alt="HomeCue app icon"> | **HomeCue: Receipts & Care** | iOS / iPhone & iPad | Item care, receipts, returns, warranties, and maintenance history | [App Store](https://apps.apple.com/app/id6810898865) · [Project](HomeCue/) |
 | <img src="./assets/app-icons/family-friends.png" width="64" alt="Family & Friends Journal app icon"> | **Family & Friends Journal** | iOS / iPhone | Private people profiles, memories, birthdays, and personal documents | [App Store Connect](https://appstoreconnect.apple.com/apps/6835294742/distribution) · [Project](importantPeople/) |
 | <img src="./assets/app-icons/photo-maker.png" width="64" alt="Photo Maker app icon"> | **Photo Maker: Standard Sizes** | iOS / iPhone | Standard and custom photo sizes, background editing, and multipage print sheets | [App Store](https://apps.apple.com/app/id6798896113) · [Project](PassportPhotoMaker/) |
-| <img src="./assets/app-icons/dewday.png" width="64" alt="Dewday app icon"> | **Dewday: Daily Savings** | iOS / iPhone | Daily spending check-ins, savings challenges, plant growth, badges, and a widget | [Project](Nada/) |
-| — | **Nightblade · 夜刃** | iOS / landscape game | Playable ninja action prototype with platforming, enemies, and bosses | [Project](game/Nightblade/) |
+| <img src="./assets/app-icons/dewday.png" width="64" alt="Dewday app icon"> | **Dewday: Daily Savings** | iOS / iPhone | Daily spending check-ins, savings challenges, plant growth, badges, and a widget | [App Store](https://apps.apple.com/app/id6808116696) · [Project](Nada/) |
 
 ### Web Projects
 
@@ -161,17 +160,7 @@ Create a savings challenge for 7 days, one calendar month, or one calendar year,
 
 The current implementation offers 24 hours of full access from first launch. Afterwards, yearly, monthly, or weekly subscriptions provide continued access, while a completed optional share unlocks the current local calendar day. Repeated shares on the same day do not extend access, and historical records remain viewable without an active pass. There is no developer account or advertising. Records stay on-device unless private iCloud sync is enabled.
 
-[Project folder](Nada/) · [Current product description](Nada/fastlane/metadata/en-US/description.txt) · [Local support page](Nada/Nadaweb/support.html)
-
-## Nightblade · 夜刃
-
-### A Playable Ninja Action Prototype
-
-Nightblade is an original landscape action game built with Swift and SpriteKit. Move through scrolling terrain and tree platforms, jump and double-jump, use ranged attacks against enemies, collect pickups, and face a boss. The prototype includes touch controls, a lives system, a main menu, and a result screen.
-
-This project is a playable prototype. The design document also describes possible future progression, game modes, and monetization; those plans are separate from the current implementation.
-
-[Project folder](game/Nightblade/) · [Game design document](game/Nightblade/DESIGN.md)
+[Download Dewday: Daily Savings on the App Store](https://apps.apple.com/app/id6808116696) · [Project folder](Nada/) · [Current product description](Nada/fastlane/metadata/en-US/description.txt) · [Local support page](Nada/Nadaweb/support.html)
 
 ## Independent App Portfolio
 
@@ -202,4 +191,4 @@ See each app's privacy policy and App Store listing for its complete disclosures
 
 ---
 
-Search topics: iOS apps, macOS apps, indie apps, privacy-first apps, Stayframe, rental inspection, move-in records, move-out comparison, rental reports, receipt tracker, warranty tracker, return reminder, Foliover, calendar spam remover, daily logic puzzle, connect puzzle, Mac cleaner, disk cleanup, app uninstaller, perfume samples, scent trials, fragrance impressions, habit tracker, goal planner, Live Activities, HomeCue, home maintenance, vehicle maintenance, Family & Friends Journal, people journal, personal documents, birthday reminders, local video transfer, Photo Maker, custom photo sizes, photo print sheets, photo cleanup, timestamp camera, daily savings, no-spend check-ins, savings challenges, ninja action game, local image compression, app portfolio.
+Search topics: iOS apps, macOS apps, indie apps, privacy-first apps, Stayframe, rental inspection, move-in records, move-out comparison, rental reports, receipt tracker, warranty tracker, return reminder, Foliover, calendar spam remover, daily logic puzzle, connect puzzle, Mac cleaner, disk cleanup, app uninstaller, perfume samples, scent trials, fragrance impressions, habit tracker, goal planner, Live Activities, HomeCue, home maintenance, vehicle maintenance, Family & Friends Journal, people journal, personal documents, birthday reminders, local video transfer, Photo Maker, custom photo sizes, photo print sheets, photo cleanup, timestamp camera, daily savings, no-spend check-ins, savings challenges, local image compression, app portfolio.
