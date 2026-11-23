@@ -24,7 +24,7 @@ Last updated: **November 23, 2026**. This inventory reflects the folders current
 
 | Project | Platform | What it does | Folder |
 | --- | --- | --- | --- |
-| **Independent App Portfolio** | Web browser | Bilingual app showcase with icons, categories, and store links | [portfolio-site](portfolio-site/) |
+| **Independent App Portfolio** | Web browser | Bilingual app showcase with icons, categories, and store links | [Live website](https://wlb0806.github.io/someInfo/portfolio-site/) |
 
 ## Stayframe
 
@@ -166,11 +166,9 @@ The current implementation offers 24 hours of full access from first launch. Aft
 
 ### A Bilingual Website for the App Collection
 
-The portfolio website showcases apps with icons, descriptions, platform and app/game categories, and App Store links. It follows the visitor's browser language and offers a manual English/Chinese switch. Built with plain HTML, CSS, and JavaScript, it can be served locally or published as a static site.
+The portfolio showcases all 11 apps in English and Simplified Chinese. Each app has a dedicated page with features, supported devices, and available App Store and support links. The site serves static HTML and provides a sitemap.
 
-Its app catalogue is maintained separately in `portfolio-site/app.js`; the current website presents six entries under earlier names, including ReceiptGuard, CalendarKiller, Spruce, and Scentory: Fragrance Wardrobe. This README inventories all current app projects; the website catalogue has not yet been updated to match these product changes.
-
-[Project folder](portfolio-site/) · [Website README](portfolio-site/README.md) · [App catalogue](portfolio-site/app.js)
+[Live portfolio](https://wlb0806.github.io/someInfo/portfolio-site/) · [中文作品集](https://wlb0806.github.io/someInfo/portfolio-site/zh/) · [Website README](portfolio-site/README.md)
 
 ## Privacy at a Glance
 

@@ -1,21 +1,24 @@
 # Independent App Portfolio
 
-A bilingual, dependency-free portfolio for six Apple-platform apps. It can be published directly with GitHub Pages.
+The public portfolio features 11 Apple-platform apps. The English and Simplified Chinese homepages and app pages are served as static HTML.
 
-## Preview locally
+- [Live portfolio](https://wlb0806.github.io/someInfo/portfolio-site/)
+- [Chinese homepage](https://wlb0806.github.io/someInfo/portfolio-site/zh/)
+- [XML sitemap](https://wlb0806.github.io/someInfo/portfolio-site/sitemap.xml)
+
+## Update and preview
+
+Edit `catalog.json` for app names, descriptions, and links. Edit `build.py` for shared page copy and markup, and `styles.css` for the layout. Icons are shared with the repository README in `assets/app-icons/`.
+
+From the repository root, run:
 
 ```bash
-python3 -m http.server 8080 --directory portfolio-site
+python3 portfolio-site/build.py
+python3 -m http.server 8080
 ```
 
-Then open `http://localhost:8080`.
+Open [the local portfolio](http://localhost:8080/portfolio-site/). Commit both the source and regenerated HTML and sitemap. GitHub Pages serves the committed files.
 
-## Publish with GitHub Pages
+## Google Search Console
 
-1. Create a GitHub repository and copy the contents of this folder to its root.
-2. Push to the `main` branch.
-3. Open **Settings → Pages** in GitHub.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select `main` and `/ (root)`, then save.
-
-The language automatically follows the visitor's browser and can be switched manually. App data and links live in `app.js`.
+With access to the site's verified Search Console property, submit the sitemap URL above. Use URL Inspection to check coverage or request indexing for the homepage and priority app pages.

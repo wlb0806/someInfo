@@ -1,133 +1,264 @@
 <!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f4f0e8" />
-    <meta
-      name="description"
-      content="Independent apps for useful moments and playful breaks — ReceiptGuard, CalendarKiller, Trio, Knots, Spruce and Scentory."
-    />
-    <meta property="og:title" content="Independent Apps · 独立应用作品集" />
-    <meta
-      property="og:description"
-      content="Six focused apps, thoughtfully made for Apple platforms."
-    />
-    <meta property="og:type" content="website" />
-    <title>Independent Apps · 独立应用作品集</title>
-    <link rel="icon" href="assets/icons/trio.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#apps" data-i18n="skip">跳到作品</a>
-
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand-mark" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </span>
-        <span data-i18n="brand">独立开发者</span>
-      </a>
-
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#apps" data-i18n="navApps">作品</a>
-        <a href="#about" data-i18n="navAbout">关于</a>
-        <div class="language-switch" role="group" aria-label="Language">
-          <button type="button" data-lang="zh" aria-pressed="true">中</button>
-          <button type="button" data-lang="en" aria-pressed="false">EN</button>
-        </div>
-      </nav>
-    </header>
-
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span data-i18n="eyebrow">为 Apple 平台打造 · 持续更新中</span>
-          </p>
-          <h1 id="hero-title">
-            <span data-i18n="heroLine1">小而专注的应用，</span>
-            <em data-i18n="heroLine2">认真做得更好。</em>
-          </h1>
-          <p class="hero-intro" data-i18n="heroIntro">
-            我是一名独立开发者，喜欢把日常里不够顺手的事，做成简单、漂亮、真正有用的产品。
-          </p>
-          <a class="primary-cta" href="#apps">
-            <span data-i18n="seeApps">查看全部作品</span>
-            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>
-          </a>
-        </div>
-
-        <div class="icon-stage reveal" aria-label="App icon collection">
-          <div class="stage-glow" aria-hidden="true"></div>
-          <div class="icon-tile tile-receipt">
-            <img src="assets/icons/receiptguard.png" alt="ReceiptGuard" />
-          </div>
-          <div class="icon-tile tile-calendar">
-            <img src="assets/icons/calendarkiller.png" alt="CalendarKiller" />
-          </div>
-          <div class="icon-tile tile-trio">
-            <img src="assets/icons/trio.png" alt="Trio" />
-          </div>
-          <div class="icon-tile tile-knots">
-            <img src="assets/icons/knots.png" alt="Knots" />
-          </div>
-          <div class="icon-tile tile-spruce">
-            <img src="assets/icons/spruce.png" alt="Spruce" />
-          </div>
-          <div class="icon-tile tile-scentory">
-            <img src="assets/icons/scentory.png" alt="Scentory" />
-          </div>
-          <p class="stage-note" data-i18n="stageNote">六个想法，六种日常。</p>
-        </div>
-      </section>
-
-      <section class="stats reveal" aria-label="Portfolio summary">
-        <div><strong>6</strong><span data-i18n="statApps">款独立应用</span></div>
-        <div><strong>3</strong><span>iPhone · iPad · Mac</span></div>
-        <div><strong>2</strong><span data-i18n="statLanguages">种网站语言</span></div>
-      </section>
-
-      <section class="apps-section" id="apps" aria-labelledby="apps-heading">
-        <div class="section-heading reveal">
-          <div>
-            <p class="section-kicker" data-i18n="selectedWork">SELECTED WORK</p>
-            <h2 id="apps-heading" data-i18n="appsHeading">我的作品</h2>
-          </div>
-          <p data-i18n="appsIntro">工具让生活轻一点，游戏让空闲有趣一点。</p>
-        </div>
-        <div class="portfolio-groups" id="portfolio-groups"></div>
-      </section>
-
-      <section class="about-section reveal" id="about" aria-labelledby="about-heading">
-        <div class="about-number" aria-hidden="true">06</div>
-        <div class="about-copy">
-          <p class="section-kicker" data-i18n="behindApps">BEHIND THE APPS</p>
-          <h2 id="about-heading" data-i18n="aboutHeading">独立制作，认真打磨。</h2>
-          <p data-i18n="aboutBody">
-            从一个具体的小问题出发，完成设计、开发和发布的每一步。没有庞大的团队，只有对清晰体验、可靠功能和细节的坚持。
-          </p>
-        </div>
-        <div class="principles" aria-label="Principles">
-          <span data-i18n="principle1">专注</span>
-          <span data-i18n="principle2">隐私</span>
-          <span data-i18n="principle3">品质</span>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div>
-        <span class="footer-mark" aria-hidden="true"></span>
-        <span data-i18n="footerLine">为有用的时刻，也为放松的片刻。</span>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Independent Apps for iPhone, iPad &amp; Mac | Lingbo Wang</title>
+  <meta name="description" content="Explore 11 independent iPhone, iPad and Mac apps by Lingbo Wang. Find photo and Mac cleanup tools, rental and receipt trackers, habit and savings apps, and daily logic puzzles.">
+  <meta name="theme-color" content="#f7f6f0">
+  <link rel="canonical" href="https://wlb0806.github.io/someInfo/portfolio-site/">
+  <link rel="alternate" hreflang="en" href="https://wlb0806.github.io/someInfo/portfolio-site/">
+  <link rel="alternate" hreflang="zh-CN" href="https://wlb0806.github.io/someInfo/portfolio-site/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://wlb0806.github.io/someInfo/portfolio-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lingbo Wang · Independent Apps">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Independent Apps for iPhone, iPad &amp; Mac | Lingbo Wang">
+  <meta property="og:description" content="Explore 11 independent iPhone, iPad and Mac apps by Lingbo Wang. Find photo and Mac cleanup tools, rental and receipt trackers, habit and savings apps, and daily logic puzzles.">
+  <meta property="og:url" content="https://wlb0806.github.io/someInfo/portfolio-site/">
+  <link rel="icon" href="../assets/app-icons/trio.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "url": "https://wlb0806.github.io/someInfo/portfolio-site/",
+  "name": "Independent Apps for iPhone, iPad & Mac | Lingbo Wang",
+  "description": "Explore 11 independent iPhone, iPad and Mac apps by Lingbo Wang. Find photo and Mac cleanup tools, rental and receipt trackers, habit and savings apps, and daily logic puzzles.",
+  "inLanguage": "en",
+  "author": {
+    "@type": "Person",
+    "name": "Lingbo Wang"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/stayframe/",
+        "name": "Stayframe"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/scentory/",
+        "name": "Scentory: Perfume Samples"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/daily-quest/",
+        "name": "Daily Quest: Habit & Goals"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/homecue/",
+        "name": "HomeCue: Receipts & Care"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/family-friends/",
+        "name": "Family & Friends Journal"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/dewday/",
+        "name": "Dewday: Daily Savings"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/foliover/",
+        "name": "Foliover: Photos & Space"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/eos/",
+        "name": "Eos: Disk Cleanup"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/photo-maker/",
+        "name": "Photo Maker: Standard Sizes"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/trio/",
+        "name": "Trio: Daily Logic Puzzles"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "url": "https://wlb0806.github.io/someInfo/portfolio-site/apps/knots/",
+        "name": "Knots: Connect Puzzle"
+      }
+    ]
+  }
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header frame">
+    <a class="brand" href="./"><span class="wordmark" aria-hidden="true">LW</span> Lingbo Wang</a>
+    <nav aria-label="Main navigation">
+      <a class="nav-link" href="./#apps">Explore apps</a>
+      <div class="languages">
+        <a href="./" lang="en" hreflang="en" aria-current="page">EN</a>
+        <a href="zh/" lang="zh-CN" hreflang="zh-CN">中文</a>
       </div>
-      <span>© <span id="year"></span> · <span data-i18n="footerRights">用心制作</span></span>
-    </footer>
-
-    <noscript>
-      <p class="noscript">This portfolio needs JavaScript to display the app collection.</p>
-    </noscript>
-  </body>
+    </nav>
+  </header>
+  <main class="frame" id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">iPhone, iPad & Mac</p>
+        <h1 id="hero-title">Apps for daily life<br><span>and a little play.</span></h1>
+        <p class="hero-intro">I’m Lingbo Wang. I build apps for the things you do every day, from keeping track of a receipt to unwinding with a logic puzzle.</p>
+        <a class="button" href="#apps">Explore apps <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art">
+        <a class="hero-tile tile-stayframe" href="apps/stayframe/" aria-label="Stayframe"><img src="../assets/app-icons/stayframe.png" alt="" width="124" height="124" decoding="async"></a>
+        <a class="hero-tile tile-eos" href="apps/eos/" aria-label="Eos: Disk Cleanup"><img src="../assets/app-icons/eos.png" alt="" width="124" height="124" decoding="async"></a>
+        <a class="hero-tile tile-trio" href="apps/trio/" aria-label="Trio: Daily Logic Puzzles"><img src="../assets/app-icons/trio.png" alt="" width="124" height="124" decoding="async"></a>
+        <a class="hero-tile tile-dewday" href="apps/dewday/" aria-label="Dewday: Daily Savings"><img src="../assets/app-icons/dewday.png" alt="" width="124" height="124" decoding="async"></a>
+      </div>
+    </section>
+    <section class="directory" id="apps" aria-labelledby="directory-title">
+      <div class="directory-heading">
+        <h2 id="directory-title">The app collection</h2>
+        <nav class="category-nav" aria-label="App categories"><a href="#everyday">Everyday tools</a><a href="#studio">Photos & storage</a><a href="#games">Puzzle games</a></nav>
+      </div>
+      <section class="app-group" id="everyday" aria-labelledby="everyday-title">
+        <h3 id="everyday-title">Everyday tools</h3>
+        <div class="app-grid">
+        <article class="app-card">
+          <img src="../assets/app-icons/stayframe.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">iPhone</p>
+            <h4><a href="apps/stayframe/">Stayframe</a></h4>
+            <p class="app-summary">Document your rental at move-in, compare room conditions at move-out, and share a report with your landlord.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="app-card">
+          <img src="../assets/app-icons/scentory.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">iPhone</p>
+            <h4><a href="apps/scentory/">Scentory: Perfume Samples</a></h4>
+            <p class="app-summary">Keep track of samples and where you put them. Log how a fragrance changes and decide whether to buy, retry or pass.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="app-card">
+          <img src="../assets/app-icons/daily-quest.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">iPhone · iPad</p>
+            <h4><a href="apps/daily-quest/">Daily Quest: Habit &amp; Goals</a></h4>
+            <p class="app-summary">Check off recurring habits, advance goals step by step, and watch Mochi and its world grow.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="app-card">
+          <img src="../assets/app-icons/homecue.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">iPhone · iPad</p>
+            <h4><a href="apps/homecue/">HomeCue: Receipts &amp; Care</a></h4>
+            <p class="app-summary">Keep receipts and warranties with the things you own, track return deadlines, and schedule home and car maintenance.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="app-card">
+          <img src="../assets/app-icons/family-friends.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">iPhone</p>
+            <h4><a href="apps/family-friends/">Family &amp; Friends Journal</a></h4>
+            <p class="app-summary">Give each person a private place for photos, memories, birthdays and important documents.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="app-card">
+          <img src="../assets/app-icons/dewday.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">iPhone</p>
+            <h4><a href="apps/dewday/">Dewday: Daily Savings</a></h4>
+            <p class="app-summary">Log spending choices, record purchases you skipped, and grow a virtual plant as you build a savings habit.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        </div>
+      </section>
+      <section class="app-group" id="studio" aria-labelledby="studio-title">
+        <h3 id="studio-title">Photos & storage</h3>
+        <div class="app-grid">
+        <article class="app-card">
+          <img src="../assets/app-icons/foliover.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">iPhone · iPad</p>
+            <h4><a href="apps/foliover/">Foliover: Photos &amp; Space</a></h4>
+            <p class="app-summary">Review duplicate photos and unwanted calendar events, add timestamps, compress images, and prepare photos for printing.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="app-card">
+          <img src="../assets/app-icons/eos.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">Mac</p>
+            <h4><a href="apps/eos/">Eos: Disk Cleanup</a></h4>
+            <p class="app-summary">Find large files, exact duplicates, app leftovers and developer caches. Review what each cleanup will remove.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="app-card">
+          <img src="../assets/app-icons/photo-maker.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">iPhone</p>
+            <h4><a href="apps/photo-maker/">Photo Maker: Standard Sizes</a></h4>
+            <p class="app-summary">Crop photos to standard or custom dimensions, change backgrounds and arrange multiple copies on printable sheets.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        </div>
+      </section>
+      <section class="app-group" id="games" aria-labelledby="games-title">
+        <h3 id="games-title">Puzzle games</h3>
+        <div class="app-grid">
+        <article class="app-card">
+          <img src="../assets/app-icons/trio.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">iPhone</p>
+            <h4><a href="apps/trio/">Trio: Daily Logic Puzzles</a></h4>
+            <p class="app-summary">Draw a path, balance suns and moons, and place crowns. Everyone gets the same three logic puzzles each day.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="app-card">
+          <img src="../assets/app-icons/knots.png" alt="" width="64" height="64" decoding="async" loading="lazy">
+          <div class="card-copy">
+            <p class="platform">iPhone · iPad</p>
+            <h4><a href="apps/knots/">Knots: Connect Puzzle</a></h4>
+            <p class="app-summary">Connect matching dots without crossing paths and fill the grid for a Perfect result. Play without a timer.</p>
+          </div>
+          <span class="card-arrow" aria-hidden="true">↗</span>
+        </article>
+        </div>
+      </section>
+    </section>
+    <section class="about" id="about">
+      <h2>Made by Lingbo Wang</h2>
+      <p>Most of my apps keep your records and processing on your device. Some offer optional private iCloud sync. Each app’s page explains what it does and links to its store listing and privacy policy where available.</p>
+    </section>
+  </main>
+  <footer class="site-footer frame">
+    <span>© 2026 Lingbo Wang</span>
+    <a href="./#about">About</a>
+  </footer>
+</body>
 </html>
